@@ -1,12 +1,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+s// Import our new singleton to access the global volume level
+import "qrc:/qt/qml/trial1/content" as App
 
 Item {
-    id: root
+    id: userMenuRoot
     property var parentWindow
+    // This is the single source of truth for the volume level on this page.
     property int volumeLevel: 75
-    // batteryLevel is provided by the C++ backend as `backend.batteryLevel`
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
 
@@ -21,11 +23,43 @@ Item {
     }
 
     HeaderBar {
+        id: header
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.margins: 16
-        batteryLevel: typeof backend !== 'undefined' ? backend.batteryLevel : 0
-        volumeLevel: root.volumeLevel
+        batteryLevel: typeof backend !== 'undefined' ? backend.batteryLevel : 0 // Provided by C++
+        volumeLevel: userMenuRoot.volumeLevel // Bind to the page's volume level
+        volumeLevel: App.AppSettings.volumeLevel // Bind to the global volume level
+    }
+
+    function stackRef() {
+        var s = (parentWindow && parentWindow.stack) || StackView.view;
+        if (!s) console.warn("UserMenu: no stack available");
+        return s;
+    }
+
+    function go(title) {
+        var s = stackRef();
+        if (s) {
+u            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.qml"), { parentWindow: userMenuRoot.parentWindow, title: title })
+        }
+    }
+
+    function goVolume() {
+        var s = stackRef();
+        if (s) {
+            var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { 
+                parentWindow: userMenuRoot.parentWindow,
+                // Pass the current volume level to the new page
+                volumeLevel: userMenuRoot.volumeLevel 
+                volumeLevel: App.AppSettings.volumeLevel 
+            });
+            // Connect to the new page's signal
+            page.volumeChanged.connect(function(newVolume) {
+                userMenuRoot.volumeLevel = newVolume;
+                App.AppSettings.volumeLevel = newVolume;
+            });
+        }
     }
 
     ColumnLayout {
@@ -43,26 +77,6 @@ Item {
         ColumnLayout {
             spacing: 12
             Layout.fillWidth: true
-
-            function stackRef() {
-                var s = (parentWindow && parentWindow.stack) || StackView.view;
-                if (!s) console.warn("UserMenu: no stack available");
-                return s;
-            }
-
-            function go(title) {
-                var s = stackRef();
-                if (s) {
-                    s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.qml"), { parentWindow: root.parentWindow, title: title })
-                }
-            }
-
-            function goVolume() {
-                var s = stackRef();
-                if (s) {
-                    s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { parentWindow: root.parentWindow })
-                }
-            }
 
             Button { text: "Auto Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }

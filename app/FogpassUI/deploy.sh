@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 #
 # This script deploys the FogpassUI application to the target hardware for testing.
 #
