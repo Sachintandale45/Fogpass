@@ -1,0 +1,56 @@
+{
+    "classes": [
+        {
+            "className": "BackendManager",
+            "lineNumber": 6,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "batteryLevel",
+                    "notify": "batteryLevelChanged",
+                    "read": "batteryLevel",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "BackendManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "batteryLevelChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "start",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 2,
+                    "name": "onTimeout",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "backendmanager.h",
+    "outputRevision": 68
+}

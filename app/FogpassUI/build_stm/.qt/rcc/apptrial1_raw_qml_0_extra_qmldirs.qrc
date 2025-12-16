@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/trial1/">
+    <file alias="content/qmldir">/home/sachin/projects/FogpassUI/build_stm/trial1/content/qmldir</file>
+  </qresource>
+</RCC>
+
