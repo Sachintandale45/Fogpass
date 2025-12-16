@@ -72,6 +72,7 @@ Item {
 
         RowLayout {
             Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
             spacing: 8
 
             Button {
