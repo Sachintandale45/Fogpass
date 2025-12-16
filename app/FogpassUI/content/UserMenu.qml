@@ -1,13 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-s// Import our new singleton to access the global volume level
-import "qrc:/qt/qml/trial1/content" as App
+// Import our singleton to access the global settings
 
 Item {
     id: userMenuRoot
     property var parentWindow
-    // This is the single source of truth for the volume level on this page.
+    // This property will now hold the volume level for this page.
     property int volumeLevel: 75
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
@@ -28,8 +27,7 @@ Item {
         anchors.right: parent.right
         anchors.margins: 16
         batteryLevel: typeof backend !== 'undefined' ? backend.batteryLevel : 0 // Provided by C++
-        volumeLevel: userMenuRoot.volumeLevel // Bind to the page's volume level
-        volumeLevel: App.AppSettings.volumeLevel // Bind to the global volume level
+        volumeLevel: userMenuRoot.volumeLevel // Bind to this page's volume level
     }
 
     function stackRef() {
@@ -41,7 +39,7 @@ Item {
     function go(title) {
         var s = stackRef();
         if (s) {
-u            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.qml"), { parentWindow: userMenuRoot.parentWindow, title: title })
+            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.qml"), { parentWindow: userMenuRoot.parentWindow, title: title })
         }
     }
 
@@ -52,12 +50,10 @@ u            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.q
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
                 volumeLevel: userMenuRoot.volumeLevel 
-                volumeLevel: App.AppSettings.volumeLevel 
             });
             // Connect to the new page's signal
             page.volumeChanged.connect(function(newVolume) {
                 userMenuRoot.volumeLevel = newVolume;
-                App.AppSettings.volumeLevel = newVolume;
             });
         }
     }
