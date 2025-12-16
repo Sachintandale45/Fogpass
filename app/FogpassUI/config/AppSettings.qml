@@ -1,0 +1,17 @@
+import QtQuick 2.15
+
+// By declaring this as a Singleton, QML ensures only one instance of this
+// component ever exists. It can be imported and used from anywhere in the app.
+pragma Singleton
+
+Item {
+    // Global application settings that persist across all pages.
+
+    // --- State Properties ---
+    property int volumeLevel: 75
+    property int batteryLevel: 100 // Default value, will be updated by the backend.
+
+    // --- Configuration Constants ---
+    readonly property string volumePassword: "admin"
+    readonly property int volumeThreshold: 60
+}

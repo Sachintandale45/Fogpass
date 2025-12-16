@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+// Import our singleton to access global application settings
+import "../config" as App
 
 Item {
     // Define a signal that will be emitted when the volume is finalized
@@ -9,8 +11,6 @@ Item {
     id: root
     property var parentWindow
     // This property receives the volume level from the previous page
-    readonly property int volumeThreshold: 60
-    readonly property string requiredPassword: "admin"
     property bool isAuthenticated: false
     property int previousVolume: volumeLevel
     property int volumeLevel: 75 // This property receives the value from the previous page
@@ -64,7 +64,7 @@ Item {
             value: root.volumeLevel // Set slider's initial value
             stepSize: 1
             onValueChanged: {
-                if (value < root.volumeThreshold && !root.isAuthenticated) {
+                if (value < App.AppSettings.volumeThreshold && !root.isAuthenticated) {
                     // If moving below threshold without auth, open dialog
                     passwordPopup.open();
                     // Prevent slider from staying in the restricted area
@@ -152,7 +152,7 @@ Item {
                 echoMode: TextInput.Password
                 color: "white"
                 onAccepted: {
-                    if (text === root.requiredPassword) {
+                    if (text === App.AppSettings.volumePassword) {
                         root.isAuthenticated = true;
                         passwordPopup.close();
                     } else { text = ""; }

@@ -1,13 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-// Import our singleton to access the global settings
+// Import our singleton to access global application settings
+import "../config" as App
 
 Item {
     id: userMenuRoot
     property var parentWindow
-    // This property will now hold the volume level for this page.
-    property int volumeLevel: 75
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
 
@@ -19,15 +18,6 @@ Item {
             GradientStop { position: 0.5; color: "#764ba2" }  // Purple
             GradientStop { position: 1.0; color: "#f093fb" }  // Pink
         }
-    }
-
-    HeaderBar {
-        id: header
-        anchors.top: parent.top
-        anchors.right: parent.right
-        anchors.margins: 16
-        batteryLevel: typeof backend !== 'undefined' ? backend.batteryLevel : 0 // Provided by C++
-        volumeLevel: userMenuRoot.volumeLevel // Bind to this page's volume level
     }
 
     function stackRef() {
@@ -49,12 +39,19 @@ Item {
             var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { 
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
-                volumeLevel: userMenuRoot.volumeLevel 
+                volumeLevel: App.AppSettings.volumeLevel 
             });
             // Connect to the new page's signal
             page.volumeChanged.connect(function(newVolume) {
-                userMenuRoot.volumeLevel = newVolume;
+                App.AppSettings.volumeLevel = newVolume;
             });
+        }
+    }
+
+    function goBrightness() {
+        var s = stackRef();
+        if (s) {
+            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/BrightnessControl.qml"), { parentWindow: userMenuRoot.parentWindow });
         }
     }
 
@@ -97,7 +94,7 @@ Item {
             Button { text: "Adjust Brightness"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
-                onClicked: go("Adjust Brightness")
+                onClicked: goBrightness()
             }
             Button { text: "Display All Route"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }

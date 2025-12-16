@@ -35,6 +35,8 @@ qt_add_qml_module(apptrial1
         content/HeaderBar.qml
         content/ModePlaceholder.qml
         content/VolumeControl.qml
+        content/BrightnessControl.qml
+        config/AppSettings.qml
 
     SOURCES
         src/backend/backendmanager.cpp
