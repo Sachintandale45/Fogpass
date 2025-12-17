@@ -9,6 +9,7 @@ Item {
 
     // --- State Properties ---
     property int volumeLevel: 75
+    property int brightnessLevel: 80
     property int batteryLevel: 100 // Default value, will be updated by the backend.
 
     // --- Configuration Constants ---

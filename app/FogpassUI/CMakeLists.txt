@@ -15,6 +15,13 @@ qt_add_executable(apptrial1
     main.cpp
 )
 
+set_source_files_properties(
+    config/AppSettings.qml
+    PROPERTIES
+        QT_QML_SINGLETON_TYPE TRUE
+)
+
+
 # --- QML Module ---
 qt_add_qml_module(apptrial1
     URI trial1

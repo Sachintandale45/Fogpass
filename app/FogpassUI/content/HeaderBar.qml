@@ -1,10 +1,10 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import "../config" as App
 
 Item {
     id: headerBar
     property int batteryLevel: 0
-    property int volumeLevel: 75
 
     width: batteryRow.implicitWidth + volumeRow.implicitWidth + 32
     height: 40
@@ -97,7 +97,7 @@ Item {
                         ctx.fill()
 
                         // bars based on volume
-                        var v = Math.max(0, Math.min(100, volumeLevel)) / 100
+                        var v = Math.max(0, Math.min(100, App.AppSettings.volumeLevel)) / 100
                         var bars = 3
                         for (var i = 1; i <= bars; i++) {
                             var strength = v - (i - 1) * 0.25
@@ -120,7 +120,7 @@ Item {
             }
 
             Text {
-                text: volumeLevel + "%"
+                text: App.AppSettings.volumeLevel + "%"
                 color: "#ffffff"
                 font.pointSize: 14
                 font.bold: true
@@ -129,4 +129,3 @@ Item {
         }
     }
 }
-
