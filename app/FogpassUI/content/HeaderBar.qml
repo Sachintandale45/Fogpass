@@ -1,129 +1,102 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import trial1
+import trial1 1.0
+import trial1.config 1.0
 
-Item {
+Rectangle {
     id: headerBar
-
-    width: batteryRow.implicitWidth + volumeRow.implicitWidth + 32
-    height: 40
+    width: parent.width
+    height: 60
+    color: "#333333"
 
     Row {
-        id: mainRow
-        anchors.fill: parent
-        spacing: 14
+        id: contentRow
+        spacing: 10
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        anchors.rightMargin: 10
+        height: parent.height
 
-        Row {
-            id: batteryRow
-            spacing: 8
-            // Battery icon
-            Item {
-                width: 68
-                height: 32
-
-                Rectangle {
-                    anchors.fill: parent
-                    radius: 5
-                    color: "#1b1b2b"
-                    opacity: 0.65
-                    border.width: 2
-                    border.color: "#ffffff"
-                }
-
-                // Battery cap
-                Rectangle {
-                    width: 6
-                    height: 12
-                    radius: 2
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.right: parent.right
-                    anchors.rightMargin: -6
-                    color: "#ffffff"
-                    opacity: 0.9
-                }
-
-                // Battery fill
-                Rectangle {
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        bottom: parent.bottom
-                        leftMargin: 3
-                        rightMargin: 10
-                    }
-                    width: Math.max(6, (AppSettings.batteryLevel / 100) * (parent.width - 13))
-                    radius: 4
-                    color: AppSettings.batteryLevel >= 80 ? "#2ecc71" : (AppSettings.batteryLevel >= 50 ? "#f1c40f" : "#e74c3c")
-                    opacity: 0.95
-                }
-            }
+        // Volume Control
+        Rectangle {
+            id: volumeIcon
+            width: 40
+            height: 40
+            color: "transparent"
+            anchors.verticalCenter: parent.verticalCenter
 
             Text {
-                text: AppSettings.batteryLevel + "%"
-                color: "#ffffff"
-                font.pointSize: 14
-                font.bold: true
+                id: volumeText
+                font.pixelSize: 20
+                color: "white"
                 anchors.verticalCenter: parent.verticalCenter
+                // Use a Binding to ensure the text is always updated.
+                Binding { target: volumeText; property: "text"; value: "🔊 " + AppSettings.volumeLevel }
+                text: "🔊 " + AppSettings.volumeLevel
+
+                // Explicitly react to changes in the AppSettings singleton
+                Connections {
+                    target: AppSettings
+                    function onVolumeLevelChanged() { volumeText.text = "🔊 " + AppSettings.volumeLevel; }
+                }
             }
         }
 
-        Row {
-            id: volumeRow
-            spacing: 8
-
-            // Speaker icon with curves
-            Item {
-                id: volumeIcon
-                width: 56
-                height: 32
-
-                Canvas {
-                    anchors.fill: parent
-                    onPaint: {
-                        var ctx = getContext("2d")
-                        ctx.clearRect(0, 0, width, height)
-
-                        // speaker body
-                        ctx.fillStyle = "#ffffff"
-                        ctx.beginPath()
-                        ctx.moveTo(4, height*0.30)
-                        ctx.lineTo(16, height*0.30)
-                        ctx.lineTo(28, 6)
-                        ctx.lineTo(28, height-6)
-                        ctx.lineTo(16, height*0.70)
-                        ctx.lineTo(4, height*0.70)
-                        ctx.closePath()
-                        ctx.fill()
-
-                        // bars based on volume
-                        var v = Math.max(0, Math.min(100, AppSettings.volumeLevel)) / 100
-                        var bars = 3
-                        for (var i = 1; i <= bars; i++) {
-                            var strength = v - (i - 1) * 0.25
-                            if (strength > 0) {
-                                var alpha = Math.min(1, strength * 1.6)
-                                ctx.strokeStyle = "rgba(79,195,247," + alpha + ")"
-                                ctx.lineWidth = 2
-                                ctx.beginPath()
-                                var offset = 10 + i * 7
-                                ctx.moveTo(28 + offset, height * 0.25 - i * 2)
-                                ctx.quadraticCurveTo(28 + offset + 6, height * 0.5, 28 + offset, height * 0.75 + i * 2)
-                                ctx.stroke()
-                            }
-                        }
-                    }
-                    Component.onCompleted: requestPaint()
-                    onWidthChanged: requestPaint()
-                    onHeightChanged: requestPaint()
-                }
-            }
+        // Mode Indicator
+        Rectangle {
+            id: modeIndicator
+            width: 40
+            height: 40
+            radius: 20
+            color: "#555555"
+            anchors.verticalCenter: parent.verticalCenter
 
             Text {
-                text: AppSettings.volumeLevel + "%"
-                color: "#ffffff"
-                font.pointSize: 14
+                id: modeText
                 font.bold: true
+                font.pixelSize: 20
+                color: "white"
+                anchors.centerIn: parent
+                // Use a Binding to ensure the text is always updated.
+                Binding { target: modeText; property: "text"; value: AppSettings.currentMode === "Foggy" ? "F" : "NF" }
+                text: AppSettings.currentMode === "Foggy" ? "F" : "NF"
+
+                // Explicitly react to changes in the AppSettings singleton
+                Connections {
+                    target: AppSettings
+                    function onCurrentModeChanged() { modeText.text = AppSettings.currentMode === "Foggy" ? "F" : "NF"; }
+                }
+            }
+        }
+
+        // Battery Indicator
+        Rectangle {
+            id: batteryIndicator
+            width: 60
+            height: 30
+            color: "transparent"
+            border.color: "white"
+            border.width: 2
+            radius: 5
+            anchors.verticalCenter: parent.verticalCenter
+
+            Rectangle {
+                id: batteryFill
+                height: parent.height - 4
                 anchors.verticalCenter: parent.verticalCenter
+                anchors.left: parent.left
+                anchors.leftMargin: 2
+                Binding { target: batteryFill; property: "width"; value: (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100) }
+                Binding { target: batteryFill; property: "color"; value: AppSettings.batteryLevel > 20 ? "green" : "red" }
+
+                // Explicitly react to changes in the AppSettings singleton
+                Connections {
+                    target: AppSettings
+                    function onBatteryLevelChanged() {
+                        batteryFill.width = (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100);
+                        batteryFill.color = AppSettings.batteryLevel > 20 ? "green" : "red";
+                    }
+                }
             }
         }
     }

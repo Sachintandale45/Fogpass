@@ -11,6 +11,7 @@ Item {
     property int volumeLevel: 75
     property int brightnessLevel: 80
     property int batteryLevel: 87 // Default value, will be updated by the backend.
+    property string currentMode: "Foggy" // Can be "Foggy" or "Non-Foggy"
 
     // --- Configuration Constants ---
     readonly property string volumePassword: "admin123"
