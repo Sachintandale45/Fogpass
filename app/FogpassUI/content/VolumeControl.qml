@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 // Import our singleton to access global application settings
-import "../config" as App
+import trial1
 
 Item {
     // Define a signal that will be emitted when the volume is finalized
@@ -64,7 +64,7 @@ Item {
             value: root.volumeLevel // Set slider's initial value
             stepSize: 1
             onValueChanged: {
-                if (value < App.AppSettings.volumeThreshold && !root.isAuthenticated) {
+                if (value < AppSettings.volumeThreshold && !root.isAuthenticated) {
                     // If moving below threshold without auth, open dialog
                     passwordPopup.open();
                     // Prevent slider from staying in the restricted area
@@ -151,8 +151,8 @@ Item {
                 placeholderText: "Password"
                 echoMode: TextInput.Password
                 color: "white"
-                onAccepted: {
-                    if (text === App.AppSettings.volumePassword) {
+                onAccepted: { 
+                    if (text === AppSettings.volumePassword) {
                         root.isAuthenticated = true;
                         passwordPopup.close();
                     } else { text = ""; }

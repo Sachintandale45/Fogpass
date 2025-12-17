@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 // Import our singleton to access global application settings
-import "../config" as App
+import trial1
 
 Item {
     id: userMenuRoot
@@ -39,11 +39,11 @@ Item {
             var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { 
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
-                volumeLevel: App.AppSettings.volumeLevel 
+                volumeLevel: AppSettings.volumeLevel 
             });
             // Connect to the new page's signal
             page.volumeChanged.connect(function(newVolume) {
-                App.AppSettings.volumeLevel = newVolume;
+                AppSettings.volumeLevel = newVolume;
             });
         }
     }

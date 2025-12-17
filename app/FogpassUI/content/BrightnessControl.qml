@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 // Import our singleton to access global application settings
-import "../config" as App
+import trial1
 
 Item {
     id: root
@@ -41,7 +41,7 @@ Item {
 
         Text {
             // This text updates automatically because the slider's value is bound to the singleton
-            text: Math.round(App.AppSettings.brightnessLevel) + "%"
+            text: Math.round(AppSettings.brightnessLevel) + "%"
             font.pointSize: 22
             font.bold: true
             color: "#ffffff"
@@ -56,9 +56,9 @@ Item {
             to: 100
             stepSize: 1
             // This creates a two-way binding. Moving the slider updates the singleton directly.
-            value: App.AppSettings.brightnessLevel
+            value: AppSettings.brightnessLevel
             onValueChanged: {
-                App.AppSettings.brightnessLevel = value;
+                AppSettings.brightnessLevel = value;
             }
         }
 
