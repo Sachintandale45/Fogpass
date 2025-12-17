@@ -7,7 +7,7 @@ Rectangle {
     id: headerBar
     width: parent.width
     height: 60
-    color: "#333333"
+    color: "transparent" // Match parent window color
 
     Row {
         id: contentRow
@@ -17,10 +17,55 @@ Rectangle {
         anchors.rightMargin: 10
         height: parent.height
 
+        // Battery Indicator
+        Rectangle {
+            id: batteryIndicator
+            width: 60
+            height: 30
+            border.color: "white"
+            border.width: 2
+            radius: 5
+            anchors.verticalCenter: parent.verticalCenter
+            color: "transparent"
+
+            Rectangle {
+                id: batteryFill
+                // Set initial state
+                width: (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100)
+                color: AppSettings.batteryLevel > 20 ? "green" : "red"
+                height: parent.height - 4
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.left: parent.left
+                anchors.leftMargin: 2
+
+                Connections {
+                    target: AppSettings
+                    function onBatteryLevelChanged() {
+                        batteryFill.width = (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100);
+                        batteryFill.color = AppSettings.batteryLevel > 20 ? "green" : "red";
+                    }
+                }
+            }
+
+            Text {
+                id: batteryText
+                anchors.centerIn: parent
+                color: "white"
+                font.pixelSize: 16
+                font.bold: true
+                text: AppSettings.batteryLevel + "%"
+
+                Connections {
+                    target: AppSettings
+                    function onBatteryLevelChanged() { batteryText.text = AppSettings.batteryLevel + "%"; }
+                }
+            }
+        }
+
         // Volume Control
         Rectangle {
             id: volumeIcon
-            width: 40
+            width: 70 // Increased width to accommodate text
             height: 40
             color: "transparent"
             anchors.verticalCenter: parent.verticalCenter
@@ -29,12 +74,9 @@ Rectangle {
                 id: volumeText
                 font.pixelSize: 20
                 color: "white"
-                anchors.verticalCenter: parent.verticalCenter
-                // Use a Binding to ensure the text is always updated.
-                Binding { target: volumeText; property: "text"; value: "🔊 " + AppSettings.volumeLevel }
+                anchors.centerIn: parent
                 text: "🔊 " + AppSettings.volumeLevel
 
-                // Explicitly react to changes in the AppSettings singleton
                 Connections {
                     target: AppSettings
                     function onVolumeLevelChanged() { volumeText.text = "🔊 " + AppSettings.volumeLevel; }
@@ -57,45 +99,11 @@ Rectangle {
                 font.pixelSize: 20
                 color: "white"
                 anchors.centerIn: parent
-                // Use a Binding to ensure the text is always updated.
-                Binding { target: modeText; property: "text"; value: AppSettings.currentMode === "Foggy" ? "F" : "NF" }
                 text: AppSettings.currentMode === "Foggy" ? "F" : "NF"
 
-                // Explicitly react to changes in the AppSettings singleton
                 Connections {
                     target: AppSettings
                     function onCurrentModeChanged() { modeText.text = AppSettings.currentMode === "Foggy" ? "F" : "NF"; }
-                }
-            }
-        }
-
-        // Battery Indicator
-        Rectangle {
-            id: batteryIndicator
-            width: 60
-            height: 30
-            color: "transparent"
-            border.color: "white"
-            border.width: 2
-            radius: 5
-            anchors.verticalCenter: parent.verticalCenter
-
-            Rectangle {
-                id: batteryFill
-                height: parent.height - 4
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.leftMargin: 2
-                Binding { target: batteryFill; property: "width"; value: (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100) }
-                Binding { target: batteryFill; property: "color"; value: AppSettings.batteryLevel > 20 ? "green" : "red" }
-
-                // Explicitly react to changes in the AppSettings singleton
-                Connections {
-                    target: AppSettings
-                    function onBatteryLevelChanged() {
-                        batteryFill.width = (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100);
-                        batteryFill.color = AppSettings.batteryLevel > 20 ? "green" : "red";
-                    }
                 }
             }
         }
