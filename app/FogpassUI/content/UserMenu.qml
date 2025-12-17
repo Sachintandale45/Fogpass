@@ -26,12 +26,14 @@ Item {
         return s;
     }
 
+
     function go(title) {
         var s = stackRef();
         if (s) {
             s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ModePlaceholder.qml"), { parentWindow: userMenuRoot.parentWindow, title: title })
         }
     }
+
 
     function goVolume() {
         var s = stackRef();
@@ -74,7 +76,7 @@ Item {
             Button { text: "Auto Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
-                onClicked: go("Auto Mode")
+                onClicked: go("Auto Mode");
             }
             Button { text: "Manual Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
@@ -96,11 +98,13 @@ Item {
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: goBrightness()
             }
+
             Button { text: "Display All Route"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: go("Display All Route")
             }
+
         }
 
         Item { Layout.fillHeight: true }
@@ -128,6 +132,7 @@ Item {
                 }
                 onClicked: { var s = (parentWindow && parentWindow.stack) || StackView.view; if (s) s.pop(); else console.warn("UserMenu: no stack on back"); }
             }
+
         }
     }
 }

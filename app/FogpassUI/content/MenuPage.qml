@@ -1,9 +1,11 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import trial1
 
 Item {
     id: root
+    property bool isAuthenticated: false
     property var parentWindow
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
@@ -12,6 +14,32 @@ Item {
         var s = (parentWindow && parentWindow.stack) || StackView.view;
         if (!s) console.warn("MenuPage: no stack available for navigation");
         return s;
+    }
+
+    function goTestMenu() {
+        if (!root.isAuthenticated) {
+            passwordPopup.open();
+            passwordPopup.targetPage = "TestMenu";
+        } else {
+            var s = root.stackRef();
+            if (s) {
+                s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/TestMenuPage.qml"), { parentWindow: root.parentWindow });
+                root.isAuthenticated = false; // Reset auth after navigation
+            }
+        }
+    }
+
+    function goUsbMenu() {
+        if (!root.isAuthenticated) {
+            passwordPopup.open();
+            passwordPopup.targetPage = "UsbMenu";
+        } else {
+            var s = root.stackRef();
+            if (s) {
+                s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/PlaceholderPage.qml"), { title: "USB Menu", parentWindow: root.parentWindow });
+                root.isAuthenticated = false; // Reset auth after navigation
+            }
+        }
     }
 
     // Beautiful gradient background with mixed colors
@@ -85,8 +113,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
             }
             onClicked: {
-                var s = root.stackRef();
-                if (s) s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/TestMenuPage.qml"), { parentWindow: root.parentWindow });
+                goTestMenu();
             }
         }
         Button { 
@@ -111,8 +138,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
             }
             onClicked: {
-                var s = root.stackRef();
-                if (s) s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/PlaceholderPage.qml"), { title: "USB Menu", parentWindow: root.parentWindow });
+                goUsbMenu();
             }
         }
         Button { 
@@ -142,5 +168,56 @@ Item {
             }
         }
 
+    }
+
+    Popup {
+        id: passwordPopup
+        property string targetPage: ""
+        x: (root.width - width) / 2
+        y: (root.height - height) / 2
+        width: 300
+        height: 200
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+
+        background: Rectangle {
+            color: "#444"
+            border.color: "#FFF"
+            border.width: 1
+            radius: 8
+        }
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 16
+            spacing: 12
+
+            Text {
+                text: "Enter Password"
+                color: "white"
+                font.bold: true
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            TextField {
+                id: passwordField
+                Layout.fillWidth: true
+                placeholderText: "Password"
+                echoMode: TextInput.Password
+                color: "white"
+                onAccepted: {
+                    if (text === AppSettings.volumePassword) {
+                        root.isAuthenticated = true;
+                        passwordPopup.close();
+                        if (passwordPopup.targetPage === "TestMenu") {
+                            goTestMenu();
+                        } else if (passwordPopup.targetPage === "UsbMenu") {
+                            goUsbMenu();
+                        }
+                    } else { text = ""; }
+                }
+            }
+        }
     }
 }
