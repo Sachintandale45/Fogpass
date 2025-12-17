@@ -244,9 +244,9 @@ Item {
                     Layout.minimumWidth: 180
                     Layout.minimumHeight: 45
                     font.pointSize: 16
-                    background: Rectangle { color: AppSettings.weatherMode === "Foggy Mode" ? "#2980b9" : "#566573"; radius: 8 }
+                    background: Rectangle { color: AppSettings.currentMode === "Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.weatherMode = "Foggy Mode";
+                        AppSettings.currentMode = "Foggy";
                         weatherModePopup.close();
                     }
                 }
@@ -256,9 +256,9 @@ Item {
                     Layout.minimumWidth: 180
                     Layout.minimumHeight: 45
                     font.pointSize: 16
-                    background: Rectangle { color: AppSettings.weatherMode === "Non-Foggy Mode" ? "#2980b9" : "#566573"; radius: 8 }
+                    background: Rectangle { color: AppSettings.currentMode === "Non-Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.weatherMode = "Non-Foggy Mode";
+                        AppSettings.currentMode = "Non-Foggy";
                         weatherModePopup.close();
                     }
                 }

@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import trial1 1.0
-import trial1.config 1.0
 
 Rectangle {
     id: headerBar
