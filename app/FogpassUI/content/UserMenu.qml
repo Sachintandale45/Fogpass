@@ -153,7 +153,7 @@ Item {
         height: 220
         modal: true
         focus: true
-        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+        closePolicy: Popup.NoAutoClose
 
         background: Rectangle {
             color: "#34495e"
