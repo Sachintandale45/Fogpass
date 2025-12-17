@@ -1,7 +1,7 @@
 CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o: \
- /home/sachin/projects/FogpassUI/src/backend/backendmanager.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/FogpassUI/src/backend/backendmanager.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \

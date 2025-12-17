@@ -1,10 +1,19 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+// Import our singleton to access global application settings
+import trial1
 
 Item {
+    // Define a signal that will be emitted when the volume is finalized
+    signal volumeChanged(int newVolume)
+
     id: root
     property var parentWindow
+    // This property receives the volume level from the previous page
+    property bool isAuthenticated: false
+    property int previousVolume: volumeLevel
+    property int volumeLevel: 75 // This property receives the value from the previous page
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
 
@@ -39,7 +48,7 @@ Item {
 
         Text {
             id: valueText
-            text: (parentWindow ? parentWindow.volumeLevel : 0) + "%"
+            text: Math.round(volumeSlider.value) + "%"
             font.pointSize: 22
             font.bold: true
             color: "#ffffff"
@@ -52,13 +61,23 @@ Item {
             Layout.fillWidth: true
             from: 0
             to: 100
-            value: parentWindow ? parentWindow.volumeLevel : 75
+            value: root.volumeLevel // Set slider's initial value
             stepSize: 1
             onValueChanged: {
-                if (parentWindow) {
-                    parentWindow.volumeLevel = value
-                    valueText.text = Math.round(value) + "%"
+                if (value < AppSettings.volumeThreshold && !root.isAuthenticated) {
+                    // If moving below threshold without auth, open dialog
+                    passwordPopup.open();
+                    // Prevent slider from staying in the restricted area
+                    volumeSlider.value = root.previousVolume;
+                } else {
+                    // Otherwise, allow the change
+                    root.volumeLevel = value;
+                    root.previousVolume = value;
                 }
+            }
+            onPressedChanged: {
+                // Store the volume when the user starts dragging
+                if (pressed) root.previousVolume = volumeSlider.value;
             }
         }
 
@@ -85,9 +104,60 @@ Item {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                 }
-            onClicked: { var s = stackRef(); if (s) s.pop(); else console.warn("VolumeControl: no stack on back"); }
+                onClicked: { 
+                    var s = stackRef(); 
+                    if (s) {
+                        // Emit the signal with the new volume before popping the page
+                        root.volumeChanged(root.volumeLevel);
+                        s.pop(); 
+                    } else console.warn("VolumeControl: no stack on back"); 
+                }
+            }
+        }
+    }
+
+    Popup {
+        id: passwordPopup
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        width: 300
+        height: 200
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+
+        background: Rectangle {
+            color: "#444"
+            border.color: "#FFF"
+            border.width: 1
+            radius: 8
+        }
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 16
+            spacing: 12
+
+            Text {
+                text: "Enter Password"
+                color: "white"
+                font.bold: true
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            TextField {
+                id: passwordField
+                Layout.fillWidth: true
+                placeholderText: "Password"
+                echoMode: TextInput.Password
+                color: "white"
+                onAccepted: { 
+                    if (text === AppSettings.volumePassword) {
+                        root.isAuthenticated = true;
+                        passwordPopup.close();
+                    } else { text = ""; }
+                }
             }
         }
     }
 }
-

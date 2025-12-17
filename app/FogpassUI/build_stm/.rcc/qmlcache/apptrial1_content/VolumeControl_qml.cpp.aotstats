@@ -5,91 +5,99 @@
                 "entries": [
                     {
                         "codegenSuccessfull": true,
+                        "column": 34,
+                        "durationMicroseconds": 138,
+                        "errorMessage": "",
+                        "functionName": "previousVolume",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 220,
+                        "durationMicroseconds": 414,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 8
+                        "line": 17
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 278,
                         "errorMessage": "",
                         "functionName": "height",
-                        "line": 9
+                        "line": 18
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 29,
-                        "errorMessage": "Cannot load property stack from (component in /home/sachin/projects/FogpassUI/content/VolumeControl.qml)::parentWindow with type QVariant.",
+                        "durationMicroseconds": 44,
+                        "errorMessage": "Cannot load property stack from (component in /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml)::parentWindow with type QVariant.",
                         "functionName": "stackRef",
-                        "line": 20
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 23,
-                        "durationMicroseconds": 54,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 12
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 16,
-                        "durationMicroseconds": 237,
-                        "errorMessage": "",
-                        "functionName": "width",
                         "line": 29
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 27,
-                        "durationMicroseconds": 53,
+                        "column": 23,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 27
+                        "functionName": "fill",
+                        "line": 21
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 34,
-                        "durationMicroseconds": 72,
+                        "column": 16,
+                        "durationMicroseconds": 357,
                         "errorMessage": "",
-                        "functionName": "horizontalAlignment",
+                        "functionName": "width",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 81,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
                         "line": 36
                     },
                     {
                         "codegenSuccessfull": true,
+                        "column": 34,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 37
+                        "line": 46
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 27,
-                        "errorMessage": "Cannot access value for name parentWindow",
+                        "durationMicroseconds": 57,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: volumeSlider",
                         "functionName": "text",
-                        "line": 42
+                        "line": 51
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 105,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 46
+                        "line": 55
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 47
+                        "line": 56
                     },
                     {
                         "codegenSuccessfull": false,
@@ -97,7 +105,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"value\".",
                         "functionName": "value",
-                        "line": 55
+                        "line": 64
                     },
                     {
                         "codegenSuccessfull": false,
@@ -105,74 +113,138 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"valueChanged\".",
                         "functionName": "onValueChanged",
-                        "line": 57
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"pressedChanged\".",
+                        "functionName": "onPressedChanged",
+                        "line": 78
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 118,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 67
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 24,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 88
+                        "line": 86
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
-                        "line": 76
+                        "line": 95
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
-                        "line": 77
+                        "line": 96
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
-                        "line": 82
+                        "line": 101
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
-                        "line": 83
+                        "line": 102
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 232,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
-                        "line": 85
+                        "line": 104
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 271,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 86
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 12,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"x\".",
+                        "functionName": "x",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 12,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"y\".",
+                        "functionName": "y",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 22,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"closePolicy\".",
+                        "functionName": "closePolicy",
+                        "line": 127
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 105,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 137
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 145
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"echoMode\".",
+                        "functionName": "echoMode",
+                        "line": 152
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 29,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"accepted\".",
+                        "functionName": "onAccepted",
+                        "line": 154
                     }
                 ],
-                "filepath": "/home/sachin/projects/FogpassUI/content/VolumeControl.qml"
+                "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml"
             }
         ],
         "moduleId": "trial1(apptrial1)"

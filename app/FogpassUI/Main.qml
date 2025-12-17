@@ -42,6 +42,5 @@ ApplicationWindow {
         anchors.right: parent.right
         anchors.margins: 16
         z: 2
-        batteryLevel: typeof backend !== 'undefined' ? backend.batteryLevel : 0
     }
 }

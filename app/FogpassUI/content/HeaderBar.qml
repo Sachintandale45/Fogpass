@@ -4,7 +4,6 @@ import trial1
 
 Item {
     id: headerBar
-    property int batteryLevel: 0
 
     width: batteryRow.implicitWidth + volumeRow.implicitWidth + 32
     height: 40
@@ -52,15 +51,15 @@ Item {
                         leftMargin: 3
                         rightMargin: 10
                     }
-                    width: Math.max(6, (batteryLevel / 100) * (parent.width - 13))
+                    width: Math.max(6, (AppSettings.batteryLevel / 100) * (parent.width - 13))
                     radius: 4
-                    color: batteryLevel >= 80 ? "#2ecc71" : (batteryLevel >= 50 ? "#f1c40f" : "#e74c3c")
+                    color: AppSettings.batteryLevel >= 80 ? "#2ecc71" : (AppSettings.batteryLevel >= 50 ? "#f1c40f" : "#e74c3c")
                     opacity: 0.95
                 }
             }
 
             Text {
-                text: batteryLevel + "%"
+                text: AppSettings.batteryLevel + "%"
                 color: "#ffffff"
                 font.pointSize: 14
                 font.bold: true

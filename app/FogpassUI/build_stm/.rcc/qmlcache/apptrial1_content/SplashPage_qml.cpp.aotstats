@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 230,
+                        "durationMicroseconds": 370,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 8
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 161,
+                        "durationMicroseconds": 230,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 9
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 13
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 242,
+                        "durationMicroseconds": 342,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 25
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 22
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 107,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 32
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 94,
+                        "durationMicroseconds": 97,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 33
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 34
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 110,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 40
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 48
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 49
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 55
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 56
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 149,
+                        "durationMicroseconds": 213,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 58
@@ -126,13 +126,13 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 129,
+                        "durationMicroseconds": 219,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 59
                     }
                 ],
-                "filepath": "/home/sachin/projects/FogpassUI/content/SplashPage.qml"
+                "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml"
             }
         ],
         "moduleId": "trial1(apptrial1)"

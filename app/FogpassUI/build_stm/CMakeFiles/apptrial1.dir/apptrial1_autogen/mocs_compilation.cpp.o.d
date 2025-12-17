@@ -1,8 +1,8 @@
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: \
- /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/mocs_compilation.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/mocs_compilation.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp \
- /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/backendmanager.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/backendmanager.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \

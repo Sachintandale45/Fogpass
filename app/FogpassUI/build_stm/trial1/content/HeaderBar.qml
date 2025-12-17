@@ -1,10 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import trial1
 
 Item {
     id: headerBar
-    property int batteryLevel: 0
-    property int volumeLevel: 75
 
     width: batteryRow.implicitWidth + volumeRow.implicitWidth + 32
     height: 40
@@ -52,15 +51,15 @@ Item {
                         leftMargin: 3
                         rightMargin: 10
                     }
-                    width: Math.max(6, (batteryLevel / 100) * (parent.width - 13))
+                    width: Math.max(6, (AppSettings.batteryLevel / 100) * (parent.width - 13))
                     radius: 4
-                    color: batteryLevel >= 80 ? "#2ecc71" : (batteryLevel >= 50 ? "#f1c40f" : "#e74c3c")
+                    color: AppSettings.batteryLevel >= 80 ? "#2ecc71" : (AppSettings.batteryLevel >= 50 ? "#f1c40f" : "#e74c3c")
                     opacity: 0.95
                 }
             }
 
             Text {
-                text: batteryLevel + "%"
+                text: AppSettings.batteryLevel + "%"
                 color: "#ffffff"
                 font.pointSize: 14
                 font.bold: true
@@ -97,7 +96,7 @@ Item {
                         ctx.fill()
 
                         // bars based on volume
-                        var v = Math.max(0, Math.min(100, volumeLevel)) / 100
+                        var v = Math.max(0, Math.min(100, AppSettings.volumeLevel)) / 100
                         var bars = 3
                         for (var i = 1; i <= bars; i++) {
                             var strength = v - (i - 1) * 0.25
@@ -120,7 +119,7 @@ Item {
             }
 
             Text {
-                text: volumeLevel + "%"
+                text: AppSettings.volumeLevel + "%"
                 color: "#ffffff"
                 font.pointSize: 14
                 font.bold: true
@@ -129,4 +128,3 @@ Item {
         }
     }
 }
-

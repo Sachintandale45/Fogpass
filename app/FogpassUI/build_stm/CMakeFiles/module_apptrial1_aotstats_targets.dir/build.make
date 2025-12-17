@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for module_apptrial1_aotstats_targets.
 
@@ -82,207 +82,241 @@ CMakeFiles/module_apptrial1_aotstats_targets: .rcc/qmlcache/module_trial1.aotsta
 .rcc/qmlcache/module_trial1.aotstats: .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.aotstats
 .rcc/qmlcache/module_trial1.aotstats: .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.aotstats
 .rcc/qmlcache/module_trial1.aotstats: .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.aotstats
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_trial1.aotstats"
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats aggregate /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/module_trial1.aotstatslist /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/module_trial1.aotstats
+.rcc/qmlcache/module_trial1.aotstats: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats
+.rcc/qmlcache/module_trial1.aotstats: .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_trial1.aotstats"
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats aggregate /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/module_trial1.aotstatslist /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/module_trial1.aotstats
 
 .rcc/qmlcache/apptrial1_Main_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_Main_qml.cpp: /home/sachin/projects/FogpassUI/Main.qml
+.rcc/qmlcache/apptrial1_Main_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml
 .rcc/qmlcache/apptrial1_Main_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_Main_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_Main_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_Main_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_Main_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/apptrial1_Main_qml.cpp, .rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/Main.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp /home/sachin/projects/FogpassUI/Main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/apptrial1_Main_qml.cpp, .rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/Main.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml
 
 .rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_Main_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats
 
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: .qt/rcc/qmake_trial1.qrc
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: trial1/apptrial1.qmltypes
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp: trial1/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp, .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_config
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/config/AppSettings.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
+
+.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats
+
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: .qt/rcc/qmake_trial1.qrc
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: trial1/apptrial1.qmltypes
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp: trial1/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp, .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/BrightnessControl.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
+
+.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats
+
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: /home/sachin/projects/FogpassUI/content/DemoPage.qml
+.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp, .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/DemoPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp /home/sachin/projects/FogpassUI/content/DemoPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp, .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/DemoPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml
 
 .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: /home/sachin/projects/FogpassUI/content/GPSSimulationPage.qml
+.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/GPSSimulationPage.qml
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp, .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/GPSSimulationPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp /home/sachin/projects/FogpassUI/content/GPSSimulationPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp, .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/GPSSimulationPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/GPSSimulationPage.qml
 
 .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: /home/sachin/projects/FogpassUI/content/HeaderBar.qml
+.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp, .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/HeaderBar.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp /home/sachin/projects/FogpassUI/content/HeaderBar.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp, .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/HeaderBar.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
 
 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: /home/sachin/projects/FogpassUI/content/IntroPage.qml
+.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/IntroPage.qml
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp, .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/IntroPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp /home/sachin/projects/FogpassUI/content/IntroPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp, .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/IntroPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/IntroPage.qml
 
 .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: /home/sachin/projects/FogpassUI/content/MenuPage.qml
+.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/MenuPage.qml
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp, .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/MenuPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp /home/sachin/projects/FogpassUI/content/MenuPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp, .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/MenuPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/MenuPage.qml
 
 .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: /home/sachin/projects/FogpassUI/content/ModePlaceholder.qml
+.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp, .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/ModePlaceholder.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp /home/sachin/projects/FogpassUI/content/ModePlaceholder.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp, .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/ModePlaceholder.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
 
 .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: /home/sachin/projects/FogpassUI/content/PlaceholderPage.qml
+.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/PlaceholderPage.qml
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp, .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/PlaceholderPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp /home/sachin/projects/FogpassUI/content/PlaceholderPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp, .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/PlaceholderPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/PlaceholderPage.qml
 
 .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: /home/sachin/projects/FogpassUI/content/SplashPage.qml
+.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp, .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/SplashPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp /home/sachin/projects/FogpassUI/content/SplashPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp, .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/SplashPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml
 
 .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: /home/sachin/projects/FogpassUI/content/TestMenuPage.qml
+.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/TestMenuPage.qml
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp, .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/TestMenuPage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp /home/sachin/projects/FogpassUI/content/TestMenuPage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp, .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/TestMenuPage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/TestMenuPage.qml
 
 .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: /home/sachin/projects/FogpassUI/content/UserMenu.qml
+.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Generating .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp, .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/UserMenu.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp /home/sachin/projects/FogpassUI/content/UserMenu.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp, .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/UserMenu.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml
 
 .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: /home/sachin/projects/FogpassUI/content/VolumeControl.qml
+.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp, .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/VolumeControl.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp /home/sachin/projects/FogpassUI/content/VolumeControl.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp, .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/VolumeControl.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
 
 .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: /home/sachin/projects/FogpassUI/content/WelcomePage.qml
+.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/WelcomePage.qml
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp, .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/WelcomePage.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp /home/sachin/projects/FogpassUI/content/WelcomePage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Generating .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp, .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/WelcomePage.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/WelcomePage.qml
 
 .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.aotstats
 
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
-.rcc/qmlcache/apptrial1_content/button_qml.cpp: /home/sachin/projects/FogpassUI/content/button.qml
+.rcc/qmlcache/apptrial1_content/button_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: .qt/rcc/qmake_trial1.qrc
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: trial1/apptrial1.qmltypes
 .rcc/qmlcache/apptrial1_content/button_qml.cpp: trial1/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Generating .rcc/qmlcache/apptrial1_content/button_qml.cpp, .rcc/qmlcache/apptrial1_content/button_qml.cpp.aotstats"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/button.qml -I /home/sachin/projects/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp /home/sachin/projects/FogpassUI/content/button.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating .rcc/qmlcache/apptrial1_content/button_qml.cpp, .rcc/qmlcache/apptrial1_content/button_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/button.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml
 
 .rcc/qmlcache/apptrial1_content/button_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/button_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/button_qml.cpp.aotstats
 
 module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_Main_qml.cpp
 module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats
+module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp
+module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats
+module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
+module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats
 module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats
 module_apptrial1_aotstats_targets: .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp
@@ -323,6 +357,6 @@ CMakeFiles/module_apptrial1_aotstats_targets.dir/clean:
 .PHONY : CMakeFiles/module_apptrial1_aotstats_targets.dir/clean
 
 CMakeFiles/module_apptrial1_aotstats_targets.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/module_apptrial1_aotstats_targets.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/module_apptrial1_aotstats_targets.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/module_apptrial1_aotstats_targets.dir/depend
 

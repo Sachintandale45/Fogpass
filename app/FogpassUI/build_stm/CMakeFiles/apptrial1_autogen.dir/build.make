@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for apptrial1_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/apptrial1_autogen: apptrial1_autogen/timestamp
 
 apptrial1_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
 apptrial1_autogen/timestamp: CMakeFiles/apptrial1_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target apptrial1"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cmake_autogen /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json Release
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target apptrial1"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cmake_autogen /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json ""
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/timestamp
 
 apptrial1_autogen: CMakeFiles/apptrial1_autogen
 apptrial1_autogen: apptrial1_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/apptrial1_autogen.dir/clean:
 .PHONY : CMakeFiles/apptrial1_autogen.dir/clean
 
 CMakeFiles/apptrial1_autogen.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/apptrial1_autogen.dir/depend
 

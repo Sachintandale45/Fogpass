@@ -1,5 +1,5 @@
 CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o: \
- /home/sachin/projects/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtQml/qqml.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtQml/qqmlprivate.h \

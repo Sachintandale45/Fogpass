@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for apptrial1_qmlimportscan.
 
@@ -72,22 +72,24 @@ CMakeFiles/apptrial1_qmlimportscan: .qt/qml_imports/apptrial1_build.cmake
 .qt/qml_imports/apptrial1_build.cmake: .qt/rcc/qmake_trial1.qrc
 .qt/qml_imports/apptrial1_build.cmake: .qt/rcc/apptrial1_raw_qml_0.qrc
 .qt/qml_imports/apptrial1_build.cmake: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/Main.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/button.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/DemoPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/WelcomePage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/PlaceholderPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/SplashPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/MenuPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/IntroPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/UserMenu.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/TestMenuPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/GPSSimulationPage.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/HeaderBar.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/ModePlaceholder.qml
-.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/FogpassUI/content/VolumeControl.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for apptrial1"
-	cd /home/sachin/projects/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlimportscanner @/home/sachin/projects/FogpassUI/build_stm/.qt/qml_imports/apptrial1_build.rsp
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/WelcomePage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/PlaceholderPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/MenuPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/IntroPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/TestMenuPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/GPSSimulationPage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for apptrial1"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlimportscanner @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/qml_imports/apptrial1_build.rsp
 
 apptrial1_qmlimportscan: .qt/qml_imports/apptrial1_build.cmake
 apptrial1_qmlimportscan: CMakeFiles/apptrial1_qmlimportscan
@@ -103,6 +105,6 @@ CMakeFiles/apptrial1_qmlimportscan.dir/clean:
 .PHONY : CMakeFiles/apptrial1_qmlimportscan.dir/clean
 
 CMakeFiles/apptrial1_qmlimportscan.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/apptrial1_qmlimportscan.dir/depend
 

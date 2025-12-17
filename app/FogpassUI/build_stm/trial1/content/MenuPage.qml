@@ -41,6 +41,7 @@ Item {
             text: "User Menu"; 
             Layout.minimumWidth: 240; 
             Layout.minimumHeight: 50
+            Layout.alignment: Qt.AlignHCenter
             font.pointSize: 14
             font.bold: true
             background: Rectangle {
@@ -66,6 +67,7 @@ Item {
             text: "Test Menu"; 
             Layout.minimumWidth: 240; 
             Layout.minimumHeight: 50
+            Layout.alignment: Qt.AlignHCenter
             font.pointSize: 14
             font.bold: true
             background: Rectangle {
@@ -91,6 +93,7 @@ Item {
             text: "USB Menu"; 
             Layout.minimumWidth: 240; 
             Layout.minimumHeight: 50
+            Layout.alignment: Qt.AlignHCenter
             font.pointSize: 14
             font.bold: true
             background: Rectangle {
@@ -116,6 +119,7 @@ Item {
             text: "GPS Simulation"; 
             Layout.minimumWidth: 240; 
             Layout.minimumHeight: 50
+            Layout.alignment: Qt.AlignHCenter
             font.pointSize: 14
             font.bold: true
             background: Rectangle {

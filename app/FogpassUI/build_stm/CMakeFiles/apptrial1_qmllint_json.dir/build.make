@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for apptrial1_qmllint_json.
 
@@ -67,22 +67,24 @@ include CMakeFiles/apptrial1_qmllint_json.dir/compiler_depend.make
 include CMakeFiles/apptrial1_qmllint_json.dir/progress.make
 
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/Qt/6.8.3/gcc_64/bin/qmllint
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/Main.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/button.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/DemoPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/WelcomePage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/PlaceholderPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/SplashPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/MenuPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/IntroPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/UserMenu.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/TestMenuPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/GPSSimulationPage.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/HeaderBar.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/ModePlaceholder.qml
-CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/FogpassUI/content/VolumeControl.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/WelcomePage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/PlaceholderPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/MenuPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/IntroPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/TestMenuPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/GPSSimulationPage.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 CMakeFiles/apptrial1_qmllint_json: .rcc/qmllint/apptrial1_json.rsp
-	cd /home/sachin/projects/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/bin/qmllint @/home/sachin/projects/FogpassUI/build_stm/.rcc/qmllint/apptrial1_json.rsp
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/bin/qmllint @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmllint/apptrial1_json.rsp
 
 apptrial1_qmllint_json: CMakeFiles/apptrial1_qmllint_json
 apptrial1_qmllint_json: CMakeFiles/apptrial1_qmllint_json.dir/build.make
@@ -97,6 +99,6 @@ CMakeFiles/apptrial1_qmllint_json.dir/clean:
 .PHONY : CMakeFiles/apptrial1_qmllint_json.dir/clean
 
 CMakeFiles/apptrial1_qmllint_json.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/apptrial1_qmllint_json.dir/depend
 

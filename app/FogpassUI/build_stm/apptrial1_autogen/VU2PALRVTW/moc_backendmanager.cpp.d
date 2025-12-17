@@ -1,5 +1,5 @@
-/home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp: /home/sachin/projects/FogpassUI/src/backend/backendmanager.h \
-  /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/moc_predefs.h \
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.h \
+  /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/moc_predefs.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \

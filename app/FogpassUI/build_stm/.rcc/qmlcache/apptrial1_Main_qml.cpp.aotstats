@@ -9,7 +9,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"flags\".",
                         "functionName": "flags",
-                        "line": 10
+                        "line": 11
                     },
                     {
                         "codegenSuccessfull": false,
@@ -30,31 +30,15 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot retrieve a non-object type by ID: stackView",
                         "functionName": "onCompleted",
                         "line": 34
                     },
                     {
-                        "codegenSuccessfull": false,
-                        "column": 23,
-                        "durationMicroseconds": 124,
-                        "errorMessage": "Cannot access value for name backend",
-                        "functionName": "batteryLevel",
-                        "line": 45
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 22,
-                        "durationMicroseconds": 17,
-                        "errorMessage": "Cannot retrieve a non-object type by ID: appWindow",
-                        "functionName": "volumeLevel",
-                        "line": 46
-                    },
-                    {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 195,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 41
@@ -62,13 +46,13 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 42
                     }
                 ],
-                "filepath": "/home/sachin/projects/FogpassUI/Main.qml"
+                "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml"
             }
         ],
         "moduleId": "trial1(apptrial1)"

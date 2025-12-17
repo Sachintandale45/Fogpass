@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "apptrial1_qmltyperegistrations.cpp"
   "meta_types/apptrial1_json_file_list.txt"
   "meta_types/apptrial1_json_file_list.txt.timestamp"
-  "meta_types/qt6apptrial1_release_metatypes.json"
-  "meta_types/qt6apptrial1_release_metatypes.json.gen"
+  "meta_types/qt6apptrial1_metatypes.json"
+  "meta_types/qt6apptrial1_metatypes.json.gen"
   "trial1/apptrial1.qmltypes"
 )
 

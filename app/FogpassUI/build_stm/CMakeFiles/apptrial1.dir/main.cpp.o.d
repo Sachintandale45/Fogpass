@@ -1,5 +1,5 @@
 CMakeFiles/apptrial1.dir/main.cpp.o: \
- /home/sachin/projects/FogpassUI/main.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/main.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtGui/QGuiApplication \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtGui/qguiapplication.h \
@@ -462,7 +462,7 @@ CMakeFiles/apptrial1.dir/main.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtQml/qqmlabstracturlinterceptor.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtQml/QQmlContext \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtQml/qqmlcontext.h \
- /home/sachin/projects/FogpassUI/src/backend/backendmanager.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \

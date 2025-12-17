@@ -1,2 +1,2 @@
-set(__QT_DEPLOY_TARGET_apptrial1_FILE /home/sachin/projects/FogpassUI/build_stm/apptrial1)
+set(__QT_DEPLOY_TARGET_apptrial1_FILE /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1)
 set(__QT_DEPLOY_TARGET_apptrial1_TYPE EXECUTABLE)

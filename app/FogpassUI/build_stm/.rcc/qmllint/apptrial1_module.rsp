@@ -1,12 +1,12 @@
 -I
-/home/sachin/projects/FogpassUI/build_stm
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 -I
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 --module
 trial1

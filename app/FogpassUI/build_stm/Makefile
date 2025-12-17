@@ -57,10 +57,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sachin/projects/FogpassUI/build_stm/CMakeFiles /home/sachin/projects/FogpassUI/build_stm//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sachin/projects/FogpassUI/build_stm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -499,6 +499,54 @@ build_stm/.rcc/qmlcache/apptrial1_Main_qml.s: build_stm/.rcc/qmlcache/apptrial1_
 build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.s
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.s
+
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.o: build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.o
+
+# target to build an object file
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o
+
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.i: build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.i
+
+# target to preprocess a source file
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.i
+
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.s: build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.s
+
+# target to generate assembly for a file
+build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.s
+
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o
+
+# target to build an object file
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o
+
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.i: build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.i
+
+# target to preprocess a source file
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.i
+
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.s: build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.s
+
+# target to generate assembly for a file
+build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s
 
 build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o
@@ -929,6 +977,12 @@ help:
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_Main_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_Main_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_Main_qml.s"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.o"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.i"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.s"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.i"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.s"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.s"

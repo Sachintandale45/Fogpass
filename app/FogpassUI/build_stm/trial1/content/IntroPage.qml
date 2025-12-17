@@ -19,9 +19,7 @@ Item {
     }
 
     ColumnLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.top
-        anchors.topMargin: 110
+        anchors.centerIn: parent
         spacing: 10
         width: parent ? parent.width * 0.8 : 640
 

@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for apptrial1_qmltyperegistration.
 
@@ -70,7 +70,7 @@ CMakeFiles/apptrial1_qmltyperegistration: apptrial1_qmltyperegistrations.cpp
 CMakeFiles/apptrial1_qmltyperegistration: trial1/apptrial1.qmltypes
 
 apptrial1_qmltyperegistrations.cpp: qmltypes/apptrial1_foreign_types.txt
-apptrial1_qmltyperegistrations.cpp: meta_types/qt6apptrial1_release_metatypes.json
+apptrial1_qmltyperegistrations.cpp: meta_types/qt6apptrial1_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmltyperegistrar
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6core_release_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6qml_release_metatypes.json
@@ -81,41 +81,41 @@ apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/l
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6qmlmodels_release_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6qmlworkerscript_release_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6opengl_release_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target apptrial1"
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmltyperegistrar --generate-qmltypes=/home/sachin/projects/FogpassUI/build_stm/trial1/apptrial1.qmltypes --import-name=trial1 --major-version=1 --minor-version=0 @/home/sachin/projects/FogpassUI/build_stm/qmltypes/apptrial1_foreign_types.txt -o /home/sachin/projects/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp /home/sachin/projects/FogpassUI/build_stm/meta_types/qt6apptrial1_release_metatypes.json
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/FogpassUI/build_stm/.qt/qmltypes
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/FogpassUI/build_stm/.qt/qmltypes/apptrial1.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target apptrial1"
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmltyperegistrar --generate-qmltypes=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/apptrial1.qmltypes --import-name=trial1 --major-version=1 --minor-version=0 @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/qmltypes/apptrial1_foreign_types.txt -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/qt6apptrial1_metatypes.json
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/qmltypes
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/qmltypes/apptrial1.qmltypes
 
 trial1/apptrial1.qmltypes: apptrial1_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate trial1/apptrial1.qmltypes
 
-meta_types/qt6apptrial1_release_metatypes.json: meta_types/qt6apptrial1_release_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating meta_types/qt6apptrial1_release_metatypes.json"
+meta_types/qt6apptrial1_metatypes.json: meta_types/qt6apptrial1_metatypes.json.gen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating meta_types/qt6apptrial1_metatypes.json"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E true
 
-meta_types/qt6apptrial1_release_metatypes.json.gen: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
-meta_types/qt6apptrial1_release_metatypes.json.gen: meta_types/apptrial1_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running moc --collect-json for target apptrial1"
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/moc -o /home/sachin/projects/FogpassUI/build_stm/meta_types/qt6apptrial1_release_metatypes.json.gen --collect-json @/home/sachin/projects/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E copy_if_different /home/sachin/projects/FogpassUI/build_stm/meta_types/qt6apptrial1_release_metatypes.json.gen /home/sachin/projects/FogpassUI/build_stm/meta_types/qt6apptrial1_release_metatypes.json
+meta_types/qt6apptrial1_metatypes.json.gen: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
+meta_types/qt6apptrial1_metatypes.json.gen: meta_types/apptrial1_json_file_list.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running moc --collect-json for target apptrial1"
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/moc -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/qt6apptrial1_metatypes.json.gen --collect-json @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E copy_if_different /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/qt6apptrial1_metatypes.json.gen /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/qt6apptrial1_metatypes.json
 
 meta_types/apptrial1_json_file_list.txt: /home/sachin/Qt/6.8.3/gcc_64/libexec/cmake_automoc_parser
 meta_types/apptrial1_json_file_list.txt: apptrial1_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running AUTOMOC file extraction for target apptrial1"
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json --output-file-path /home/sachin/projects/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt --timestamp-file-path /home/sachin/projects/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running AUTOMOC file extraction for target apptrial1"
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json --output-file-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt --timestamp-file-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/include
 
 apptrial1_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
 apptrial1_autogen/timestamp: CMakeFiles/apptrial1_qmltyperegistration.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Automatic MOC and UIC for target apptrial1"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cmake_autogen /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json Release
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/FogpassUI/build_stm/apptrial1_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Automatic MOC and UIC for target apptrial1"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cmake_autogen /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json ""
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/timestamp
 
 apptrial1_qmltyperegistration: CMakeFiles/apptrial1_qmltyperegistration
 apptrial1_qmltyperegistration: apptrial1_autogen/timestamp
 apptrial1_qmltyperegistration: apptrial1_qmltyperegistrations.cpp
 apptrial1_qmltyperegistration: meta_types/apptrial1_json_file_list.txt
-apptrial1_qmltyperegistration: meta_types/qt6apptrial1_release_metatypes.json
-apptrial1_qmltyperegistration: meta_types/qt6apptrial1_release_metatypes.json.gen
+apptrial1_qmltyperegistration: meta_types/qt6apptrial1_metatypes.json
+apptrial1_qmltyperegistration: meta_types/qt6apptrial1_metatypes.json.gen
 apptrial1_qmltyperegistration: trial1/apptrial1.qmltypes
 apptrial1_qmltyperegistration: CMakeFiles/apptrial1_qmltyperegistration.dir/build.make
 .PHONY : apptrial1_qmltyperegistration
@@ -129,6 +129,6 @@ CMakeFiles/apptrial1_qmltyperegistration.dir/clean:
 .PHONY : CMakeFiles/apptrial1_qmltyperegistration.dir/clean
 
 CMakeFiles/apptrial1_qmltyperegistration.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/apptrial1_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/apptrial1_qmltyperegistration.dir/depend
 

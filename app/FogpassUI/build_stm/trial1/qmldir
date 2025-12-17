@@ -14,4 +14,6 @@ GPSSimulationPage 1.0 content/GPSSimulationPage.qml
 HeaderBar 1.0 content/HeaderBar.qml
 ModePlaceholder 1.0 content/ModePlaceholder.qml
 VolumeControl 1.0 content/VolumeControl.qml
+BrightnessControl 1.0 content/BrightnessControl.qml
+singleton AppSettings 1.0 config/AppSettings.qml
 

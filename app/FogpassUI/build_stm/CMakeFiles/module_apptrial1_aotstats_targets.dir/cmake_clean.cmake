@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   ".rcc/qmlcache/apptrial1_Main_qml.cpp"
   ".rcc/qmlcache/apptrial1_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp"
+  ".rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.aotstats"
+  ".rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp"
+  ".rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats"
   ".rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp"
   ".rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats"
   ".rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp"

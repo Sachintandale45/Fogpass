@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/FogpassUI
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/FogpassUI/build_stm
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm
 
 # Utility rule file for all_aotstats.
 
@@ -67,12 +67,12 @@ include CMakeFiles/all_aotstats.dir/compiler_depend.make
 include CMakeFiles/all_aotstats.dir/progress.make
 
 CMakeFiles/all_aotstats: .rcc/qmlcache/all_aotstats.txt
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cat /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.txt
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cat /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.txt
 
 .rcc/qmlcache/all_aotstats.aotstats:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/all_aotstats.aotstats, .rcc/qmlcache/all_aotstats.txt"
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats aggregate /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstatslist /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstats
-	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats format /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstats /home/sachin/projects/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/all_aotstats.aotstats, .rcc/qmlcache/all_aotstats.txt"
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats aggregate /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstatslist /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstats
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlaotstats format /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.aotstats /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/all_aotstats.txt
 
 .rcc/qmlcache/all_aotstats.txt: .rcc/qmlcache/all_aotstats.aotstats
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/all_aotstats.txt
@@ -92,6 +92,6 @@ CMakeFiles/all_aotstats.dir/clean:
 .PHONY : CMakeFiles/all_aotstats.dir/clean
 
 CMakeFiles/all_aotstats.dir/depend:
-	cd /home/sachin/projects/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm /home/sachin/projects/FogpassUI/build_stm/CMakeFiles/all_aotstats.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/all_aotstats.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/all_aotstats.dir/depend
 

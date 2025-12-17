@@ -6,157 +6,157 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 265,
+                        "durationMicroseconds": 866,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 9
+                        "line": 8
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 14
+                        "line": 13
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 26
+                        "line": 25
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 117,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 39
+                        "line": 38
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 177,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 40
+                        "line": 39
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 45,
-                        "errorMessage": "Cannot access value for name batteryLevel",
+                        "durationMicroseconds": 2425,
+                        "errorMessage": "",
                         "functionName": "width",
-                        "line": 55
+                        "line": 54
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 27,
-                        "errorMessage": "Cannot access value for name batteryLevel",
+                        "durationMicroseconds": 919,
+                        "errorMessage": "",
                         "functionName": "color",
-                        "line": 57
+                        "line": 56
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 113,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
                         "functionName": "left",
+                        "line": 48
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 288,
+                        "errorMessage": "",
+                        "functionName": "top",
                         "line": 49
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 30,
-                        "durationMicroseconds": 108,
+                        "column": 33,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
-                        "functionName": "top",
+                        "functionName": "bottom",
                         "line": 50
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 33,
-                        "durationMicroseconds": 107,
-                        "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 51
-                    },
-                    {
-                        "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name batteryLevel",
+                        "durationMicroseconds": 196,
+                        "errorMessage": "",
                         "functionName": "text",
-                        "line": 63
+                        "line": 62
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 67
+                        "line": 66
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 259,
-                        "errorMessage": "Cannot access value for name volumeLevel",
+                        "durationMicroseconds": 9049,
+                        "errorMessage": "Cannot generate efficient code for call to untyped JavaScript function",
                         "functionName": "onPaint",
-                        "line": 83
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 37,
-                        "durationMicroseconds": 62,
-                        "errorMessage": "",
-                        "functionName": "onWidthChanged",
-                        "line": 117
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 38,
-                        "durationMicroseconds": 51,
-                        "errorMessage": "",
-                        "functionName": "onHeightChanged",
-                        "line": 118
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 35,
-                        "durationMicroseconds": 55,
-                        "errorMessage": "",
-                        "functionName": "fill",
                         "line": 82
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 44,
-                        "durationMicroseconds": 52,
+                        "column": 37,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
-                        "functionName": "onCompleted",
+                        "functionName": "onWidthChanged",
                         "line": 116
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
+                        "column": 38,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "onHeightChanged",
+                        "line": 117
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot access value for name volumeLevel",
+                        "durationMicroseconds": 259,
+                        "errorMessage": "",
                         "functionName": "text",
-                        "line": 123
+                        "line": 122
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 116,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 127
+                        "line": 126
                     }
                 ],
-                "filepath": "/home/sachin/projects/FogpassUI/content/HeaderBar.qml"
+                "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml"
             }
         ],
         "moduleId": "trial1(apptrial1)"

@@ -1,9 +1,9 @@
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc
 --resource
-/home/sachin/projects/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
+/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 /qt/qml/trial1/Main.qml
 /qt/qml/trial1/content/button.qml
 /qt/qml/trial1/content/DemoPage.qml
@@ -18,3 +18,5 @@
 /qt/qml/trial1/content/HeaderBar.qml
 /qt/qml/trial1/content/ModePlaceholder.qml
 /qt/qml/trial1/content/VolumeControl.qml
+/qt/qml/trial1/content/BrightnessControl.qml
+/qt/qml/trial1/config/AppSettings.qml

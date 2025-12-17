@@ -1,19 +1,21 @@
 <RCC>
   <qresource prefix="/qt/qml/trial1/">
-    <file alias="Main.qml">/home/sachin/projects/FogpassUI/Main.qml</file>
-    <file alias="content/button.qml">/home/sachin/projects/FogpassUI/content/button.qml</file>
-    <file alias="content/DemoPage.qml">/home/sachin/projects/FogpassUI/content/DemoPage.qml</file>
-    <file alias="content/WelcomePage.qml">/home/sachin/projects/FogpassUI/content/WelcomePage.qml</file>
-    <file alias="content/PlaceholderPage.qml">/home/sachin/projects/FogpassUI/content/PlaceholderPage.qml</file>
-    <file alias="content/SplashPage.qml">/home/sachin/projects/FogpassUI/content/SplashPage.qml</file>
-    <file alias="content/MenuPage.qml">/home/sachin/projects/FogpassUI/content/MenuPage.qml</file>
-    <file alias="content/IntroPage.qml">/home/sachin/projects/FogpassUI/content/IntroPage.qml</file>
-    <file alias="content/UserMenu.qml">/home/sachin/projects/FogpassUI/content/UserMenu.qml</file>
-    <file alias="content/TestMenuPage.qml">/home/sachin/projects/FogpassUI/content/TestMenuPage.qml</file>
-    <file alias="content/GPSSimulationPage.qml">/home/sachin/projects/FogpassUI/content/GPSSimulationPage.qml</file>
-    <file alias="content/HeaderBar.qml">/home/sachin/projects/FogpassUI/content/HeaderBar.qml</file>
-    <file alias="content/ModePlaceholder.qml">/home/sachin/projects/FogpassUI/content/ModePlaceholder.qml</file>
-    <file alias="content/VolumeControl.qml">/home/sachin/projects/FogpassUI/content/VolumeControl.qml</file>
+    <file alias="Main.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml</file>
+    <file alias="content/button.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml</file>
+    <file alias="content/DemoPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml</file>
+    <file alias="content/WelcomePage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/WelcomePage.qml</file>
+    <file alias="content/PlaceholderPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/PlaceholderPage.qml</file>
+    <file alias="content/SplashPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/SplashPage.qml</file>
+    <file alias="content/MenuPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/MenuPage.qml</file>
+    <file alias="content/IntroPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/IntroPage.qml</file>
+    <file alias="content/UserMenu.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml</file>
+    <file alias="content/TestMenuPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/TestMenuPage.qml</file>
+    <file alias="content/GPSSimulationPage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/GPSSimulationPage.qml</file>
+    <file alias="content/HeaderBar.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml</file>
+    <file alias="content/ModePlaceholder.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml</file>
+    <file alias="content/VolumeControl.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml</file>
+    <file alias="content/BrightnessControl.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml</file>
+    <file alias="config/AppSettings.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml</file>
   </qresource>
 </RCC>
 
