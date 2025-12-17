@@ -48,6 +48,7 @@ qt_add_qml_module(apptrial1
     SOURCES
         src/backend/backendmanager.cpp
         src/backend/backendmanager.h
+        QML_FILES content/AutoRoutePage.qml
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---

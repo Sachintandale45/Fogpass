@@ -34,6 +34,15 @@ Item {
         }
     }
 
+    function goToAutoRoutePage() {
+        confirmPopup.close();
+        var s = stackRef();
+        if (s) {
+            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/AutoRoutePage.qml"), { 
+                parentWindow: userMenuRoot.parentWindow 
+            });
+        }
+    }
 
     function goVolume() {
         var s = stackRef();
@@ -76,7 +85,7 @@ Item {
             Button { text: "Auto Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
-                onClicked: go("Auto Mode");
+                onClicked: confirmPopup.open()
             }
             Button { text: "Manual Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
@@ -133,6 +142,64 @@ Item {
                 onClicked: { var s = (parentWindow && parentWindow.stack) || StackView.view; if (s) s.pop(); else console.warn("UserMenu: no stack on back"); }
             }
 
+        }
+    }
+
+    Popup {
+        id: confirmPopup
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        width: 450
+        height: 220
+        modal: true
+        focus: true
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
+
+        background: Rectangle {
+            color: "#34495e"
+            border.color: "#4fc3f7"
+            border.width: 2
+            radius: 12
+        }
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 20
+            spacing: 20
+
+            Text {
+                text: "Do you want to select auto route?"
+                color: "white"
+                font.pointSize: 18
+                font.bold: true
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignHCenter
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            RowLayout {
+                Layout.alignment: Qt.AlignHCenter
+                spacing: 25
+
+                Button {
+                    text: "YES"
+                    Layout.minimumWidth: 120
+                    Layout.minimumHeight: 45
+                    font.pointSize: 16
+                    background: Rectangle { color: "#27ae60"; radius: 8 }
+                    onClicked: goToAutoRoutePage()
+                }
+
+                Button {
+                    text: "NO"
+                    Layout.minimumWidth: 120
+                    Layout.minimumHeight: 45
+                    font.pointSize: 16
+                    background: Rectangle { color: "#c0392b"; radius: 8 }
+                    onClicked: confirmPopup.close()
+                }
+            }
         }
     }
 }
