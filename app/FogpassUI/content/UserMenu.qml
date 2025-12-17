@@ -95,7 +95,7 @@ Item {
             Button { text: "Weather Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
-                onClicked: go("Weather Mode")
+                onClicked: weatherModePopup.open()
             }
             Button { text: "Adjust Volume"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
@@ -198,6 +198,69 @@ Item {
                     font.pointSize: 16
                     background: Rectangle { color: "#c0392b"; radius: 8 }
                     onClicked: confirmPopup.close()
+                }
+            }
+        }
+    }
+
+    Popup {
+        id: weatherModePopup
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        width: 450
+        height: 220
+        modal: true
+        focus: true
+        closePolicy: Popup.NoAutoClose
+
+        background: Rectangle {
+            color: "#34495e"
+            border.color: "#4fc3f7"
+            border.width: 2
+            radius: 12
+        }
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 20
+            spacing: 20
+
+            Text {
+                text: "Select Weather Mode"
+                color: "white"
+                font.pointSize: 18
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            RowLayout {
+                Layout.alignment: Qt.AlignHCenter
+                spacing: 15
+
+                Button {
+                    text: "Foggy Mode"
+                    Layout.minimumWidth: 180
+                    Layout.minimumHeight: 45
+                    font.pointSize: 16
+                    background: Rectangle { color: AppSettings.weatherMode === "Foggy Mode" ? "#2980b9" : "#566573"; radius: 8 }
+                    onClicked: {
+                        AppSettings.weatherMode = "Foggy Mode";
+                        weatherModePopup.close();
+                    }
+                }
+
+                Button {
+                    text: "Non-Foggy Mode"
+                    Layout.minimumWidth: 180
+                    Layout.minimumHeight: 45
+                    font.pointSize: 16
+                    background: Rectangle { color: AppSettings.weatherMode === "Non-Foggy Mode" ? "#2980b9" : "#566573"; radius: 8 }
+                    onClicked: {
+                        AppSettings.weatherMode = "Non-Foggy Mode";
+                        weatherModePopup.close();
+                    }
                 }
             }
         }
