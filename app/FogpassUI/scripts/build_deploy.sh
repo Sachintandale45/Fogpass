@@ -17,7 +17,7 @@ set -e   # Exit immediately if any command fails
 # ============================================================
 
 # Build
-BUILD_DIR="build_stm"
+BUILD_DIR="../build_stm"
 EXECUTABLE_NAME="apptrial1"
 
 # Qt / SDK
