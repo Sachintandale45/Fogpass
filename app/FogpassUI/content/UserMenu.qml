@@ -47,7 +47,7 @@ Item {
     function goVolume() {
         var s = stackRef();
         if (s) {
-            var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { 
+            var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), {
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
                 volumeLevel: AppSettings.volumeLevel 

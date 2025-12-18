@@ -37,13 +37,6 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.leftMargin: 2
 
-                Connections {
-                    target: AppSettings
-                    function onBatteryLevelChanged() {
-                        batteryFill.width = (batteryIndicator.width - 4) * (AppSettings.batteryLevel / 100);
-                        batteryFill.color = AppSettings.batteryLevel > 20 ? "green" : "red";
-                    }
-                }
             }
 
             Text {
@@ -54,10 +47,6 @@ Rectangle {
                 font.bold: true
                 text: AppSettings.batteryLevel + "%"
 
-                Connections {
-                    target: AppSettings
-                    function onBatteryLevelChanged() { batteryText.text = AppSettings.batteryLevel + "%"; }
-                }
             }
         }
 
@@ -76,10 +65,6 @@ Rectangle {
                 anchors.centerIn: parent
                 text: "🔊 " + AppSettings.volumeLevel
 
-                Connections {
-                    target: AppSettings
-                    function onVolumeLevelChanged() { volumeText.text = "🔊 " + AppSettings.volumeLevel; }
-                }
             }
         }
 
@@ -100,10 +85,6 @@ Rectangle {
                 anchors.centerIn: parent
                 text: AppSettings.currentMode === "Foggy" ? "F" : "NF"
 
-                Connections {
-                    target: AppSettings
-                    function onCurrentModeChanged() { modeText.text = AppSettings.currentMode === "Foggy" ? "F" : "NF"; }
-                }
             }
         }
     }
