@@ -9,7 +9,7 @@ Item {
     // The 'BackendManager' object must be registered with the QML engine from C++
     // for these connections to work.
     Connections {
-        target: BackendManager
+        target: Backend // This must match the context property name from main.cpp
 
         // This function name must match the C++ signal: onBatteryLevelUpdated(int newLevel)
         function onBatteryLevelUpdated(newLevel) {

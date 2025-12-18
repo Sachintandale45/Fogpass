@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     BackendManager backend;
-    engine.rootContext()->setContextProperty("Backend", &backend); // Use "Backend" to match QML
-    backend.init(); // Request initial state from services
+    engine.rootContext()->setContextProperty("Backend", &backend);
+    backend.start(); // Start the battery simulation timer
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,
