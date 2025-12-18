@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     BackendManager backend;
-    backend.start();
-    engine.rootContext()->setContextProperty("backend", &backend);
+    engine.rootContext()->setContextProperty("Backend", &backend); // Use "Backend" to match QML
+    backend.init(); // Request initial state from services
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

@@ -49,7 +49,12 @@ qt_add_qml_module(apptrial1
     SOURCES
         src/backend/backendmanager.cpp
         src/backend/backendmanager.h
-        QML_FILES content/AutoRoutePage.qml
+        src/backend/AudioClient.cpp
+        src/backend/AudioClient.h
+        src/backend/PowerClient.cpp
+        src/backend/PowerClient.h
+        src/backend/CoreClient.cpp
+        src/backend/CoreClient.h
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---
