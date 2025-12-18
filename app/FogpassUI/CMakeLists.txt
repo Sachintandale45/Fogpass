@@ -55,8 +55,6 @@ qt_add_qml_module(apptrial1
         src/backend/PowerClient.h
         src/backend/CoreClient.cpp
         src/backend/CoreClient.h
-        SOURCES src/backend/AudioClient.h src/backend/backendmanager.h src/backend/CoreClient.h src/backend/PowerClient.h
-        SOURCES src/backend/AudioClient.cpp src/backend/AudioClient.h src/backend/backendmanager.cpp src/backend/backendmanager.h src/backend/CoreClient.cpp src/backend/CoreClient.h src/backend/PowerClient.cpp src/backend/PowerClient.h
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---
