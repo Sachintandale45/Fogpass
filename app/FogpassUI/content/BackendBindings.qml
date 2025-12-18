@@ -23,5 +23,11 @@ Item {
             AppSettings.volumeLevel = newVolume;
         }
 
+        // This function name must match the C++ signal: onModeUpdated(string mode)
+        function onModeUpdated(newMode) {
+            console.log("BackendBindings: Received new weather mode from C++:", newMode);
+            AppSettings.currentMode = newMode;
+        }
+
     }
 }

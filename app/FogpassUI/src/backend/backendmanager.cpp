@@ -41,6 +41,11 @@ void BackendManager::setWeatherMode(bool foggy)
 {
     // UI command -> system backend
     m_core->setWeatherMode(foggy);
+
+    // After sending the command, emit the signal to update the UI immediately.
+    // This provides instant feedback to the user.
+    const QString newMode = foggy ? "Foggy" : "Non-Foggy";
+    emit modeUpdated(newMode);
 }
 
 void BackendManager::onTimeout()
