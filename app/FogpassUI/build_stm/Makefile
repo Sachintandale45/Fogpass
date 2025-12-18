@@ -548,6 +548,30 @@ build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.s
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.s
 
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.o
+
+# target to build an object file
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o
+
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.i: build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.i
+
+# target to preprocess a source file
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.i
+
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.s: build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.s
+
+# target to generate assembly for a file
+build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.s
+
 build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o
 
@@ -932,6 +956,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/backend/AudioClient.o: src/backend/AudioClient.cpp.o
+.PHONY : src/backend/AudioClient.o
+
+# target to build an object file
+src/backend/AudioClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o
+.PHONY : src/backend/AudioClient.cpp.o
+
+src/backend/AudioClient.i: src/backend/AudioClient.cpp.i
+.PHONY : src/backend/AudioClient.i
+
+# target to preprocess a source file
+src/backend/AudioClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.i
+.PHONY : src/backend/AudioClient.cpp.i
+
+src/backend/AudioClient.s: src/backend/AudioClient.cpp.s
+.PHONY : src/backend/AudioClient.s
+
+# target to generate assembly for a file
+src/backend/AudioClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.s
+.PHONY : src/backend/AudioClient.cpp.s
+
+src/backend/CoreClient.o: src/backend/CoreClient.cpp.o
+.PHONY : src/backend/CoreClient.o
+
+# target to build an object file
+src/backend/CoreClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o
+.PHONY : src/backend/CoreClient.cpp.o
+
+src/backend/CoreClient.i: src/backend/CoreClient.cpp.i
+.PHONY : src/backend/CoreClient.i
+
+# target to preprocess a source file
+src/backend/CoreClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.i
+.PHONY : src/backend/CoreClient.cpp.i
+
+src/backend/CoreClient.s: src/backend/CoreClient.cpp.s
+.PHONY : src/backend/CoreClient.s
+
+# target to generate assembly for a file
+src/backend/CoreClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.s
+.PHONY : src/backend/CoreClient.cpp.s
+
+src/backend/PowerClient.o: src/backend/PowerClient.cpp.o
+.PHONY : src/backend/PowerClient.o
+
+# target to build an object file
+src/backend/PowerClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o
+.PHONY : src/backend/PowerClient.cpp.o
+
+src/backend/PowerClient.i: src/backend/PowerClient.cpp.i
+.PHONY : src/backend/PowerClient.i
+
+# target to preprocess a source file
+src/backend/PowerClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.i
+.PHONY : src/backend/PowerClient.cpp.i
+
+src/backend/PowerClient.s: src/backend/PowerClient.cpp.s
+.PHONY : src/backend/PowerClient.s
+
+# target to generate assembly for a file
+src/backend/PowerClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.s
+.PHONY : src/backend/PowerClient.cpp.s
+
 src/backend/backendmanager.o: src/backend/backendmanager.cpp.o
 .PHONY : src/backend/backendmanager.o
 
@@ -1007,6 +1103,9 @@ help:
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.s"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.o"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.i"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.s"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.s"
@@ -1055,6 +1154,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/backend/AudioClient.o"
+	@echo "... src/backend/AudioClient.i"
+	@echo "... src/backend/AudioClient.s"
+	@echo "... src/backend/CoreClient.o"
+	@echo "... src/backend/CoreClient.i"
+	@echo "... src/backend/CoreClient.s"
+	@echo "... src/backend/PowerClient.o"
+	@echo "... src/backend/PowerClient.i"
+	@echo "... src/backend/PowerClient.s"
 	@echo "... src/backend/backendmanager.o"
 	@echo "... src/backend/backendmanager.i"
 	@echo "... src/backend/backendmanager.s"

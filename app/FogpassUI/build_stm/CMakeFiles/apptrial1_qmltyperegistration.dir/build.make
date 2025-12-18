@@ -81,6 +81,7 @@ apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/l
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6qmlmodels_release_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6qmlworkerscript_release_metatypes.json
 apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6opengl_release_metatypes.json
+apptrial1_qmltyperegistrations.cpp: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/metatypes/qt6dbus_release_metatypes.json
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target apptrial1"
 	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmltyperegistrar --generate-qmltypes=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/apptrial1.qmltypes --import-name=trial1 --major-version=1 --minor-version=0 @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/qmltypes/apptrial1_foreign_types.txt -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/qt6apptrial1_metatypes.json
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/qmltypes

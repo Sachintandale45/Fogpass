@@ -409,4 +409,20 @@ CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata_impl.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/AudioClient.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/PowerClient.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/CoreClient.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QDBusInterface \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusinterface.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusglobal.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvariant.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q23utility.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusexports.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusabstractinterface.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusmessage.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuserror.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusextratypes.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusconnection.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuspendingcall.h

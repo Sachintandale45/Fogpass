@@ -86,6 +86,7 @@ CMakeFiles/apptrial1_qmlimportscan: .qt/qml_imports/apptrial1_build.cmake
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BackendBindings.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml

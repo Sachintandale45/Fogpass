@@ -1,0 +1,32 @@
+{
+    "classes": [
+        {
+            "className": "PowerClient",
+            "lineNumber": 6,
+            "object": true,
+            "qualifiedClassName": "PowerClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "level",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "batteryLevelChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PowerClient.h",
+    "outputRevision": 68
+}

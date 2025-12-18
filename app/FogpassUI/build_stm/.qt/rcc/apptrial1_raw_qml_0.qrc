@@ -14,6 +14,7 @@
     <file alias="content/HeaderBar.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml</file>
     <file alias="content/ModePlaceholder.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml</file>
     <file alias="content/VolumeControl.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml</file>
+    <file alias="content/BackendBindings.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BackendBindings.qml</file>
     <file alias="content/BrightnessControl.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml</file>
     <file alias="config/AppSettings.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml</file>
     <file alias="content/AutoRoutePage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml</file>

@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "CoreClient",
+            "lineNumber": 6,
+            "object": true,
+            "qualifiedClassName": "CoreClient",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "CoreClient.h",
+    "outputRevision": 68
+}

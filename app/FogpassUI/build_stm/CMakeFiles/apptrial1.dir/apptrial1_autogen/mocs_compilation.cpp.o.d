@@ -1,8 +1,8 @@
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: \
  /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/mocs_compilation.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/backendmanager.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_AudioClient.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/AudioClient.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -384,8 +384,50 @@ CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/chrono.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ratio \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ctime \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtextstream.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcontiguouscache.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/climits \
+ /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/lib/aarch64-ostl-linux/gcc/aarch64-ostl-linux/13.3.0/include/limits.h \
+ /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/lib/aarch64-ostl-linux/gcc/aarch64-ostl-linux/13.3.0/include/syslimits.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/limits.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/posix1_lim.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/local_lim.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/local_lim-64.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/linux/limits.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/posix2_lim.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/xopen_lim.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/uio_lim.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsharedpointer.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsharedpointer_impl.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmap.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata_impl.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtmochelpers.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_CoreClient.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/CoreClient.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QDBusInterface \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusinterface.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusglobal.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvariant.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q23utility.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusexports.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusabstractinterface.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusmessage.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuserror.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusextratypes.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusconnection.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuspendingcall.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_PowerClient.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/PowerClient.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/backendmanager.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtimer.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbasictimer.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtmochelpers.h
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbasictimer.h

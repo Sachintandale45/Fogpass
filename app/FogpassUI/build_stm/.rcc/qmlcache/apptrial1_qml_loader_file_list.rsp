@@ -18,6 +18,7 @@
 /qt/qml/trial1/content/HeaderBar.qml
 /qt/qml/trial1/content/ModePlaceholder.qml
 /qt/qml/trial1/content/VolumeControl.qml
+/qt/qml/trial1/content/BackendBindings.qml
 /qt/qml/trial1/content/BrightnessControl.qml
 /qt/qml/trial1/config/AppSettings.qml
 /qt/qml/trial1/content/AutoRoutePage.qml

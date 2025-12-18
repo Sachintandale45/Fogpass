@@ -25,31 +25,31 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"fill\".",
                         "functionName": "fill",
-                        "line": 31
+                        "line": 34
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 60,
                         "errorMessage": "Cannot retrieve a non-object type by ID: stackView",
                         "functionName": "onCompleted",
-                        "line": 34
+                        "line": 37
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 577,
+                        "durationMicroseconds": 227,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 41
+                        "line": 44
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 194,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 42
+                        "line": 45
                     }
                 ],
                 "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml"

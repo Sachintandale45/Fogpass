@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "trial1/Main.qml"
   "trial1/config/AppSettings.qml"
   "trial1/content/AutoRoutePage.qml"
+  "trial1/content/BackendBindings.qml"
   "trial1/content/BrightnessControl.qml"
   "trial1/content/DemoPage.qml"
   "trial1/content/GPSSimulationPage.qml"

@@ -81,6 +81,7 @@ CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/HeaderBar.qml
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/ModePlaceholder.qml
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/VolumeControl.qml
+CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BackendBindings.qml
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 CMakeFiles/apptrial1_qmllint_json: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml

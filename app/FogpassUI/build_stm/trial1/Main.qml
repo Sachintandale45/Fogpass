@@ -26,6 +26,9 @@ ApplicationWindow {
     // expose stack to pages
     property alias stack: stackView
 
+    // This activates all backend -> UI wiring by creating a single instance.
+    BackendBindings {}
+
     StackView {
         id: stackView
         anchors.fill: parent

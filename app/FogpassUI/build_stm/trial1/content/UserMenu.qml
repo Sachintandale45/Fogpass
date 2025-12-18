@@ -47,7 +47,7 @@ Item {
     function goVolume() {
         var s = stackRef();
         if (s) {
-            var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), { 
+            var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), {
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
                 volumeLevel: AppSettings.volumeLevel 
@@ -246,7 +246,7 @@ Item {
                     font.pointSize: 16
                     background: Rectangle { color: AppSettings.currentMode === "Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.currentMode = "Foggy";
+                        Backend.setWeatherMode(true); // Command to UI backend
                         weatherModePopup.close();
                     }
                 }
@@ -258,7 +258,7 @@ Item {
                     font.pointSize: 16
                     background: Rectangle { color: AppSettings.currentMode === "Non-Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.currentMode = "Non-Foggy";
+                        Backend.setWeatherMode(false); // Command to UI backend
                         weatherModePopup.close();
                     }
                 }

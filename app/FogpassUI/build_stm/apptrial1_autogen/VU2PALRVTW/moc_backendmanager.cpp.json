@@ -2,43 +2,83 @@
     "classes": [
         {
             "className": "BackendManager",
-            "lineNumber": 6,
-            "object": true,
-            "properties": [
+            "lineNumber": 10,
+            "methods": [
                 {
-                    "constant": false,
-                    "designable": true,
-                    "final": false,
-                    "index": 0,
-                    "name": "batteryLevel",
-                    "notify": "batteryLevelChanged",
-                    "read": "batteryLevel",
-                    "required": false,
-                    "scriptable": true,
-                    "stored": true,
-                    "type": "int",
-                    "user": false
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "volume",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "setVolume",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "foggy",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "setWeatherMode",
+                    "returnType": "void"
                 }
             ],
+            "object": true,
             "qualifiedClassName": "BackendManager",
             "signals": [
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "volume",
+                            "type": "int"
+                        }
+                    ],
                     "index": 0,
-                    "name": "batteryLevelChanged",
+                    "name": "volumeUpdated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "level",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "batteryLevelUpdated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "mode",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "modeUpdated",
                     "returnType": "void"
                 }
             ],
             "slots": [
                 {
                     "access": "public",
-                    "index": 1,
+                    "index": 3,
                     "name": "start",
                     "returnType": "void"
                 },
                 {
                     "access": "private",
-                    "index": 2,
+                    "index": 4,
                     "name": "onTimeout",
                     "returnType": "void"
                 }
