@@ -246,7 +246,7 @@ Item {
                     font.pointSize: 16
                     background: Rectangle { color: AppSettings.currentMode === "Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.currentMode = "Foggy";
+                        Backend.setWeatherMode(true); // Command to UI backend
                         weatherModePopup.close();
                     }
                 }
@@ -258,7 +258,7 @@ Item {
                     font.pointSize: 16
                     background: Rectangle { color: AppSettings.currentMode === "Non-Foggy" ? "#2980b9" : "#566573"; radius: 8 }
                     onClicked: {
-                        AppSettings.currentMode = "Non-Foggy";
+                        Backend.setWeatherMode(false); // Command to UI backend
                         weatherModePopup.close();
                     }
                 }

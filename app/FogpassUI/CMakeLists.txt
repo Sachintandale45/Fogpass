@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # --- Find Qt ---
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick DBus)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -55,6 +55,8 @@ qt_add_qml_module(apptrial1
         src/backend/PowerClient.h
         src/backend/CoreClient.cpp
         src/backend/CoreClient.h
+        SOURCES src/backend/AudioClient.h src/backend/backendmanager.h src/backend/CoreClient.h src/backend/PowerClient.h
+        SOURCES src/backend/AudioClient.cpp src/backend/AudioClient.h src/backend/backendmanager.cpp src/backend/backendmanager.h src/backend/CoreClient.cpp src/backend/CoreClient.h src/backend/PowerClient.cpp src/backend/PowerClient.h
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---
@@ -66,6 +68,7 @@ set_target_properties(apptrial1 PROPERTIES
 # --- Link Qt ---
 target_link_libraries(apptrial1
     PRIVATE Qt6::Quick
+    PRIVATE Qt6::DBus
 )
 
 # --- Install Rules (for Yocto deployment) ---

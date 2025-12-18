@@ -23,10 +23,5 @@ Item {
             AppSettings.volumeLevel = newVolume;
         }
 
-        // This function name must match the C++ signal: onModeChanged(string newMode)
-        function onModeChanged(newMode) {
-            console.log("BackendBindings: Received new mode from C++:", newMode);
-            AppSettings.currentMode = newMode;
-        }
     }
 }
