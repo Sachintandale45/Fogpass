@@ -40,7 +40,10 @@ static constexpr auto qt_meta_stringdata_ZN9CoreStateE = QtMocHelpers::stringDat
     "CoreState",
     "fogModeChanged",
     "",
-    "foggy"
+    "foggy",
+    "landmarkLocationsChanged",
+    "locations",
+    "setLandmarkLocations"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -52,18 +55,26 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9CoreStateE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   20,    2, 0x06,    1 /* Public */,
+       1,    1,   32,    2, 0x06,    1 /* Public */,
+       4,    1,   35,    2, 0x06,    3 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       6,    1,   38,    2, 0x0a,    5 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void, QMetaType::QStringList,    5,
+
+ // slots: parameters
+    QMetaType::Void, QMetaType::QStringList,    5,
 
        0        // eod
 };
@@ -79,7 +90,13 @@ Q_CONSTINIT const QMetaObject CoreState::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<CoreState, std::true_type>,
         // method 'fogModeChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'landmarkLocationsChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QStringList &, std::false_type>,
+        // method 'setLandmarkLocations'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QStringList &, std::false_type>
     >,
     nullptr
 } };
@@ -90,6 +107,8 @@ void CoreState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->fogModeChanged((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->landmarkLocationsChanged((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 2: _t->setLandmarkLocations((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
         default: ;
         }
     }
@@ -99,6 +118,13 @@ void CoreState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             using _q_method_type = void (CoreState::*)(bool );
             if (_q_method_type _q_method = &CoreState::fogModeChanged; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _q_method_type = void (CoreState::*)(const QStringList & );
+            if (_q_method_type _q_method = &CoreState::landmarkLocationsChanged; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 1;
                 return;
             }
         }
@@ -124,14 +150,14 @@ int CoreState::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }
@@ -141,5 +167,12 @@ void CoreState::fogModeChanged(bool _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void CoreState::landmarkLocationsChanged(const QStringList & _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP

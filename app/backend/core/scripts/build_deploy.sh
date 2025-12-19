@@ -65,7 +65,13 @@ cmake "${SCRIPT_DIR}/../" \
 # 4️⃣ Build and Deploy
 # ------------------------------------------------------------
 echo "Building and deploying project..."
-make -j$(nproc) && scp "./${EXECUTABLE_NAME}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}/"
+make -j$(nproc) && \
+    (
+        echo "Stopping existing service on target..." && \
+        ssh "${TARGET_USER}@${TARGET_HOST}" "killall ${EXECUTABLE_NAME} || true" && \
+        echo "Deploying new executable..." && \
+        scp "./${EXECUTABLE_NAME}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}/"
+    )
 
 echo "✅ Deployment successful."
 echo "============================================="

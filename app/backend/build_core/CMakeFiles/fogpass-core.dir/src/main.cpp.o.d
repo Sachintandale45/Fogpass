@@ -438,6 +438,14 @@ CMakeFiles/fogpass-core.dir/src/main.cpp.o: \
  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreDBusAdaptor.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlist.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QDBusArgument \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusargument.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusextratypes.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QDBusMetaType \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusmetatype.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusargument.h \
  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmutex.h \
