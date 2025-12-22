@@ -1,7 +1,9 @@
 #pragma once
 
 #include <QObject>
-#include <QDBusInterface> // New: For D-Bus communication
+#include <QDBusInterface>
+#include <QStringList>
+#include <QDebug>
 
 class CoreClient : public QObject
 {
@@ -9,9 +11,13 @@ class CoreClient : public QObject
 public:
     explicit CoreClient(QObject *parent = nullptr);
 
-    // UI → Core command
-    void setWeatherMode(bool foggy); // Renamed and changed to bool
+    void setWeatherMode(bool foggy);
+    void requestLandmarkLocations();
+
+signals:
+    void landmarkLocationsChanged(const QStringList &locations);
+    void landmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
 
 private:
-    QDBusInterface *m_iface; // New: D-Bus interface member
+    QDBusInterface *m_iface;
 };

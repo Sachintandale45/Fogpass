@@ -596,6 +596,30 @@ build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.s
 
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.o
+
+# target to build an object file
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o
+
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.i: build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.i
+
+# target to preprocess a source file
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i
+
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.s: build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.s
+
+# target to generate assembly for a file
+build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/apptrial1.dir/build.make CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s
+.PHONY : build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s
+
 build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o: build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o
 .PHONY : build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o
 
@@ -1109,6 +1133,9 @@ help:
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.s"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.o"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.i"
+	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.s"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.o"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.i"
 	@echo "... build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.s"

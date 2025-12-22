@@ -16,7 +16,9 @@ BackendManager::BackendManager(QObject *parent)
     // ---- Forward service signals to UI ----
     connect(m_audio, &AudioClient::volumeChanged, this, &BackendManager::volumeUpdated);
     connect(m_power, &PowerClient::batteryLevelChanged, this, &BackendManager::batteryLevelUpdated);
-    // The modeUpdated signal from CoreClient is not yet implemented as per previous steps
+    // Connect the landmark locations signal from the CoreClient to the BackendManager's signal
+    connect(m_core, &CoreClient::landmarkLocationsChanged, this, &BackendManager::landmarkLocationsUpdated);
+    connect(m_core, &CoreClient::landmarksUpdated, this, &BackendManager::onLandmarksUpdated);
 
     // --- Battery Simulation Timer ---
     m_timer.setInterval(1000); // Update once per second
@@ -28,6 +30,33 @@ void BackendManager::setVolume(int volume)
 {
     // UI command -> system backend
     m_audio->setVolume(volume);
+}
+
+void BackendManager::requestLandmarks()
+{
+    m_core->requestLandmarkLocations();
+}
+
+QString BackendManager::landmark1() const { return m_landmark1; }
+int BackendManager::distance1() const { return m_dist1; }
+QString BackendManager::landmark2() const { return m_landmark2; }
+int BackendManager::distance2() const { return m_dist2; }
+QString BackendManager::landmark3() const { return m_landmark3; }
+int BackendManager::distance3() const { return m_dist3; }
+
+void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
+{
+    bool changed = false;
+    if (m_landmark1 != l1) { m_landmark1 = l1; changed = true; }
+    if (m_dist1 != d1) { m_dist1 = d1; changed = true; }
+    if (m_landmark2 != l2) { m_landmark2 = l2; changed = true; }
+    if (m_dist2 != d2) { m_dist2 = d2; changed = true; }
+    if (m_landmark3 != l3) { m_landmark3 = l3; changed = true; }
+    if (m_dist3 != d3) { m_dist3 = d3; changed = true; }
+
+    if (changed) {
+        emit landmarksChanged();
+    }
 }
 
 void BackendManager::start()

@@ -362,6 +362,20 @@ trial1/apptrial1.qmltypes: apptrial1_qmltyperegistrations.cpp
 .rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.aotstats
 
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: .qt/rcc/qmake_trial1.qrc
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: trial1/apptrial1.qmltypes
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp: trial1/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Generating .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp, .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.aotstats"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E make_directory /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content
+	/home/sachin/Qt/6.8.3/gcc_64/libexec/qmlcachegen --bare --resource-path /qt/qml/trial1/content/Demo2.qml -I /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm -I /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/qml -i /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/qmldir --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qmake_trial1.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc --resource /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=trial1(apptrial1)" -o /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
+
+.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.aotstats: .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.aotstats
+
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/Main.qml
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/button.qml
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/DemoPage.qml
@@ -380,37 +394,38 @@ trial1/apptrial1.qmltypes: apptrial1_qmltyperegistrations.cpp
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml
+.qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: .qt/rcc/apptrial1_raw_qml_0.qrc
 .qt/rcc/qrc_apptrial1_raw_qml_0.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Running rcc for resource apptrial1_raw_qml_0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Running rcc for resource apptrial1_raw_qml_0"
 	/home/sachin/Qt/6.8.3/gcc_64/libexec/rcc --output /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp --name apptrial1_raw_qml_0 /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0.qrc
 
 .qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp: trial1/content/qmldir
 .qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp: trial1/config/qmldir
 .qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp: .qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 .qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp: /home/sachin/Qt/6.8.3/gcc_64/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Running rcc for resource apptrial1_raw_qml_0_extra_qmldirs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Running rcc for resource apptrial1_raw_qml_0_extra_qmldirs"
 	/home/sachin/Qt/6.8.3/gcc_64/libexec/rcc --output /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp --name apptrial1_raw_qml_0_extra_qmldirs /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/apptrial1_raw_qml_0_extra_qmldirs.qrc
 
 apptrial1_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
 apptrial1_autogen/timestamp: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Automatic MOC and UIC for target apptrial1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Automatic MOC and UIC for target apptrial1"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E cmake_autogen /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json ""
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E touch /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/timestamp
 
 meta_types/apptrial1_json_file_list.txt: /home/sachin/Qt/6.8.3/gcc_64/libexec/cmake_automoc_parser
 meta_types/apptrial1_json_file_list.txt: apptrial1_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Running AUTOMOC file extraction for target apptrial1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Running AUTOMOC file extraction for target apptrial1"
 	/home/sachin/Qt/6.8.3/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/ParseCache.txt --cmake-autogen-info-file /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles/apptrial1_autogen.dir/AutogenInfo.json --output-file-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt --timestamp-file-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/meta_types/apptrial1_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/include
 
 meta_types/qt6apptrial1_metatypes.json: meta_types/qt6apptrial1_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating meta_types/qt6apptrial1_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating meta_types/qt6apptrial1_metatypes.json"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E true
 
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: apptrial1_autogen/mocs_compilation.cpp
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o -MF CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/mocs_compilation.cpp
 
 CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.i: cmake_force
@@ -424,7 +439,7 @@ CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/main.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/main.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/main.cpp
 CMakeFiles/apptrial1.dir/main.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/apptrial1.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/apptrial1.dir/main.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/main.cpp.o -MF CMakeFiles/apptrial1.dir/main.cpp.o.d -o CMakeFiles/apptrial1.dir/main.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/main.cpp
 
 CMakeFiles/apptrial1.dir/main.cpp.i: cmake_force
@@ -438,7 +453,7 @@ CMakeFiles/apptrial1.dir/main.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o: apptrial1_qmltyperegistrations.cpp
 CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o -MF CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o.d -o CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_qmltyperegistrations.cpp
 
 CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.i: cmake_force
@@ -452,7 +467,7 @@ CMakeFiles/apptrial1.dir/apptrial1_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o: .qt/rcc/qrc_qmake_trial1.cpp
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qrc_qmake_trial1.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.i: cmake_force
@@ -466,7 +481,7 @@ CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_qmake_trial1.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.cpp
 CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o -MF CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o.d -o CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.cpp
 
 CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.i: cmake_force
@@ -480,7 +495,7 @@ CMakeFiles/apptrial1.dir/src/backend/backendmanager.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/AudioClient.cpp
 CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o -MF CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o.d -o CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/AudioClient.cpp
 
 CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.i: cmake_force
@@ -494,7 +509,7 @@ CMakeFiles/apptrial1.dir/src/backend/AudioClient.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/PowerClient.cpp
 CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o -MF CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o.d -o CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/PowerClient.cpp
 
 CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.i: cmake_force
@@ -508,7 +523,7 @@ CMakeFiles/apptrial1.dir/src/backend/PowerClient.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/CoreClient.cpp
 CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o -MF CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o.d -o CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/CoreClient.cpp
 
 CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.i: cmake_force
@@ -522,7 +537,7 @@ CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.s: cmake_force
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o: .rcc/qmlcache/apptrial1_qmlcache_loader.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.i: cmake_force
@@ -536,7 +551,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_qmlcache_loader.cpp.s
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o: .rcc/qmlcache/apptrial1_Main_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.i: cmake_force
@@ -550,7 +565,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_Main_qml.cpp.s: cmake
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o: .rcc/qmlcache/apptrial1_content/button_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cpp.i: cmake_force
@@ -564,7 +579,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/button_qml.cp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.i: cmake_force
@@ -578,7 +593,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/DemoPage_qml.
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_qml.cpp.i: cmake_force
@@ -592,7 +607,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/WelcomePage_q
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPage_qml.cpp.i: cmake_force
@@ -606,7 +621,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/PlaceholderPa
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qml.cpp.i: cmake_force
@@ -620,7 +635,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/SplashPage_qm
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.cpp.i: cmake_force
@@ -634,7 +649,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/MenuPage_qml.
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml.cpp.i: cmake_force
@@ -648,7 +663,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/IntroPage_qml
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o: .rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.cpp.i: cmake_force
@@ -662,7 +677,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/UserMenu_qml.
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_qml.cpp.i: cmake_force
@@ -676,7 +691,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/TestMenuPage_
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp.i: cmake_force
@@ -690,7 +705,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/GPSSimulation
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o: .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp.i: cmake_force
@@ -704,7 +719,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/HeaderBar_qml
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o: .rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlaceholder_qml.cpp.i: cmake_force
@@ -718,7 +733,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/ModePlacehold
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o: .rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl_qml.cpp.i: cmake_force
@@ -732,7 +747,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/VolumeControl
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o: .rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.i: cmake_force
@@ -746,7 +761,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BackendBindin
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.i: cmake_force
@@ -760,7 +775,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessCon
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o: .rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.i: cmake_force
@@ -774,7 +789,7 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qm
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o: .rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.i: cmake_force
@@ -785,10 +800,24 @@ CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.s"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.s
 
+CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o: CMakeFiles/apptrial1.dir/flags.make
+CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o: .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp
+CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp
+
+CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp > CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.i
+
+CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp -o CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.s
+
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o: .qt/rcc/qrc_apptrial1_raw_qml_0.cpp
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.i: cmake_force
@@ -802,7 +831,7 @@ CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.s: cmake_
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/apptrial1.dir/flags.make
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o: .qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/apptrial1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o -MF CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o.d -o CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp
 
 CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
@@ -842,6 +871,7 @@ apptrial1_OBJECTS = \
 "CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o" \
 "CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o" \
 "CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o" \
+"CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o" \
 "CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o" \
 "CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o"
 
@@ -875,6 +905,7 @@ apptrial1: CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Ba
 apptrial1: CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.o
 apptrial1: CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_config/AppSettings_qml.cpp.o
 apptrial1: CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp.o
+apptrial1: CMakeFiles/apptrial1.dir/build_stm/.rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.o
 apptrial1: CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0.cpp.o
 apptrial1: CMakeFiles/apptrial1.dir/build_stm/.qt/rcc/qrc_apptrial1_raw_qml_0_extra_qmldirs.cpp.o
 apptrial1: CMakeFiles/apptrial1.dir/build.make
@@ -891,7 +922,7 @@ apptrial1: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Core.so.6.8.0
 apptrial1: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libGLESv2.so
 apptrial1: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libEGL.so
 apptrial1: CMakeFiles/apptrial1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking CXX executable apptrial1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking CXX executable apptrial1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/apptrial1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -915,6 +946,8 @@ CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/BackendBindings
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp.aotstats
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp.aotstats
+CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp
+CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp.aotstats
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp.aotstats
 CMakeFiles/apptrial1.dir/depend: .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp

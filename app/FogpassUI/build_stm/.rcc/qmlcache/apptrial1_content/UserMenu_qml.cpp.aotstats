@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 272,
+                        "durationMicroseconds": 354,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 264,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 11
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 56,
                         "errorMessage": "Cannot load property stack from (component in /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml)::parentWindow with type QVariant.",
                         "functionName": "stackRef",
                         "line": 23
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 48,
                         "errorMessage": "Cannot retrieve a non-object type by ID: confirmPopup",
                         "functionName": "goToAutoRoutePage",
                         "line": 37
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 2479,
+                        "durationMicroseconds": 2870,
                         "errorMessage": "QJSValue has no property called parentWindow",
                         "functionName": "goVolume",
                         "line": 47
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 372,
+                        "durationMicroseconds": 414,
                         "errorMessage": "QJSValue has no property called parentWindow",
                         "functionName": "goBrightness",
                         "line": 62
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 98,
+                        "durationMicroseconds": 100,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 15
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 108,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 70
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 124,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 78
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 148,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 85
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 108,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 86
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 87
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 62,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 87
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 114,
-                        "durationMicroseconds": 227,
+                        "durationMicroseconds": 248,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 87
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 152,
-                        "durationMicroseconds": 195,
+                        "durationMicroseconds": 224,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 87
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 150,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 140,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 90
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 59,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 91
@@ -174,202 +174,10 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 108,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 91
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 43,
-                        "durationMicroseconds": 6,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 62,
-                        "durationMicroseconds": 5,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "font",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 114,
-                        "durationMicroseconds": 165,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "horizontalAlignment",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 152,
-                        "durationMicroseconds": 202,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "verticalAlignment",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 98
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 151,
-                        "durationMicroseconds": 128,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 95
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 59,
-                        "durationMicroseconds": 14,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "color",
-                        "line": 96
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 108,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 96
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 43,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 62,
-                        "durationMicroseconds": 9,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "font",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 114,
-                        "durationMicroseconds": 230,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "horizontalAlignment",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 152,
-                        "durationMicroseconds": 208,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "verticalAlignment",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 103
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 152,
-                        "durationMicroseconds": 130,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 100
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 59,
-                        "durationMicroseconds": 16,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "color",
-                        "line": 101
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 108,
-                        "durationMicroseconds": 18,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 101
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 43,
-                        "durationMicroseconds": 12,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 62,
-                        "durationMicroseconds": 8,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "font",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 114,
-                        "durationMicroseconds": 237,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "horizontalAlignment",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 152,
-                        "durationMicroseconds": 210,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "verticalAlignment",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
-                        "line": 108
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 156,
-                        "durationMicroseconds": 137,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 105
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 59,
-                        "durationMicroseconds": 14,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "color",
-                        "line": 106
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 108,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 106
                     },
                     {
                         "codegenSuccessfull": false,
@@ -377,7 +185,7 @@
                         "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
-                        "line": 107
+                        "line": 92
                     },
                     {
                         "codegenSuccessfull": false,
@@ -385,23 +193,23 @@
                         "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
-                        "line": 107
+                        "line": 92
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 114,
-                        "durationMicroseconds": 214,
+                        "durationMicroseconds": 233,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
-                        "line": 107
+                        "line": 92
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 152,
-                        "durationMicroseconds": 206,
+                        "durationMicroseconds": 224,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 107
+                        "line": 92
                     },
                     {
                         "codegenSuccessfull": false,
@@ -409,23 +217,151 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 114
+                        "line": 107
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 156,
-                        "durationMicroseconds": 126,
+                        "column": 151,
+                        "durationMicroseconds": 144,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 111
+                        "line": 104
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 59,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 108,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 43,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 62,
+                        "durationMicroseconds": 9,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "font",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 114,
+                        "durationMicroseconds": 231,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "horizontalAlignment",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 152,
+                        "durationMicroseconds": 221,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "verticalAlignment",
+                        "line": 106
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
                         "line": 112
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 152,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 109
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 59,
+                        "durationMicroseconds": 14,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "color",
+                        "line": 110
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 108,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 110
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 43,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 62,
+                        "durationMicroseconds": 9,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "font",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 114,
+                        "durationMicroseconds": 226,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "horizontalAlignment",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 152,
+                        "durationMicroseconds": 220,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "verticalAlignment",
+                        "line": 111
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 117
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 156,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 59,
+                        "durationMicroseconds": 14,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "color",
+                        "line": 115
                     },
                     {
                         "codegenSuccessfull": false,
@@ -433,47 +369,39 @@
                         "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
-                        "line": 112
+                        "line": 115
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
-                        "line": 113
+                        "line": 116
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 62,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
-                        "line": 113
+                        "line": 116
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 114,
-                        "durationMicroseconds": 171,
+                        "durationMicroseconds": 212,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
-                        "line": 113
+                        "line": 116
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 152,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 220,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 113
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 93,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 121
+                        "line": 116
                     },
                     {
                         "codegenSuccessfull": false,
@@ -481,55 +409,127 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 142
+                        "line": 123
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 156,
+                        "durationMicroseconds": 139,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 120
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 10,
+                        "column": 59,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 108,
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 43,
+                        "durationMicroseconds": 22,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 62,
+                        "durationMicroseconds": 19,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "font",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 114,
+                        "durationMicroseconds": 286,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "horizontalAlignment",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 152,
+                        "durationMicroseconds": 226,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "verticalAlignment",
+                        "line": 122
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 158,
+                        "errorMessage": "",
+                        "functionName": "alignment",
                         "line": 130
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 6,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 131
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 151
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 27,
-                        "durationMicroseconds": 7,
+                        "column": 28,
+                        "durationMicroseconds": 17,
                         "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 136
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 27,
-                        "durationMicroseconds": 5,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "font",
-                        "line": 137
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 42,
-                        "durationMicroseconds": 137,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "horizontalAlignment",
+                        "functionName": "color",
                         "line": 139
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 11,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 140
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 12,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 145
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 9,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "font",
+                        "line": 146
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 42,
+                        "durationMicroseconds": 255,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "horizontalAlignment",
+                        "line": 148
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 142,
+                        "durationMicroseconds": 261,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 140
+                        "line": 149
                     },
                     {
                         "codegenSuccessfull": false,
@@ -537,7 +537,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"x\".",
                         "functionName": "x",
-                        "line": 150
+                        "line": 159
                     },
                     {
                         "codegenSuccessfull": false,
@@ -545,7 +545,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\".",
                         "functionName": "y",
-                        "line": 151
+                        "line": 160
                     },
                     {
                         "codegenSuccessfull": false,
@@ -553,54 +553,46 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"closePolicy\".",
                         "functionName": "closePolicy",
-                        "line": 156
+                        "line": 165
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 166
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 27,
-                        "durationMicroseconds": 90,
-                        "errorMessage": "",
-                        "functionName": "wrapMode",
                         "line": 175
                     },
                     {
                         "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 184
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 79,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 176
+                        "line": 185
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 178
+                        "line": 187
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 179,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 182
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
                         "line": 191
                     },
                     {
@@ -613,11 +605,19 @@
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 209
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 12,
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"x\".",
                         "functionName": "x",
-                        "line": 208
+                        "line": 217
                     },
                     {
                         "codegenSuccessfull": false,
@@ -625,7 +625,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\".",
                         "functionName": "y",
-                        "line": 209
+                        "line": 218
                     },
                     {
                         "codegenSuccessfull": false,
@@ -633,55 +633,55 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"closePolicy\".",
                         "functionName": "closePolicy",
-                        "line": 214
+                        "line": 223
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 154,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 224
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 38,
-                        "durationMicroseconds": 72,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
                         "line": 233
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 35,
-                        "durationMicroseconds": 76,
+                        "column": 38,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 235
+                        "functionName": "horizontalAlignment",
+                        "line": 242
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 239
+                        "line": 244
                     },
                     {
-                        "codegenSuccessfull": false,
-                        "column": 32,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"clicked\".",
-                        "functionName": "onClicked",
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 89,
+                        "errorMessage": "",
+                        "functionName": "alignment",
                         "line": 248
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 257
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 231,
                         "errorMessage": "Cannot access value for name AppSettings",
                         "functionName": "color",
-                        "line": 247
+                        "line": 256
                     },
                     {
                         "codegenSuccessfull": false,
@@ -689,15 +689,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 260
+                        "line": 269
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 127,
+                        "durationMicroseconds": 214,
                         "errorMessage": "Cannot access value for name AppSettings",
                         "functionName": "color",
-                        "line": 259
+                        "line": 268
                     }
                 ],
                 "filepath": "/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/UserMenu.qml"

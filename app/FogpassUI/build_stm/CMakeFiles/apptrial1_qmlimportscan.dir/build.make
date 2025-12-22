@@ -90,6 +90,7 @@ CMakeFiles/apptrial1_qmlimportscan: .qt/qml_imports/apptrial1_build.cmake
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 .qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml
+.qt/qml_imports/apptrial1_build.cmake: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for apptrial1"
 	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/libexec/qmlimportscanner @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.qt/qml_imports/apptrial1_build.rsp
 

@@ -48,6 +48,7 @@ apptrial1_autogen/timestamp: \
 	/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/backendmanager.h \
 	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
 	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
+	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
 	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
 	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \
 	/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20memory.h \

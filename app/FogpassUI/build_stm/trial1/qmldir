@@ -18,4 +18,5 @@ BackendBindings 1.0 content/BackendBindings.qml
 BrightnessControl 1.0 content/BrightnessControl.qml
 singleton AppSettings 1.0 config/AppSettings.qml
 AutoRoutePage 1.0 content/AutoRoutePage.qml
+Demo2 1.0 content/Demo2.qml
 

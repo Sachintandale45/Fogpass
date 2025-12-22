@@ -2,14 +2,14 @@
 #include "CoreState.h"
 #include <iostream>
 #include <QDebug>
+#include "LandmarkEngine.h"
 
-CoreDBusAdaptor::CoreDBusAdaptor(CoreState *state, QObject *parent)
+CoreDBusAdaptor::CoreDBusAdaptor(CoreState *state, LandmarkEngine *engine, QObject *parent)
     : QObject(parent), m_state(state)
 {
-    // Here you would connect signals from CoreState to D-Bus signals
-    // For example:
-    // connect(m_state, &CoreState::fogModeChanged, this, &CoreDBusAdaptor::FogModeChanged);
+    // Connect signals from the application's state/logic objects to this adaptor's D-Bus signals.
     connect(m_state, &CoreState::landmarkLocationsChanged, this, &CoreDBusAdaptor::LandmarkLocationsChanged);
+    connect(engine, &LandmarkEngine::nextLandmarksUpdated, this, &CoreDBusAdaptor::NextLandmarksUpdated);
 }
 
 void CoreDBusAdaptor::SetWeatherMode(bool foggy)
@@ -18,6 +18,12 @@ void CoreDBusAdaptor::SetWeatherMode(bool foggy)
               << (foggy ? "true" : "false") << ")" << std::endl;
 
     m_state->setFogMode(foggy);
+}
+
+QStringList CoreDBusAdaptor::GetLandmarkLocations()
+{
+    qDebug() << "[CORE] D-Bus call received: GetLandmarkLocations";
+    return m_state->landmarkLocations();
 }
 
 void CoreDBusAdaptor::SetLandmarkLocations(const QStringList &locations)

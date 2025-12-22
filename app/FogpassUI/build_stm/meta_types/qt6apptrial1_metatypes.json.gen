@@ -35,9 +35,23 @@
         "classes": [
             {
                 "className": "CoreClient",
-                "lineNumber": 6,
+                "lineNumber": 8,
                 "object": true,
                 "qualifiedClassName": "CoreClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "locations",
+                                "type": "QStringList"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "landmarkLocationsChanged",
+                        "returnType": "void"
+                    }
+                ],
                 "superClasses": [
                     {
                         "access": "public",
@@ -95,7 +109,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 5,
+                        "index": 6,
                         "name": "setVolume",
                         "returnType": "void"
                     },
@@ -107,7 +121,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "index": 6,
+                        "index": 7,
                         "name": "setWeatherMode",
                         "returnType": "void"
                     }
@@ -150,18 +164,30 @@
                         "index": 2,
                         "name": "modeUpdated",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "locations",
+                                "type": "QStringList"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "landmarkLocationsUpdated",
+                        "returnType": "void"
                     }
                 ],
                 "slots": [
                     {
                         "access": "public",
-                        "index": 3,
+                        "index": 4,
                         "name": "start",
                         "returnType": "void"
                     },
                     {
                         "access": "private",
-                        "index": 4,
+                        "index": 5,
                         "name": "onTimeout",
                         "returnType": "void"
                     }

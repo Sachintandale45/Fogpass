@@ -18,6 +18,7 @@
     <file alias="content/BrightnessControl.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml</file>
     <file alias="config/AppSettings.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml</file>
     <file alias="content/AutoRoutePage.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml</file>
+    <file alias="content/Demo2.qml">/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml</file>
   </qresource>
 </RCC>
 

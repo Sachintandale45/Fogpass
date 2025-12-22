@@ -29,5 +29,11 @@ Item {
             AppSettings.currentMode = newMode;
         }
 
+        // This function name must match the C++ signal: onLandmarkLocationsUpdated(QStringList locations)
+        function onLandmarkLocationsUpdated(locations) {
+            console.log("BackendBindings: Received new landmarks from C++:", locations);
+            AppSettings.landmarkLocations = locations;
+        }
+
     }
 }

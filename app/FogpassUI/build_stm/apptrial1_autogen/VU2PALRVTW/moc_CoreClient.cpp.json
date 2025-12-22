@@ -2,9 +2,23 @@
     "classes": [
         {
             "className": "CoreClient",
-            "lineNumber": 6,
+            "lineNumber": 8,
             "object": true,
             "qualifiedClassName": "CoreClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "locations",
+                            "type": "QStringList"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "landmarkLocationsChanged",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

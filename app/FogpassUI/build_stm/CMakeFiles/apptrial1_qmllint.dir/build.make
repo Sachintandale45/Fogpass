@@ -85,6 +85,7 @@ CMakeFiles/apptrial1_qmllint: /home/sachin/projects/Develop_FogPass/fogpass/app/
 CMakeFiles/apptrial1_qmllint: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/BrightnessControl.qml
 CMakeFiles/apptrial1_qmllint: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/config/AppSettings.qml
 CMakeFiles/apptrial1_qmllint: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml
+CMakeFiles/apptrial1_qmllint: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
 CMakeFiles/apptrial1_qmllint: .rcc/qmllint/apptrial1.rsp
 	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /home/sachin/Qt/6.8.3/gcc_64/bin/qmllint @/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/.rcc/qmllint/apptrial1.rsp
 

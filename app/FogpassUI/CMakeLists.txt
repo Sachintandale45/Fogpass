@@ -56,6 +56,7 @@ qt_add_qml_module(apptrial1
         src/backend/CoreClient.cpp
         src/backend/CoreClient.h
         QML_FILES content/AutoRoutePage.qml
+        QML_FILES content/Demo2.qml
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---

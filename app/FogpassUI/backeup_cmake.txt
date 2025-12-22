@@ -28,6 +28,7 @@ QML_FILES content/GPSSimulationPage.qml
 QML_FILES content/HeaderBar.qml
 QML_FILES content/ModePlaceholder.qml
 QML_FILES content/VolumeControl.qml
+QML_FILES content/Demo2.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -51,4 +52,3 @@ install(TARGETS apptrial1
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-

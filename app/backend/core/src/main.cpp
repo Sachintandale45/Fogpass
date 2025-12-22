@@ -3,51 +3,41 @@
 #include <QDBusError>
 #include <iostream>
 
-#include "CoreDBusAdaptor.h"
 #include "CoreState.h"
-
-// Business logic declaration
+#include "LandmarkEngine.h"
 #include "landmark.h"
+#include "CoreDBusAdaptor.h"
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    // Connect to system bus
-    QDBusConnection bus = QDBusConnection::systemBus();
-    if (!bus.isConnected()) {
-        std::cerr << "Failed to connect to system D-Bus\n";
-        return 1;
-    }
-
-    // Register service
-    if (!bus.registerService("com.fogpass.Core")) {
-        std::cerr << "Failed to register D-Bus service: "
-                  << bus.lastError().message().toStdString()
-                  << std::endl;
-        return 1;
-    }
-
-    // 1. Create core state (single source of truth)
+    // 1. Create the core state and logic engine objects.
     CoreState state;
+    LandmarkEngine engine;
 
-    // 2. Create IPC adaptor
-    CoreDBusAdaptor adaptor(&state);
+    // 2. Create the D-Bus adaptor and connect it to the logic engines.
+    new CoreDBusAdaptor(&state, &engine, &app);
 
-    // 3. Wire internal logic
-    setupLandmarkLogic(&state);
+    // 3. Register the service on the D-Bus system bus.
+    QDBusConnection bus = QDBusConnection::systemBus();
+    const QString serviceName = "com.fogpass.Core";
 
-    // 4. Register D-Bus object
-    if (!bus.registerObject(
-            "/com/fogpass/Core",
-            &adaptor,
-            QDBusConnection::ExportAllSlots |
-            QDBusConnection::ExportAllSignals)) {
-
-        std::cerr << "Failed to register D-Bus object\n";
+    if (!bus.registerService(serviceName)) {
+        std::cerr << "Failed to register D-Bus service: " << bus.lastError().message().toStdString() << std::endl;
         return 1;
     }
 
-    std::cout << "[CORE] fogpass-core started, waiting for D-Bus calls...\n";
+    if (!bus.registerObject("/com/fogpass/Core", &state)) {
+        std::cerr << "Failed to register D-Bus object: " << bus.lastError().message().toStdString() << std::endl;
+        return 1;
+    }
+
+    std::cout << "[CORE] fogpass-core started, waiting for D-Bus calls..." << std::endl;
+
+    // 4. Start the landmark simulation logic.
+    // This now correctly calls the function with both required arguments.
+    setupLandmarkLogic(&state, &engine);
+
     return app.exec();
 }

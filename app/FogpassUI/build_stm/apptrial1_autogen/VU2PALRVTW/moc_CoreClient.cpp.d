@@ -1,6 +1,8 @@
 /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_CoreClient.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/src/backend/CoreClient.h \
   /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/moc_predefs.h \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20memory.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20type_traits.h \

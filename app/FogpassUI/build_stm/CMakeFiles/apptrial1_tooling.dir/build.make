@@ -138,11 +138,16 @@ trial1/content/AutoRoutePage.qml: /home/sachin/projects/Develop_FogPass/fogpass/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Copying content/AutoRoutePage.qml to /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/content/AutoRoutePage.qml"
 	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E copy /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/AutoRoutePage.qml /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/content/AutoRoutePage.qml
 
+trial1/content/Demo2.qml: /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Copying content/Demo2.qml to /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/content/Demo2.qml"
+	cd /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI && /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E copy /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/content/Demo2.qml /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/trial1/content/Demo2.qml
+
 apptrial1_tooling: trial1/Main.qml
 apptrial1_tooling: trial1/config/AppSettings.qml
 apptrial1_tooling: trial1/content/AutoRoutePage.qml
 apptrial1_tooling: trial1/content/BackendBindings.qml
 apptrial1_tooling: trial1/content/BrightnessControl.qml
+apptrial1_tooling: trial1/content/Demo2.qml
 apptrial1_tooling: trial1/content/DemoPage.qml
 apptrial1_tooling: trial1/content/GPSSimulationPage.qml
 apptrial1_tooling: trial1/content/HeaderBar.qml

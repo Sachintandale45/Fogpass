@@ -86,7 +86,7 @@ Item {
                     verticalAlignment: Text.AlignVCenter
                 }
                 onClicked: { 
-                    var s = stackRef(); 
+                    var s = root.stackRef(); 
                     if (s) s.pop(); 
                     else console.warn("BrightnessControl: no stack on back"); 
                 }

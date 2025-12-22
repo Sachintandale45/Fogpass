@@ -131,6 +131,13 @@ namespace _qt_qml_trial1_content_AutoRoutePage_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_trial1_content_Demo2_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -163,6 +170,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/trial1/content/BrightnessControl.qml"), &QmlCacheGeneratedCode::_qt_qml_trial1_content_BrightnessControl_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/trial1/config/AppSettings.qml"), &QmlCacheGeneratedCode::_qt_qml_trial1_config_AppSettings_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/trial1/content/AutoRoutePage.qml"), &QmlCacheGeneratedCode::_qt_qml_trial1_content_AutoRoutePage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/trial1/content/Demo2.qml"), &QmlCacheGeneratedCode::_qt_qml_trial1_content_Demo2_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

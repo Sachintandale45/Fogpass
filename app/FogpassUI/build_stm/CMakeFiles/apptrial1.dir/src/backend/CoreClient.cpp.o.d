@@ -418,5 +418,9 @@ CMakeFiles/apptrial1.dir/src/backend/CoreClient.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusextratypes.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusconnection.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuspendingcall.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlist.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QDBusConnection \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusconnection.h

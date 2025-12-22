@@ -424,6 +424,8 @@ CMakeFiles/apptrial1.dir/apptrial1_autogen/mocs_compilation.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusextratypes.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusconnection.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbuspendingcall.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlist.h \
  /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_PowerClient.cpp \
  /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/../../../src/backend/PowerClient.h \
  /home/sachin/projects/Develop_FogPass/fogpass/app/FogpassUI/build_stm/apptrial1_autogen/VU2PALRVTW/moc_backendmanager.cpp \

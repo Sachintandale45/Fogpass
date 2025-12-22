@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "trial1/content/AutoRoutePage.qml"
   "trial1/content/BackendBindings.qml"
   "trial1/content/BrightnessControl.qml"
+  "trial1/content/Demo2.qml"
   "trial1/content/DemoPage.qml"
   "trial1/content/GPSSimulationPage.qml"
   "trial1/content/HeaderBar.qml"

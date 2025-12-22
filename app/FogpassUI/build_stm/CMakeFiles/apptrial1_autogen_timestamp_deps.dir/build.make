@@ -68,8 +68,8 @@ include CMakeFiles/apptrial1_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/apptrial1_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Quick.so.6.8.0
 CMakeFiles/apptrial1_autogen_timestamp_deps: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
-CMakeFiles/apptrial1_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Qml.so.6.8.0
 CMakeFiles/apptrial1_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6DBus.so.6.8.0
+CMakeFiles/apptrial1_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Qml.so.6.8.0
 
 apptrial1_autogen_timestamp_deps: CMakeFiles/apptrial1_autogen_timestamp_deps
 apptrial1_autogen_timestamp_deps: CMakeFiles/apptrial1_autogen_timestamp_deps.dir/build.make

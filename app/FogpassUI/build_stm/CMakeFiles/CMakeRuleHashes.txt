@@ -9,6 +9,7 @@ ad06018009d1f592ff66f90754ff3520 .rcc/qmlcache/apptrial1_Main_qml.cpp
 ce6d27189b364ac11b346dd04df8f790 .rcc/qmlcache/apptrial1_content/AutoRoutePage_qml.cpp
 2461a90ff452598720edcddf18b9c18f .rcc/qmlcache/apptrial1_content/BackendBindings_qml.cpp
 25b34a1efe9fe122d25010916b8696ec .rcc/qmlcache/apptrial1_content/BrightnessControl_qml.cpp
+1f1d7fbb14b9174c7577a63c0b6b526c .rcc/qmlcache/apptrial1_content/Demo2_qml.cpp
 22d4d383095e46339bec3e3cc29dfc4c .rcc/qmlcache/apptrial1_content/DemoPage_qml.cpp
 a15cd2b254f2909da9aca3a52f7b7c7a .rcc/qmlcache/apptrial1_content/GPSSimulationPage_qml.cpp
 3aeafe482263a505806ad7ec5b541670 .rcc/qmlcache/apptrial1_content/HeaderBar_qml.cpp
@@ -43,6 +44,7 @@ cdd8ecd3c0e192d7ec2d88ccda61b19e trial1/config/AppSettings.qml
 a7c9b66aa7972bbdace2d97ef5b76fc7 trial1/content/AutoRoutePage.qml
 86314568ec59aeeb66a972107c168062 trial1/content/BackendBindings.qml
 9b8e50dd630dbd182b23c106448adb9e trial1/content/BrightnessControl.qml
+bcfb1bb57d93e43ad19d2fb5c0bc6c3a trial1/content/Demo2.qml
 cdd250e45385d70d6c6c2cf878b5ccb0 trial1/content/DemoPage.qml
 338239f0234fd25b548cfab664e5073a trial1/content/GPSSimulationPage.qml
 8be651f6a3790491a094b33e81471e97 trial1/content/HeaderBar.qml
