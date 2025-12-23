@@ -1,5 +1,5 @@
 #include "LandmarkEngine.h"
-#include "Locator.h"
+#include "locator.h"
 #include "CoreState.h"
 
 #include <QDebug>

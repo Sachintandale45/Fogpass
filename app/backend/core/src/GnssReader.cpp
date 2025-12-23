@@ -8,6 +8,7 @@
 
 GnssReader::GnssReader() : m_running(false)
 {
+
 }
 
 GnssReader::~GnssReader()
@@ -126,7 +127,7 @@ void GnssReader::parseNmeaSentence(const std::string &sentence)
     // Format: $GNRMC,hhmmss.ss,A,llll.ll,a,yyyy.yy,a,x.x,x.x,ddmmyy,x.x,a*hh
     
     if (sentence.empty() || sentence[0] != '$') return;
-
+m_latitude
     std::vector<std::string> parts;
     std::string current_part;
     for (char c : sentence) {
