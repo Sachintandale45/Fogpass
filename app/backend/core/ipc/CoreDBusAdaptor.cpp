@@ -1,41 +1,57 @@
-#include "CoreDBusAdaptor.h"
+#include "CoreDbusAdaptor.h"
 #include "CoreState.h"
-#include <iostream>
+
 #include <QDebug>
-#include "LandmarkEngine.h"
 
-CoreDBusAdaptor::CoreDBusAdaptor(CoreState *state, LandmarkEngine *engine, QObject *parent)
-    : QObject(parent), m_state(state)
+CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState, QObject *parent)
+    : QObject(parent),
+      m_coreState(coreState)
 {
-    // Connect signals from the application's state/logic objects to this adaptor's D-Bus signals.
-    connect(m_state, &CoreState::landmarkLocationsChanged, this, &CoreDBusAdaptor::LandmarkLocationsChanged);
-    connect(engine, &LandmarkEngine::nextLandmarksUpdated, this, &CoreDBusAdaptor::NextLandmarksUpdated);
+    // Register D-Bus service
+    QDBusConnection bus = QDBusConnection::systemBus();
+
+    if (!bus.registerService("com.fogpass.Core")) {
+        qCritical() << "Failed to register D-Bus service:"
+                    << bus.lastError().message();
+    }
+
+    // Register object on bus
+    if (!bus.registerObject("/com/fogpass/Core",
+                            this,
+                            QDBusConnection::ExportAllSignals)) {
+        qCritical() << "Failed to register D-Bus object:"
+                    << bus.lastError().message();
+    }
+
+    // ---- Internal wiring (NOT D-Bus) ----
+
+    // Alerts
+    connect(m_coreState, &CoreState::alertRaised,
+            this, &CoreDbusAdaptor::onAlertRaised,
+            Qt::QueuedConnection);
+
+    // Landmarks
+    connect(m_coreState, &CoreState::nextLandmarksUpdated,
+            this, &CoreDbusAdaptor::onNextLandmarksUpdated,
+            Qt::QueuedConnection);
+
+    qInfo() << "CoreDbusAdaptor initialized and exported on D-Bus";
 }
 
-void CoreDBusAdaptor::SetWeatherMode(bool foggy)
-{
-    std::cout << "[CORE] D-Bus call received: SetWeatherMode("
-              << (foggy ? "true" : "false") << ")" << std::endl;
+// ---------- Internal → D-Bus bridge ----------
 
-    m_state->setFogMode(foggy);
+void CoreDbusAdaptor::onAlertRaised(const QString &alertId)
+{
+    // Emit D-Bus signal
+    emit AlertRaised(alertId);
 }
 
-QStringList CoreDBusAdaptor::GetLandmarkLocations()
+void CoreDbusAdaptor::onNextLandmarksUpdated(const QString &name1, int dist1,
+                                             const QString &name2, int dist2,
+                                             const QString &name3, int dist3)
 {
-    qDebug() << "[CORE] D-Bus call received: GetLandmarkLocations";
-    return m_state->landmarkLocations();
-}
-
-void CoreDBusAdaptor::SetLandmarkLocations(const QStringList &locations)
-{
-    qDebug() << "[CORE] D-Bus call received: SetLandmarkLocations";
-    m_state->setLandmarkLocations(locations);
-}
-
-QDBusArgument &operator<<(QDBusArgument &argument, const QStringList &list)
-{
-    argument.beginArray();
-    for (const QString &str : list) argument << str;
-    argument.endArray();
-    return argument;
+    // Emit D-Bus signal
+    emit NextLandmarksUpdated(name1, dist1,
+                              name2, dist2,
+                              name3, dist3);
 }

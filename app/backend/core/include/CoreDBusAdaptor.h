@@ -1,33 +1,38 @@
 #pragma once
 
 #include <QObject>
-#include <QStringList>
-#include <QDBusArgument>
-#include <QDBusMetaType>
+#include <QtDBus/QtDBus>
 
-class CoreState; // Forward declaration
-class LandmarkEngine; // Forward declaration
+class CoreState;
 
-class CoreDBusAdaptor : public QObject
+class CoreDbusAdaptor : public QObject
 {
     Q_OBJECT
-
-    // Expose this class to D-Bus with the interface name com.fogpass.Core
     Q_CLASSINFO("D-Bus Interface", "com.fogpass.Core")
 
 public:
-    explicit CoreDBusAdaptor(CoreState *state, LandmarkEngine *engine, QObject *parent = nullptr);
+    explicit CoreDbusAdaptor(CoreState *coreState,
+                             QObject *parent = nullptr);
 
 signals:
-    void LandmarkLocationsChanged(const QStringList &locations);
-    void NextLandmarksUpdated(const QString &name1, int dist1, const QString &name2, int dist2, const QString &name3, int dist3);
+    // -------- D-Bus signals (Core → UI) --------
 
-public slots:
-    // This slot will be callable over D-Bus as "SetWeatherMode"
-    void SetWeatherMode(bool foggy);
-    QStringList GetLandmarkLocations();
-    void SetLandmarkLocations(const QStringList &locations);
+    // Alerts
+    void AlertRaised(const QString &alertId);
+
+    // Landmark updates
+    void NextLandmarksUpdated(const QString &name1, int dist1,
+                              const QString &name2, int dist2,
+                              const QString &name3, int dist3);
+
+private slots:
+    // -------- Internal slots (CoreState → Adaptor) --------
+    void onAlertRaised(const QString &alertId);
+
+    void onNextLandmarksUpdated(const QString &name1, int dist1,
+                                const QString &name2, int dist2,
+                                const QString &name3, int dist3);
 
 private:
-    CoreState *m_state;
+    CoreState *m_coreState;
 };
