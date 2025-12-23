@@ -1,7 +1,20 @@
 #pragma once
 
-class CoreState; // Forward declaration
-class LandmarkEngine; // Forward declaration
+#include <QString>
 
-// Wires up the landmark business logic to the core state
-void setupLandmarkLogic(CoreState *state, LandmarkEngine *engine);
+class Landmark
+{
+public:
+    Landmark();
+    Landmark(const QString &name, double latitude, double longitude);
+
+    QString name() const;
+    double latitude() const;
+    double longitude() const;
+    bool isValid() const;
+
+private:
+    QString m_name;
+    double m_latitude;
+    double m_longitude;
+};
