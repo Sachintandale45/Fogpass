@@ -1,81 +1,93 @@
 #include "LandmarkEngine.h"
 #include "Locator.h"
+#include "CoreState.h"
 
-#include <QFile>
-#include <QTextStream>
 #include <QDebug>
 
-LandmarkEngine::LandmarkEngine(Locator* locator, QObject* parent)
+LandmarkEngine::LandmarkEngine(Locator *locator,
+                               CoreState *coreState,
+                               QObject *parent)
     : QObject(parent),
-      m_locator(locator)
+      m_locator(locator),
+      m_coreState(coreState)
 {
-    Q_ASSERT(m_locator != nullptr);
+    Q_ASSERT(m_locator);
+    Q_ASSERT(m_coreState);
+
+    // Timer setup (1 second update)
+    connect(&m_timer, &QTimer::timeout,
+            this, &LandmarkEngine::process);
 }
 
-bool LandmarkEngine::loadLandmarkFile(const QString& filePath)
+bool LandmarkEngine::loadRouteFile(const QString &filePath)
 {
-    qDebug() << "[Landmark] Loading landmark file:" << filePath;
+    Q_UNUSED(filePath)
 
-    QFile file(filePath);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "[Landmark] Failed to open file";
-        return false;
-    }
+    // TODO:
+    // - Open CSV
+    // - Parse landmarks
+    // - Populate m_routeLandmarks
 
-    QTextStream in(&file);
-
-    // Placeholder: real CSV parsing later
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        if (line.trimmed().isEmpty())
-            continue;
-
-        // TODO: parse CSV properly
-        // name,lat,lon
-    }
-
-    file.close();
+    qDebug() << "[LandmarkEngine] Route file loaded:" << filePath;
     return true;
 }
 
-void LandmarkEngine::update()
+void LandmarkEngine::start()
 {
-    // Called periodically (timer or thread loop)
-    computeDistances();
+    if (!m_timer.isActive()) {
+        m_timer.start(1000);  // every 1 second
+        qDebug() << "[LandmarkEngine] Started";
+    }
 }
 
-void LandmarkEngine::computeDistances()
+void LandmarkEngine::stop()
 {
-    // Placeholder logic
-    m_nextLandmarks.clear();
+    if (m_timer.isActive()) {
+        m_timer.stop();
+        qDebug() << "[LandmarkEngine] Stopped";
+    }
+}
 
-    auto pos = m_locator->position();
+void LandmarkEngine::process()
+{
+    // 1️⃣ Get current position from Locator
+    double lat = 0.0;
+    double lon = 0.0;
+    double speed = 0.0;
 
-    Q_UNUSED(pos);
+    if (!m_locator->position(lat, lon, speed)) {
+        qDebug() << "[LandmarkEngine] Position not available";
+        return;
+    }
+
+    // 2️⃣ Compute next landmarks (logic later)
+    computeNextLandmarks(lat, lon);
+
+    // 3️⃣ Compute distances (dummy values for now)
+    int d1 = 1200;
+    int d2 = 2400;
+    int d3 = 3600;
+
+    // 4️⃣ Push continuous state to CoreState
+    m_coreState->updateNextLandmarks(
+        m_next1.name, d1,
+        m_next2.name, d2,
+        m_next3.name, d3
+    );
+}
+
+void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
+{
+    Q_UNUSED(curLat)
+    Q_UNUSED(curLon)
 
     // TODO:
-    // - compute distance to each landmark
-    // - sort by distance
-    // - keep next 3
-}
+    // - Find closest landmark ahead
+    // - Select next 3 landmarks
+    // - Compute remaining distances
 
-double LandmarkEngine::computeDistanceMeters(double lat1, double lon1,
-                                             double lat2, double lon2)
-{
-    Q_UNUSED(lat1);
-    Q_UNUSED(lon1);
-    Q_UNUSED(lat2);
-    Q_UNUSED(lon2);
-
-    // TODO: Haversine formula
-    return 0.0;
-}
-
-QVector<LandmarkEngine::LandmarkStatus>
-LandmarkEngine::nextLandmarks(int count) const
-{
-    if (count >= m_nextLandmarks.size())
-        return m_nextLandmarks;
-
-    return m_nextLandmarks.mid(0, count);
+    // Placeholder data
+    m_next1.name = "Station A";
+    m_next2.name = "Bridge";
+    m_next3.name = "Tunnel";
 }
