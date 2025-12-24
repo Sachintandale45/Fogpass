@@ -12,6 +12,7 @@ public:
     explicit CoreClient(QObject *parent = nullptr);
 
     void setWeatherMode(bool foggy);
+    void setGnssMode(int mode);
 
 
 signals:

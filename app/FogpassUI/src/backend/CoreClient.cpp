@@ -34,3 +34,9 @@ void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
     // No emit modeChanged(mode); here as per the "No response handling needed" instruction.
     // The UI will update when the system backend eventually sends a state update signal.
 }
+
+void CoreClient::setGnssMode(int mode)
+{
+    m_iface->call("SetGnssMode", mode);
+    qDebug() << "CoreClient: D-Bus call 'SetGnssMode' sent with value:" << mode;
+}

@@ -61,6 +61,9 @@ void LandmarkEngine::stop()
 
 void LandmarkEngine::process()
 {
+    // CRITICAL: Update the locator with the latest data from the active GNSS source.
+    m_locator->update();
+
     // 1️⃣ Get current position from Locator
     double lat = 0.0;
     double lon = 0.0;
@@ -79,9 +82,9 @@ void LandmarkEngine::process()
     computeNextLandmarks(lat, lon);
 
     // 3️⃣ Compute distances (dummy values for now)
-    int d1 = 1200;
-    int d2 = 2400;
-    int d3 = 3600;
+    // int d1 = 1200;
+    // int d2 = 2400;
+    // int d3 = 3600;
 
     // 4️⃣ Push continuous state to CoreState
     // TEST: Overriding logic to send test name to UI

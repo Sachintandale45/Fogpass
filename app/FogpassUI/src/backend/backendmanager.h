@@ -24,6 +24,7 @@ public:
     Q_INVOKABLE void setVolume(int volume);
     Q_INVOKABLE void setWeatherMode(bool foggy);
     Q_INVOKABLE void requestLandmarks();
+    Q_INVOKABLE void setGnssMode(bool simulation);
 
     QString landmark1() const;
     int distance1() const;

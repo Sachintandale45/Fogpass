@@ -63,7 +63,7 @@ private:
     IGnssSource *m_realGnss;
     IGnssSource *m_simGnss;
 
-    Mode m_mode { Mode::Real };
+    Mode m_mode { Mode::Simulation };
 
     mutable QMutex m_mutex;
 };

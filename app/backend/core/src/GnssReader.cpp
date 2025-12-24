@@ -27,30 +27,21 @@ GnssReader::~GnssReader()
 
 bool GnssReader::start()
 {
-    // Use stored configuration
+    if (m_running) {
+        return true; // Already running
+    }
+
     if (m_portName.empty()) {
-        std::cerr << "[GNSS] start() failed: port not configured\n";
+        std::cerr << "[GNSS] Cannot start: port not configured. Call configure() first." << std::endl;
         return false;
     }
-    return start(m_portName, m_baudRate);
-}
 
-// ------------------------------------------------------------
-// Real GNSS start / stop
-// ------------------------------------------------------------
+    std::cout << "[GNSS] Attempting to connect to " << m_portName
+              << " @ " << m_baudRate << " baud" << std::endl;
 
-bool GnssReader::start(const std::string &portName, int baudRate)
-{
-    if (m_running) {
-        stop();
-    }
-
-    m_portName = portName;
-    m_baudRate = baudRate;
-
-    m_fd = open(portName.c_str(), O_RDONLY | O_NOCTTY);
+    m_fd = open(m_portName.c_str(), O_RDONLY | O_NOCTTY);
     if (m_fd < 0) {
-        std::cerr << "[GNSS] Failed to open " << portName
+        std::cerr << "[GNSS] Failed to open " << m_portName
                   << ": " << std::system_category().message(errno)
                   << std::endl;
         return false;
@@ -67,7 +58,7 @@ bool GnssReader::start(const std::string &portName, int baudRate)
     }
 
     speed_t realBaud;
-    switch (baudRate) {
+    switch (m_baudRate) {
         case 9600:   realBaud = B9600; break;
         case 19200:  realBaud = B19200; break;
         case 38400:  realBaud = B38400; break;
@@ -75,7 +66,7 @@ bool GnssReader::start(const std::string &portName, int baudRate)
         case 115200: realBaud = B115200; break;
         default:
             std::cerr << "[GNSS] Unsupported baud rate: "
-                      << baudRate << std::endl;
+                      << m_baudRate << std::endl;
             close(m_fd);
             m_fd = -1;
             return false;
@@ -109,8 +100,8 @@ bool GnssReader::start(const std::string &portName, int baudRate)
     m_running = true;
     m_readThread = std::thread(&GnssReader::readLoop, this);
 
-    std::cout << "[GNSS] Connected to " << portName
-              << " @ " << baudRate << " baud" << std::endl;
+    std::cout << "[GNSS] Started read thread for " << m_portName
+              << std::endl;
 
     return true;
 }
@@ -127,6 +118,12 @@ void GnssReader::stop()
         close(m_fd);
         m_fd = -1;
         std::cout << "[GNSS] Serial port closed." << std::endl;
+
+        // When stopping, we lose stability
+        if (m_gnssStable) {
+            m_gnssStable = false;
+            emit gnssStabilityChanged(false);
+        }
     }
 }
 
@@ -270,4 +267,13 @@ double GnssReader::parseCoordinate(const std::string &val,
     } catch (...) {
         return 0.0;
     }
+}
+
+// ------------------------------------------------------------
+// Configuration
+// ------------------------------------------------------------
+void GnssReader::configure(const std::string &portName, int baudRate)
+{
+    m_portName = portName;
+    m_baudRate = baudRate;
 }

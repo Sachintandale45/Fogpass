@@ -78,6 +78,13 @@ void BackendManager::setWeatherMode(bool foggy)
     emit modeUpdated(newMode);   //this is loopback from ui only to ui. not from backend
 }
 
+void BackendManager::setGnssMode(bool simulation)
+{
+    // 0 = Real, 1 = Simulation
+    int mode = simulation ? 1 : 0;
+    m_core->setGnssMode(mode);
+}
+
 void BackendManager::onTimeout()
 {
     if (m_batteryLevel > 25) { // Stop at 25

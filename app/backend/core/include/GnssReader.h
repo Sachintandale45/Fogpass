@@ -32,7 +32,8 @@ public:
     bool isGnssStable() const override;
 
     // -------- Real GNSS specific API --------
-    bool start(const std::string &portName, int baudRate);
+    // Configure the serial port before starting
+    void configure(const std::string &portName, int baudRate);
 
 private:
     void readLoop();
