@@ -1,0 +1,157 @@
+#include "SimulatedGnssReader.h"
+
+#include <QFile>
+#include <QTextStream>
+#include <QDebug>
+
+SimulatedGnssReader::SimulatedGnssReader(QObject *parent)
+    : IGnssSource(parent)
+{
+    // Default: 1 Hz updates (can be made configurable later)
+    m_timer.setInterval(1000);
+
+    connect(&m_timer, &QTimer::timeout,
+            this, &SimulatedGnssReader::onTimerTick,
+            Qt::QueuedConnection);
+}
+
+SimulatedGnssReader::~SimulatedGnssReader()
+{
+    stop();
+}
+
+// ------------------------------------------------------------
+// CSV loader
+// ------------------------------------------------------------
+bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
+{
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "[SimGnss] Failed to open file:" << filePath;
+        return false;
+    }
+
+    QVector<GnssPoint> points;
+    QTextStream in(&file);
+
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty() || line.startsWith('#'))
+            continue;
+
+        const QStringList parts = line.split(',');
+        if (parts.size() < 3)
+            continue;
+
+        bool ok1, ok2, ok3;
+        GnssPoint p;
+        p.latitude  = parts[0].toDouble(&ok1);
+        p.longitude = parts[1].toDouble(&ok2);
+        p.speedKmh  = parts[2].toDouble(&ok3);
+
+        if (ok1 && ok2 && ok3) {
+            points.append(p);
+        }
+    }
+
+    if (points.isEmpty()) {
+        qWarning() << "[SimGnss] No valid points in CSV";
+        return false;
+    }
+
+    QMutexLocker locker(&m_mutex);
+    m_points = points;
+    m_currentIndex = 0;
+
+    qDebug() << "[SimGnss] Loaded" << m_points.size() << "GNSS points";
+    return true;
+}
+
+// ------------------------------------------------------------
+// IGnssSource API
+// ------------------------------------------------------------
+bool SimulatedGnssReader::start()
+{
+    QMutexLocker locker(&m_mutex);
+
+    if (m_points.isEmpty()) {
+        qWarning() << "[SimGnss] Cannot start: no simulation data loaded";
+        return false;
+    }
+
+    if (m_running)
+        return true;
+
+    m_running = true;
+    m_currentIndex = 0;
+    m_timer.start();
+
+    emit gnssStabilityChanged(true); // simulation is always stable
+
+    qDebug() << "[SimGnss] Simulation started";
+    return true;
+}
+
+void SimulatedGnssReader::stop()
+{
+    QMutexLocker locker(&m_mutex);
+
+    if (!m_running)
+        return;
+
+    m_running = false;
+    m_timer.stop();
+
+    qDebug() << "[SimGnss] Simulation stopped";
+}
+
+double SimulatedGnssReader::latitude() const
+{
+    QMutexLocker locker(&m_mutex);
+    return m_latitude;
+}
+
+double SimulatedGnssReader::longitude() const
+{
+    QMutexLocker locker(&m_mutex);
+    return m_longitude;
+}
+
+double SimulatedGnssReader::speedKmh() const
+{
+    QMutexLocker locker(&m_mutex);
+    return m_speedKmh;
+}
+
+bool SimulatedGnssReader::isGnssStable() const
+{
+    return true; // simulation is always stable
+}
+
+// ------------------------------------------------------------
+// Timer tick → advance simulation
+// ------------------------------------------------------------
+void SimulatedGnssReader::onTimerTick()
+{
+    QMutexLocker locker(&m_mutex);
+
+    if (!m_running || m_points.isEmpty())
+        return;
+
+    const GnssPoint &p = m_points[m_currentIndex];
+
+    m_latitude  = p.latitude;
+    m_longitude = p.longitude;
+    m_speedKmh  = p.speedKmh;
+
+    emit positionUpdated(m_latitude, m_longitude, m_speedKmh);
+
+    m_currentIndex++;
+
+    // Stop at end of file (or loop — your choice later)
+    if (m_currentIndex >= m_points.size()) {
+        m_currentIndex = m_points.size() - 1;
+        stop();
+        qDebug() << "[SimGnss] End of simulation reached";
+    }
+}

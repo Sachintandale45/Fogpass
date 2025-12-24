@@ -12,7 +12,7 @@
 // ------------------------------------------------------------
 
 GnssReader::GnssReader(QObject *parent)
-    : QObject(parent)
+    : IGnssSource(parent)
 {
 }
 
@@ -22,7 +22,21 @@ GnssReader::~GnssReader()
 }
 
 // ------------------------------------------------------------
-// Start / Stop
+// IGnssSource start / stop
+// ------------------------------------------------------------
+
+bool GnssReader::start()
+{
+    // Use stored configuration
+    if (m_portName.empty()) {
+        std::cerr << "[GNSS] start() failed: port not configured\n";
+        return false;
+    }
+    return start(m_portName, m_baudRate);
+}
+
+// ------------------------------------------------------------
+// Real GNSS start / stop
 // ------------------------------------------------------------
 
 bool GnssReader::start(const std::string &portName, int baudRate)
@@ -30,6 +44,9 @@ bool GnssReader::start(const std::string &portName, int baudRate)
     if (m_running) {
         stop();
     }
+
+    m_portName = portName;
+    m_baudRate = baudRate;
 
     m_fd = open(portName.c_str(), O_RDONLY | O_NOCTTY);
     if (m_fd < 0) {
@@ -94,6 +111,7 @@ bool GnssReader::start(const std::string &portName, int baudRate)
 
     std::cout << "[GNSS] Connected to " << portName
               << " @ " << baudRate << " baud" << std::endl;
+
     return true;
 }
 
@@ -131,7 +149,6 @@ void GnssReader::readLoop()
                 std::string sentence = buffer.substr(0, pos);
                 buffer.erase(0, pos + 1);
 
-                // trim
                 sentence.erase(0, sentence.find_first_not_of(" \r\n\t"));
                 sentence.erase(sentence.find_last_not_of(" \r\n\t") + 1);
 
@@ -178,7 +195,6 @@ void GnssReader::parseNmeaSentence(const std::string &sentence)
 
         std::lock_guard<std::mutex> lock(m_dataMutex);
 
-        // Emit signal ONLY on change
         if (newStable != m_gnssStable) {
             m_gnssStable = newStable;
             emit gnssStabilityChanged(m_gnssStable);
@@ -191,9 +207,11 @@ void GnssReader::parseNmeaSentence(const std::string &sentence)
             try {
                 double speedKnots = std::stod(parts[7]);
                 m_speedKmh = speedKnots * 1.852;
-            } catch (...) {
-                // ignore parse errors
-            }
+            } catch (...) {}
+
+            emit positionUpdated(m_latitude,
+                                 m_longitude,
+                                 m_speedKmh);
         }
     }
 }
