@@ -57,3 +57,8 @@ install(TARGETS fogpass-core
 install(FILES fogpass-core.service
     DESTINATION /lib/systemd/system
 )
+
+# Install D-Bus policy configuration
+install(FILES com.fogpass.Core.conf
+    DESTINATION /etc/dbus-1/system.d
+)

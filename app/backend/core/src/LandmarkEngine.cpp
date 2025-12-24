@@ -19,6 +19,17 @@ LandmarkEngine::LandmarkEngine(Locator *locator,
             this, &LandmarkEngine::process);
 }
 
+// ------------------------------------------------------------
+// Test Function for UI
+// ------------------------------------------------------------
+static void sendTestLandmarkToUI(CoreState *coreState, const QString &name)
+{
+    static int counter = 0;
+    counter++;
+    // Sends a specific landmark name to the UI via CoreState -> DBus
+    coreState->updateNextLandmarks(QString("%1 %2").arg(name).arg(counter), 500, "Test2", 1000, "Test3", 1500);
+}
+
 bool LandmarkEngine::loadRouteFile(const QString &filePath)
 {
     Q_UNUSED(filePath)
@@ -73,11 +84,8 @@ void LandmarkEngine::process()
     int d3 = 3600;
 
     // 4️⃣ Push continuous state to CoreState
-    m_coreState->updateNextLandmarks(
-        m_next1.name, d1,
-        m_next2.name, d2,
-        m_next3.name, d3
-    );
+    // TEST: Overriding logic to send test name to UI
+    sendTestLandmarkToUI(m_coreState, "Test Landmark UI");
 }
 
 void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)

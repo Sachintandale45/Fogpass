@@ -12,7 +12,7 @@ public:
     explicit CoreClient(QObject *parent = nullptr);
 
     void setWeatherMode(bool foggy);
-    void requestLandmarkLocations();
+
 
 signals:
     void landmarkLocationsChanged(const QStringList &locations);

@@ -34,10 +34,15 @@ void BackendManager::setVolume(int volume)
 
 void BackendManager::requestLandmarks()
 {
-    m_core->requestLandmarkLocations();
+    // Disabled: CoreClient no longer supports manual requests.
+    // Updates are pushed automatically via signals.
 }
 
-QString BackendManager::landmark1() const { return m_landmark1; }
+QString BackendManager::landmark1() const {
+    // Debug to confirm QML is reading the property
+    qDebug() << "BackendManager: QML accessing landmark1:" << m_landmark1;
+    return m_landmark1;
+}
 int BackendManager::distance1() const { return m_dist1; }
 QString BackendManager::landmark2() const { return m_landmark2; }
 int BackendManager::distance2() const { return m_dist2; }
@@ -46,6 +51,8 @@ int BackendManager::distance3() const { return m_dist3; }
 
 void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
 {
+    qDebug() << "BackendManager: Received update:" << l1 << d1;
+
     bool changed = false;
     if (m_landmark1 != l1) { m_landmark1 = l1; changed = true; }
     if (m_dist1 != d1) { m_dist1 = d1; changed = true; }
@@ -55,6 +62,7 @@ void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString
     if (m_dist3 != d3) { m_dist3 = d3; changed = true; }
 
     if (changed) {
+        qDebug() << "BackendManager: Data changed, emitting landmarksChanged()";
         emit landmarksChanged();
     }
 }
@@ -74,7 +82,7 @@ void BackendManager::setWeatherMode(bool foggy)
     // After sending the command, emit the signal to update the UI immediately.
     // This provides instant feedback to the user.
     const QString newMode = foggy ? "Foggy" : "Non-Foggy";
-    emit modeUpdated(newMode);
+    emit modeUpdated(newMode);   //this is loopback from ui only to ui. not from backend
 }
 
 void BackendManager::onTimeout()

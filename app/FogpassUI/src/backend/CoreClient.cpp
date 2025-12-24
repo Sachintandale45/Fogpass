@@ -34,24 +34,3 @@ void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
     // No emit modeChanged(mode); here as per the "No response handling needed" instruction.
     // The UI will update when the system backend eventually sends a state update signal.
 }
-
-void CoreClient::requestLandmarkLocations()
-{
-    qDebug() << "CoreClient: Requesting landmark locations from service...";
-    // Make an asynchronous call to the GetLandmarkLocations method
-    QDBusPendingReply<QStringList> reply = m_iface->asyncCall("GetLandmarkLocations");
-
-    // Use a watcher to handle the reply when it arrives
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *self) {
-        if (self->isValid() && self->isFinished()) {
-            // Cast the watcher back to the specific reply type to access the typed result
-            QDBusPendingReply<QStringList> reply = *self;
-            // When the reply is received, emit our local C++ signal with the data
-            emit landmarkLocationsChanged(reply.value());
-        }
-        // Clean up the watcher
-        self->deleteLater();
-    });
-}
