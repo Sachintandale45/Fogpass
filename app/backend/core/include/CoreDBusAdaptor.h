@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include <QtDBus/QtDBus>
+#include <QDebug>
 
 class CoreState;
 
@@ -27,10 +28,20 @@ signals:
     
     // Internal signal to notify main.cpp to switch modes
     void gnssModeChangeRequested(int mode);
+    void weatherModeChangeRequested(bool foggy);
 
 public slots:
     // D-Bus method: SetGnssMode(int mode) -> 0=Real, 1=Simulation
-    void SetGnssMode(int mode) { emit gnssModeChangeRequested(mode); }
+    void SetGnssMode(int mode) { 
+        qDebug() << "CoreDBusAdaptor: SetGnssMode called with" << mode;
+        emit gnssModeChangeRequested(mode); 
+    }
+
+    // D-Bus method: SetWeatherMode(bool foggy)
+    void SetWeatherMode(bool foggy) {
+        qDebug() << "CoreDBusAdaptor: SetWeatherMode called with" << foggy;
+        emit weatherModeChangeRequested(foggy);
+    }
 
 private slots:
     // -------- Internal slots (CoreState → Adaptor) --------

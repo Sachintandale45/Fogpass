@@ -29,7 +29,7 @@ GnssManager::GnssManager(IGnssSource *realGnss,
             this, &GnssManager::onSourcePositionUpdated,
             Qt::QueuedConnection);
 
-    qDebug() << "[GnssManager] Initialized (default: REAL GNSS)";
+    qDebug() << "[GnssManager] Initialized (default:" << (m_mode == Mode::Simulation ? "SIMULATION" : "REAL") << ")";
 }
 
 GnssManager::~GnssManager()
@@ -45,9 +45,15 @@ bool GnssManager::start()
     QMutexLocker locker(&m_mutex);
 
     if (m_mode == Mode::Real) {
+        qDebug() << "*****************************************";
+        qDebug() << "[GnssManager] ==> STARTING REAL GNSS <==";
+        qDebug() << "*****************************************";
         m_simGnss->stop();
         return m_realGnss->start();
     } else {
+        qDebug() << "*************************************************";
+        qDebug() << "[GnssManager] ==> STARTING SIMULATION GNSS <==";
+        qDebug() << "*************************************************";
         m_realGnss->stop();
         return m_simGnss->start();
     }
@@ -94,12 +100,14 @@ void GnssManager::setMode(GnssManager::Mode mode)
 {
     QMutexLocker locker(&m_mutex);
 
+    qDebug() << "[GnssManager] Received request to set mode to:" << (mode == Mode::Simulation ? "SIMULATION" : "REAL");
+
     if (m_mode == mode) {
+        qDebug() << "[GnssManager] Already in requested mode. No change.";
         return; // no-op
     }
 
-    qDebug() << "[GnssManager] Switching GNSS mode to"
-             << (mode == Mode::Simulation ? "SIMULATION" : "REAL");
+    qDebug() << "[GnssManager] Switching GNSS mode from" << (m_mode == Mode::Simulation ? "SIM" : "REAL") << "to" << (mode == Mode::Simulation ? "SIM" : "REAL");
 
     // Stop current source
     activeSource()->stop();

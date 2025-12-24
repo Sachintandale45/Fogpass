@@ -27,8 +27,24 @@ bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
 {
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "[SimGnss] Failed to open file:" << filePath;
-        return false;
+        qWarning() << "[SimGnss] Failed to open file:" << filePath << "- Generating DEFAULT simulation path.";
+
+        // Generate a simple diagonal path for testing if file is missing
+        QVector<GnssPoint> points;
+        double lat = 18.5204;
+        double lon = 73.8567;
+        for(int i=0; i<100; i++) {
+            GnssPoint p;
+            p.latitude = lat + (i * 0.0001);
+            p.longitude = lon + (i * 0.0001);
+            p.speedKmh = 40.0 + (i % 10);
+            points.append(p);
+        }
+
+        QMutexLocker locker(&m_mutex);
+        m_points = points;
+        m_currentIndex = 0;
+        return true;
     }
 
     QVector<GnssPoint> points;
@@ -72,6 +88,8 @@ bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
 // ------------------------------------------------------------
 bool SimulatedGnssReader::start()
 {
+    qDebug() << "[SimGnss] Start requested.";
+
     QMutexLocker locker(&m_mutex);
 
     if (m_points.isEmpty()) {
@@ -125,7 +143,8 @@ double SimulatedGnssReader::speedKmh() const
 
 bool SimulatedGnssReader::isGnssStable() const
 {
-    return true; // simulation is always stable
+    QMutexLocker locker(&m_mutex);
+    return m_running && !m_points.isEmpty();
 }
 
 // ------------------------------------------------------------

@@ -37,6 +37,12 @@ void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
 
 void CoreClient::setGnssMode(int mode)
 {
+    if (!m_iface->isValid()) {
+        qWarning() << "CoreClient: D-Bus interface is not valid. Cannot call SetGnssMode.";
+        qWarning() << "CoreClient: Last error:" << m_iface->lastError().message();
+        return;
+    }
+
     m_iface->call("SetGnssMode", mode);
     qDebug() << "CoreClient: D-Bus call 'SetGnssMode' sent with value:" << mode;
 }

@@ -1,6 +1,6 @@
 #include "GnssReader.h"
 
-#include <iostream>
+#include <QDebug>
 #include <vector>
 #include <unistd.h>
 #include <fcntl.h>
@@ -27,31 +27,31 @@ GnssReader::~GnssReader()
 
 bool GnssReader::start()
 {
+    qDebug() << "[GnssReader] Start requested.";
+
     if (m_running) {
         return true; // Already running
     }
 
     if (m_portName.empty()) {
-        std::cerr << "[GNSS] Cannot start: port not configured. Call configure() first." << std::endl;
+        qCritical() << "[GNSS] Cannot start: port not configured. Call configure() first.";
         return false;
     }
 
-    std::cout << "[GNSS] Attempting to connect to " << m_portName
-              << " @ " << m_baudRate << " baud" << std::endl;
+    qDebug() << "[GNSS] Attempting to connect to" << QString::fromStdString(m_portName)
+             << "@" << m_baudRate << "baud";
 
     m_fd = open(m_portName.c_str(), O_RDONLY | O_NOCTTY);
     if (m_fd < 0) {
-        std::cerr << "[GNSS] Failed to open " << m_portName
-                  << ": " << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] Failed to open" << QString::fromStdString(m_portName)
+                    << ":" << QString::fromStdString(std::system_category().message(errno));
         return false;
     }
 
     termios tty{};
     if (tcgetattr(m_fd, &tty) != 0) {
-        std::cerr << "[GNSS] tcgetattr failed: "
-                  << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] tcgetattr failed:"
+                    << QString::fromStdString(std::system_category().message(errno));
         close(m_fd);
         m_fd = -1;
         return false;
@@ -65,8 +65,7 @@ bool GnssReader::start()
         case 57600:  realBaud = B57600; break;
         case 115200: realBaud = B115200; break;
         default:
-            std::cerr << "[GNSS] Unsupported baud rate: "
-                      << m_baudRate << std::endl;
+            qCritical() << "[GNSS] Unsupported baud rate:" << m_baudRate;
             close(m_fd);
             m_fd = -1;
             return false;
@@ -89,9 +88,7 @@ bool GnssReader::start()
     tty.c_cflag &= ~CRTSCTS;
 
     if (tcsetattr(m_fd, TCSANOW, &tty) != 0) {
-        std::cerr << "[GNSS] tcsetattr failed: "
-                  << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] tcsetattr failed:" << QString::fromStdString(std::system_category().message(errno));
         close(m_fd);
         m_fd = -1;
         return false;
@@ -100,8 +97,7 @@ bool GnssReader::start()
     m_running = true;
     m_readThread = std::thread(&GnssReader::readLoop, this);
 
-    std::cout << "[GNSS] Started read thread for " << m_portName
-              << std::endl;
+    qDebug() << "[GNSS] Started read thread for" << QString::fromStdString(m_portName);
 
     return true;
 }
@@ -117,7 +113,7 @@ void GnssReader::stop()
     if (m_fd >= 0) {
         close(m_fd);
         m_fd = -1;
-        std::cout << "[GNSS] Serial port closed." << std::endl;
+        qDebug() << "[GNSS] Serial port closed.";
 
         // When stopping, we lose stability
         if (m_gnssStable) {

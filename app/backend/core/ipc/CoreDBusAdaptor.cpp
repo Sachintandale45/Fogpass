@@ -7,22 +7,6 @@ CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState, QObject *parent)
     : QObject(parent),
       m_coreState(coreState)
 {
-    // Register D-Bus service
-    QDBusConnection bus = QDBusConnection::systemBus();
-
-    if (!bus.registerService("com.fogpass.Core")) {
-        qCritical() << "Failed to register D-Bus service:"
-                    << bus.lastError().message();
-    }
-
-    // Register object on bus
-    if (!bus.registerObject("/com/fogpass/Core",
-                            this,
-                            QDBusConnection::ExportAllSignals)) {
-        qCritical() << "Failed to register D-Bus object:"
-                    << bus.lastError().message();
-    }
-
     // ---- Internal wiring (NOT D-Bus) ----
 
     // Alerts

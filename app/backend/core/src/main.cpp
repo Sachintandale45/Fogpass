@@ -106,6 +106,22 @@ int main(int argc, char *argv[])
         gnssManager->setMode(m);
     });
 
+    // Wire up D-Bus Weather mode switch
+    QObject::connect(dbusAdaptor, &CoreDbusAdaptor::weatherModeChangeRequested,
+                     coreState, &CoreState::setFogMode);
+
+    // ------------------------------------------------------------
+    // 9️⃣ Register D-Bus Service & Object
+    // ------------------------------------------------------------
+    QDBusConnection connection = QDBusConnection::systemBus();
+    if (!connection.registerService("com.fogpass.Core")) {
+        qCritical() << "QtDBus: failed to register service com.fogpass.Core:" << connection.lastError().message();
+    }
+
+    if (!connection.registerObject("/com/fogpass/Core", dbusAdaptor, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals)) {
+        qCritical() << "QtDBus: failed to register object /com/fogpass/Core:" << connection.lastError().message();
+    }
+
     qInfo() << "FogPass Core Service initialized. Entering event loop.";
 
     // ------------------------------------------------------------
