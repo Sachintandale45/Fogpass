@@ -8,7 +8,7 @@
 // Logic modules
 #include "GnssReader.h"
 #include "locator.h"
-#include "landmark.h"
+#include "LandmarkEngine.h"
 #include "alertmanager.h"
 
 int main(int argc, char *argv[])

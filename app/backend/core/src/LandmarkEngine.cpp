@@ -55,10 +55,14 @@ void LandmarkEngine::process()
     double lon = 0.0;
     double speed = 0.0;
 
-    if (!m_locator->position(lat, lon, speed)) {
-        qDebug() << "[LandmarkEngine] Position not available";
+    if (!m_locator->isGnssStable()) {
         return;
     }
+
+    Locator::Position pos = m_locator->position();
+    lat = pos.latitude;
+    lon = pos.longitude;
+    speed = pos.speedKmh;
 
     // 2️⃣ Compute next landmarks (logic later)
     computeNextLandmarks(lat, lon);
