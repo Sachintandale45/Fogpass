@@ -1,0 +1,32 @@
+{
+    "classes": [
+        {
+            "className": "AudioClient",
+            "lineNumber": 6,
+            "object": true,
+            "qualifiedClassName": "AudioClient",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "volume",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "volumeChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "AudioClient.h",
+    "outputRevision": 68
+}

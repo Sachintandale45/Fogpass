@@ -1,0 +1,206 @@
+[
+    {
+        "classes": [
+            {
+                "className": "AudioClient",
+                "lineNumber": 6,
+                "object": true,
+                "qualifiedClassName": "AudioClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "volume",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "volumeChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "AudioClient.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "CoreClient",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "CoreClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "locations",
+                                "type": "QStringList"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "landmarkLocationsChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "CoreClient.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "PowerClient",
+                "lineNumber": 6,
+                "object": true,
+                "qualifiedClassName": "PowerClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "level",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "batteryLevelChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "PowerClient.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "BackendManager",
+                "lineNumber": 10,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "volume",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "setVolume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "foggy",
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "setWeatherMode",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "BackendManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "volume",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "volumeUpdated",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "level",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "batteryLevelUpdated",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "mode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "modeUpdated",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "locations",
+                                "type": "QStringList"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "landmarkLocationsUpdated",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "start",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "index": 5,
+                        "name": "onTimeout",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "backendmanager.h",
+        "outputRevision": 68
+    }
+]

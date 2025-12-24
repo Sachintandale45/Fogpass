@@ -1,0 +1,22 @@
+module trial1
+typeinfo apptrial1.qmltypes
+prefer :/qt/qml/trial1/
+Main 1.0 Main.qml
+DemoPage 1.0 content/DemoPage.qml
+WelcomePage 1.0 content/WelcomePage.qml
+PlaceholderPage 1.0 content/PlaceholderPage.qml
+SplashPage 1.0 content/SplashPage.qml
+MenuPage 1.0 content/MenuPage.qml
+IntroPage 1.0 content/IntroPage.qml
+UserMenu 1.0 content/UserMenu.qml
+TestMenuPage 1.0 content/TestMenuPage.qml
+GPSSimulationPage 1.0 content/GPSSimulationPage.qml
+HeaderBar 1.0 content/HeaderBar.qml
+ModePlaceholder 1.0 content/ModePlaceholder.qml
+VolumeControl 1.0 content/VolumeControl.qml
+BackendBindings 1.0 content/BackendBindings.qml
+BrightnessControl 1.0 content/BrightnessControl.qml
+singleton AppSettings 1.0 config/AppSettings.qml
+AutoRoutePage 1.0 content/AutoRoutePage.qml
+Demo2 1.0 content/Demo2.qml
+
