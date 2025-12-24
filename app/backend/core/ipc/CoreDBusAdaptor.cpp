@@ -1,4 +1,4 @@
-#include "CoreDbusAdaptor.h"
+#include "CoreDBusAdaptor.h"
 #include "CoreState.h"
 
 #include <QDebug>

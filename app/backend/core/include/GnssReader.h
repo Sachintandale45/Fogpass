@@ -1,37 +1,70 @@
 #pragma once
 
-#include <string>
+#include <QObject>
 #include <thread>
-#include <atomic>
 #include <mutex>
+#include <string>
 
-class GnssReader
+/*
+ * GnssReader
+ *
+ * Responsibilities:
+ *  - Open UART device (/dev/ttySx)
+ *  - Read NMEA data in background thread
+ *  - Parse RMC sentences
+ *  - Maintain GNSS position & speed
+ *  - Track GNSS stability
+ *  - Emit signal when stability changes
+ *
+ * DOES NOT:
+ *  - Talk to CoreState
+ *  - Raise alerts
+ *  - Use D-Bus
+ */
+class GnssReader : public QObject
 {
+    Q_OBJECT
+
 public:
-    GnssReader();
+    explicit GnssReader(QObject *parent = nullptr);
     ~GnssReader();
 
-    // Main API to start reading from the module
-    // portName: e.g., "/dev/ttyACM0"
-    // baudRate: u-blox default is usually 9600 or 38400
-    bool start(const std::string &portName, int baudRate = 9600);
+    bool start(const std::string &portName, int baudRate);
     void stop();
 
+    // Thread-safe getters
     double latitude() const;
     double longitude() const;
     double speedKmh() const;
+    bool isGnssStable() const;
+
+signals:
+    // Emitted ONLY when GNSS stability changes
+    void gnssStabilityChanged(bool stable);
 
 private:
+    // Worker thread
     void readLoop();
+
+    // NMEA parsing
     void parseNmeaSentence(const std::string &sentence);
-    double parseCoordinate(const std::string &val, const std::string &dir);
+    double parseCoordinate(const std::string &val,
+                           const std::string &dir);
 
-    int m_fd = -1;
+private:
+    // UART
+    int m_fd{-1};
+
+    // Thread control
     std::thread m_readThread;
-    std::atomic<bool> m_running;
+    bool m_running{false};
 
+    // GNSS data (protected)
     mutable std::mutex m_dataMutex;
-    double m_latitude = 0.0;
-    double m_longitude = 0.0;
-    double m_speedKmh = 0.0;
+    double m_latitude{0.0};
+    double m_longitude{0.0};
+    double m_speedKmh{0.0};
+
+    // GNSS state
+    bool m_gnssStable{false};
 };

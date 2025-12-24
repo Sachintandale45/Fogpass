@@ -1,4 +1,4 @@
-#include "Locator.h"
+#include "locator.h"
 #include "GnssReader.h"
 
 #include <QDebug>

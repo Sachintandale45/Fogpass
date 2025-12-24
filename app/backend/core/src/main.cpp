@@ -3,13 +3,13 @@
 
 // Core modules
 #include "CoreState.h"
-#include "CoreDbusAdaptor.h"
+#include "CoreDBusAdaptor.h"
 
 // Logic modules
 #include "GnssReader.h"
-#include "Locator.h"
-#include "LandmarkEngine.h"
-#include "AlertManager.h"
+#include "locator.h"
+#include "landmark.h"
+#include "alertmanager.h"
 
 int main(int argc, char *argv[])
 {

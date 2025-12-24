@@ -13,16 +13,11 @@ set(CMAKE_AUTOMOC ON)
 
 add_executable(fogpass-core
     src/main.cpp
-    src/landmark.cpp
     src/CoreState.cpp
-    src/LandmarkEngine.cpp
     src/GnssReader.cpp
+    src/locator.cpp
+    src/alertmanager.cpp
     ipc/CoreDBusAdaptor.cpp
-    # Add headers with Q_OBJECT to the sources so AUTOMOC can find them
-    include/CoreState.h
-    include/LandmarkEngine.h
-    include/GnssReader.h
-    include/CoreDBusAdaptor.h
 )
 
 target_include_directories(fogpass-core

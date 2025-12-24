@@ -1,4 +1,4 @@
-#include "AlertManager.h"
+#include "alertmanager.h"
 #include "CoreState.h"
 
 #include <QDebug>

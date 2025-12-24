@@ -1,8 +1,0 @@
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/fogpass-core.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/edit_cache.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/rebuild_cache.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/list_install_components.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/install.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/install/local.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/install/strip.dir
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/bui/CMakeFiles/fogpass-core_autogen.dir
