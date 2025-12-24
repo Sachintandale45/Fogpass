@@ -52,3 +52,8 @@ target_compile_options(fogpass-core
 install(TARGETS fogpass-core
     RUNTIME DESTINATION bin
 )
+
+# Install systemd service file
+install(FILES fogpass-core.service
+    DESTINATION /lib/systemd/system
+)
