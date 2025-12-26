@@ -54,6 +54,7 @@ void CoreDbusAdaptor::SetGnssMode(int mode)
 
 void CoreDbusAdaptor::SetWeatherMode(bool enabled)
 {
+    qInfo() << "[CoreDbusAdaptor] SetWeatherMode request received:" << enabled;
     emit weatherModeChangeRequested(enabled);
 }
 

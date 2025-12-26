@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     // Simulated GNSS
     SimulatedGnssReader *simGnss = new SimulatedGnssReader(&app);
-    simGnss->loadCsvFile("/data/routes/ROUTE1.csv");
+    //simGnss->loadCsvFile("/data/routes/ROUTE1.csv");
 
     // GNSS manager (runtime switch)
     GnssManager *gnssManager =
