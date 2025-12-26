@@ -2,6 +2,7 @@
 #include <QDBusConnection> // New: For QDBusConnection
 #include <QDBusPendingReply>
 #include <QDBusPendingCallWatcher>
+#include <QDBusReply>
 
 CoreClient::CoreClient(QObject *parent) : QObject(parent)
 {
@@ -45,4 +46,22 @@ void CoreClient::setGnssMode(int mode)
 
     m_iface->call("SetGnssMode", mode);
     qDebug() << "CoreClient: D-Bus call 'SetGnssMode' sent with value:" << mode;
+}
+
+void CoreClient::setOperationMode(int mode)
+{
+    // 0=Idle, 1=Manual, 2=Auto
+    m_iface->call(QDBus::NoBlock, "SetOperationMode", mode);
+}
+
+QStringList CoreClient::getAvailableRoutes()
+{
+    QDBusReply<QStringList> reply = m_iface->call("GetAvailableRoutes");
+    if (reply.isValid()) return reply.value();
+    return QStringList();
+}
+
+void CoreClient::selectRoute(const QString &routeName)
+{
+    m_iface->call(QDBus::NoBlock, "SelectRoute", routeName);
 }

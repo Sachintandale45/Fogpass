@@ -35,6 +35,9 @@ Item {
     }
 
     function goToAutoRoutePage() {
+        // 1. Set Operation Mode to Auto (2)
+        Backend.SetOperationMode(2);
+
         confirmPopup.close();
         var s = stackRef();
         if (s) {
@@ -91,13 +94,23 @@ Item {
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: {
-                    // 1. Request the latest landmark data from the backend
-                    Backend.requestLandmarks()
+                    // 1. Set the backend to Manual Mode. This makes it ready to accept a route.
+                    Backend.SetOperationMode(1); // 1 = Manual
 
-                    // 2. Push the Demo2.qml page (the manual mode screen) onto the navigation stack
-                    var s = stackRef();
-                    if (s) {
-                        s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: userMenuRoot.parentWindow });
+                    // 2. Get the list of available routes from the backend.
+                    var routes = Backend.GetAvailableRoutes();
+
+                    // 3. If routes are found, navigate to the selection page.
+                    if (routes && routes.length > 0) {
+                        var s = stackRef();
+                        if (s) {
+                            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/RouteSelectionPage.qml"), {
+                                parentWindow: userMenuRoot.parentWindow,
+                                routeList: routes
+                            });
+                        }
+                    } else {
+                        console.warn("No routes found. Ensure CSV files are in /data/routes/ on the target.");
                     }
                 }
             }

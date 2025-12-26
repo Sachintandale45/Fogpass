@@ -13,6 +13,9 @@ public:
 
     void setWeatherMode(bool foggy);
     void setGnssMode(int mode);
+    void setOperationMode(int mode);
+    QStringList getAvailableRoutes();
+    void selectRoute(const QString &routeName);
 
 
 signals:

@@ -85,6 +85,21 @@ void BackendManager::setGnssMode(bool simulation)
     m_core->setGnssMode(mode);
 }
 
+void BackendManager::SetOperationMode(int mode)
+{
+    m_core->setOperationMode(mode);
+}
+
+QStringList BackendManager::GetAvailableRoutes()
+{
+    return m_core->getAvailableRoutes();
+}
+
+void BackendManager::SelectRoute(const QString &routeName)
+{
+    m_core->selectRoute(routeName);
+}
+
 void BackendManager::onTimeout()
 {
     if (m_batteryLevel > 25) { // Stop at 25
