@@ -1,11 +1,15 @@
-#include "CoreDBusAdaptor.h"
+#include "CoreDbusAdaptor.h"
 #include "CoreState.h"
+#include "LandmarkEngine.h"
 
 #include <QDebug>
 
-CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState, QObject *parent)
+CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState,
+                                 LandmarkEngine *landmarkEngine,
+                                 QObject *parent)
     : QObject(parent),
-      m_coreState(coreState)
+      m_coreState(coreState),
+      m_landmarkEngine(landmarkEngine)
 {
     // ---- Internal wiring (NOT D-Bus) ----
 
@@ -38,4 +42,35 @@ void CoreDbusAdaptor::onNextLandmarksUpdated(const QString &name1, int dist1,
     emit NextLandmarksUpdated(name1, dist1,
                               name2, dist2,
                               name3, dist3);
+}
+
+// ---------- D-Bus → Internal bridge ----------
+
+void CoreDbusAdaptor::SetGnssMode(int mode)
+{
+    // Received call from UI, forward to internal logic
+    emit gnssModeChangeRequested(mode);
+}
+
+void CoreDbusAdaptor::SetWeatherMode(bool enabled)
+{
+    emit weatherModeChangeRequested(enabled);
+}
+
+// ---------- Navigation API ----------
+
+void CoreDbusAdaptor::SetOperationMode(int mode)
+{
+    // 0=Idle, 1=Manual, 2=Auto
+    m_landmarkEngine->setOperationMode(static_cast<LandmarkEngine::OperationMode>(mode));
+}
+
+QStringList CoreDbusAdaptor::GetAvailableRoutes()
+{
+    return m_landmarkEngine->getAvailableRoutes();
+}
+
+void CoreDbusAdaptor::SelectRoute(const QString &routeName)
+{
+    m_landmarkEngine->selectRoute(routeName);
 }

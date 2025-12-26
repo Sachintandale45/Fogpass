@@ -1,8 +1,9 @@
 /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_LandmarkEngine.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/LandmarkEngine.h \
   /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
-  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVector \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20memory.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20type_traits.h \
@@ -101,6 +102,7 @@
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtypeinfo.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtypes.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qutf8stringview.h \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvector.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qversiontagging.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qxptype_traits.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qyieldcpu.h \

@@ -38,15 +38,8 @@ struct qt_meta_tag_ZN14LandmarkEngineE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN14LandmarkEngineE = QtMocHelpers::stringData(
     "LandmarkEngine",
-    "nextLandmarksUpdated",
-    "",
-    "name1",
-    "dist1",
-    "name2",
-    "dist2",
-    "name3",
-    "dist3",
-    "onUpdateTimerTimeout"
+    "process",
+    ""
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -58,21 +51,15 @@ Q_CONSTINIT static const uint qt_meta_data_ZN14LandmarkEngineE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
-
- // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    6,   26,    2, 0x06,    1 /* Public */,
+       0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       9,    0,   39,    2, 0x08,    8 /* Private */,
-
- // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int,    3,    4,    5,    6,    7,    8,
+       1,    0,   20,    2, 0x08,    1 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -89,15 +76,7 @@ Q_CONSTINIT const QMetaObject LandmarkEngine::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN14LandmarkEngineE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<LandmarkEngine, std::true_type>,
-        // method 'nextLandmarksUpdated'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'onUpdateTimerTimeout'
+        // method 'process'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -108,21 +87,11 @@ void LandmarkEngine::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     auto *_t = static_cast<LandmarkEngine *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->nextLandmarksUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6]))); break;
-        case 1: _t->onUpdateTimerTimeout(); break;
+        case 0: _t->process(); break;
         default: ;
         }
     }
-    if (_c == QMetaObject::IndexOfMethod) {
-        int *result = reinterpret_cast<int *>(_a[0]);
-        {
-            using _q_method_type = void (LandmarkEngine::*)(const QString & , int , const QString & , int , const QString & , int );
-            if (_q_method_type _q_method = &LandmarkEngine::nextLandmarksUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
-                *result = 0;
-                return;
-            }
-        }
-    }
+    (void)_a;
 }
 
 const QMetaObject *LandmarkEngine::metaObject() const
@@ -144,22 +113,15 @@ int LandmarkEngine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 1)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
-}
-
-// SIGNAL 0
-void LandmarkEngine::nextLandmarksUpdated(const QString & _t1, int _t2, const QString & _t3, int _t4, const QString & _t5, int _t6)
-{
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

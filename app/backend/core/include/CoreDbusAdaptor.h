@@ -5,6 +5,7 @@
 #include <QDebug>
 
 class CoreState;
+class LandmarkEngine;
 
 class CoreDbusAdaptor : public QObject
 {
@@ -13,6 +14,7 @@ class CoreDbusAdaptor : public QObject
 
 public:
     explicit CoreDbusAdaptor(CoreState *coreState,
+                             LandmarkEngine *landmarkEngine,
                              QObject *parent = nullptr);
 
 signals:
@@ -32,16 +34,15 @@ signals:
 
 public slots:
     // D-Bus method: SetGnssMode(int mode) -> 0=Real, 1=Simulation
-    void SetGnssMode(int mode) { 
-        qDebug() << "CoreDBusAdaptor: SetGnssMode called with" << mode;
-        emit gnssModeChangeRequested(mode); 
-    }
+    void SetGnssMode(int mode);
 
     // D-Bus method: SetWeatherMode(bool foggy)
-    void SetWeatherMode(bool foggy) {
-        qDebug() << "CoreDBusAdaptor: SetWeatherMode called with" << foggy;
-        emit weatherModeChangeRequested(foggy);
-    }
+    void SetWeatherMode(bool foggy);
+
+    // New Navigation API
+    void SetOperationMode(int mode);
+    QStringList GetAvailableRoutes();
+    void SelectRoute(const QString &routeName);
 
 private slots:
     // -------- Internal slots (CoreState → Adaptor) --------
@@ -53,4 +54,5 @@ private slots:
 
 private:
     CoreState *m_coreState;
+    LandmarkEngine *m_landmarkEngine;
 };

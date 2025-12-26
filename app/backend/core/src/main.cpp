@@ -1,14 +1,15 @@
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDBusConnection>
 
 // Core modules
 #include "CoreState.h"
-#include "CoreDBusAdaptor.h"
+#include "CoreDbusAdaptor.h"
 
 // GNSS & navigation
-#include "GnssReader.h"              // REAL GNSS
-#include "SimulatedGnssReader.h"     // SIM GNSS
-#include "GnssManager.h"             // GNSS switch
+#include "GnssReader.h"
+#include "SimulatedGnssReader.h"
+#include "GnssManager.h"
 #include "locator.h"
 
 // Logic
@@ -17,115 +18,82 @@
 
 int main(int argc, char *argv[])
 {
-    // ------------------------------------------------------------
-    // 1️⃣ Qt core application (event loop owner)
-    // ------------------------------------------------------------
     QCoreApplication app(argc, argv);
-    qInfo() << "FogPass Core Service starting...";
+    qInfo() << "FogPASS Core Service starting...";
 
-    // ------------------------------------------------------------
-    // 2️⃣ CoreState (single source of truth)
-    // ------------------------------------------------------------
+    // Core shared state
     CoreState *coreState = new CoreState(&app);
 
-    // ------------------------------------------------------------
-    // 3️⃣ GNSS SOURCES
-    // ------------------------------------------------------------
-
-    // Real GNSS (UART-based)
+    // Real GNSS (UART)
     GnssReader *realGnss = new GnssReader(&app);
-    // Configure the real GNSS reader, but don't start it directly.
-    // The GnssManager will handle starting/stopping.
     realGnss->configure("/dev/ttyS6", 115200);
 
-    // Simulated GNSS (CSV-based)
+    // Simulated GNSS
     SimulatedGnssReader *simGnss = new SimulatedGnssReader(&app);
+    simGnss->loadCsvFile("/data/routes/ROUTE1.csv");
 
-    // Load simulation file (can be changed later via UI / D-Bus)
-    simGnss->loadCsvFile("/data/sim/gnss_simulation.csv");
-
-    // ------------------------------------------------------------
-    // 4️⃣ GNSS MANAGER (runtime switch)
-    // ------------------------------------------------------------
+    // GNSS manager (runtime switch)
     GnssManager *gnssManager =
         new GnssManager(realGnss, simGnss, &app);
-
-    // Start GNSS manager (will activate current mode)
     gnssManager->start();
 
-    // ------------------------------------------------------------
-    // 5️⃣ Locator (position abstraction)
-    // ------------------------------------------------------------
+    // Locator (position abstraction)
     Locator *locator = new Locator(gnssManager, &app);
 
-    // ------------------------------------------------------------
-    // 6️⃣ Landmark engine (navigation logic)
-    // ------------------------------------------------------------
+    // Landmark engine (route logic)
     LandmarkEngine *landmarkEngine =
         new LandmarkEngine(locator, coreState, &app);
+    // REMOVED: landmarkEngine->start(); 
+    // The engine now starts in IDLE mode and waits for UI commands via D-Bus.
 
-    landmarkEngine->loadRouteFile("/data/routes/route1.csv");
-    landmarkEngine->start();
-
-    // ------------------------------------------------------------
-    // 7️⃣ Alert manager (decision logic)
-    // ------------------------------------------------------------
+    // Alert manager (decision layer)
     AlertManager *alertManager =
         new AlertManager(coreState, &app);
 
-    // ------------------------------------------------------------
-    // 🔗 SIGNAL WIRING (composition root)
-    // ------------------------------------------------------------
-
     // GNSS stability → AlertManager
-    QObject::connect(
-        gnssManager, &IGnssSource::gnssStabilityChanged,
-        alertManager, &AlertManager::onGnssStabilityChanged,
-        Qt::QueuedConnection
-    );
+    QObject::connect(gnssManager, &IGnssSource::gnssStabilityChanged,
+                     alertManager, &AlertManager::onGnssStabilityChanged,
+                     Qt::QueuedConnection);
 
     // Landmark updates → AlertManager
-    QObject::connect(
-        coreState, &CoreState::nextLandmarksUpdated,
-        alertManager, &AlertManager::onNextLandmarksUpdated,
-        Qt::QueuedConnection
-    );
+    QObject::connect(coreState, &CoreState::nextLandmarksUpdated,
+                     alertManager, &AlertManager::onNextLandmarksUpdated,
+                     Qt::QueuedConnection);
 
-    // ------------------------------------------------------------
-    // 8️⃣ D-Bus adaptor (Core → UI IPC)
-    // ------------------------------------------------------------
+    // D-Bus adaptor
     CoreDbusAdaptor *dbusAdaptor =
-        new CoreDbusAdaptor(coreState);
+        new CoreDbusAdaptor(coreState, landmarkEngine, &app);
 
-    // Wire up D-Bus GNSS mode switch to GnssManager
+    // GNSS mode change from UI
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::gnssModeChangeRequested,
-                     gnssManager, [gnssManager](int mode){
-        GnssManager::Mode m = (mode == 1) ? GnssManager::Mode::Simulation
-                                          : GnssManager::Mode::Real;
-        qInfo() << "D-Bus requested GNSS mode change to:" << (mode == 1 ? "Simulation" : "Real");
+                     gnssManager, [gnssManager](int mode) {
+        GnssManager::Mode m =
+            (mode == 1) ? GnssManager::Mode::Simulation
+                        : GnssManager::Mode::Real;
+        qInfo() << "GNSS mode changed via D-Bus:" << mode;
         gnssManager->setMode(m);
     });
 
-    // Wire up D-Bus Weather mode switch
+    // Weather / fog mode
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::weatherModeChangeRequested,
                      coreState, &CoreState::setFogMode);
 
-    // ------------------------------------------------------------
-    // 9️⃣ Register D-Bus Service & Object
-    // ------------------------------------------------------------
-    QDBusConnection connection = QDBusConnection::systemBus();
-    if (!connection.registerService("com.fogpass.Core")) {
-        qCritical() << "QtDBus: failed to register service com.fogpass.Core:" << connection.lastError().message();
+    // Register D-Bus service
+    QDBusConnection bus = QDBusConnection::systemBus();
+
+    if (!bus.registerService("com.fogpass.Core")) {
+        qCritical() << "Failed to register D-Bus service:"
+                    << bus.lastError().message();
     }
 
-    if (!connection.registerObject("/com/fogpass/Core", dbusAdaptor, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals)) {
-        qCritical() << "QtDBus: failed to register object /com/fogpass/Core:" << connection.lastError().message();
+    if (!bus.registerObject("/com/fogpass/Core",
+                            dbusAdaptor,
+                            QDBusConnection::ExportAllSlots |
+                            QDBusConnection::ExportAllSignals)) {
+        qCritical() << "Failed to register D-Bus object:"
+                    << bus.lastError().message();
     }
 
-    qInfo() << "FogPass Core Service initialized. Entering event loop.";
-
-    // ------------------------------------------------------------
-    // 9️⃣ Start Qt event loop
-    // ------------------------------------------------------------
+    qInfo() << "FogPASS Core initialized. Entering event loop.";
     return app.exec();
 }

@@ -1,6 +1,6 @@
 cd ..
 
-rm -rf build
+sudo rm -rf build
 
 
 mkdir build

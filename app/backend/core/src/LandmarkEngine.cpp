@@ -2,8 +2,16 @@
 #include "locator.h"
 #include "CoreState.h"
 
+#include <QFile>
+#include <QTextStream>
+#include <QtMath>
 #include <QDebug>
+#include <QRegularExpression>
+#include <QDir>
 
+// ------------------------------------------------------------
+// Constructor
+// ------------------------------------------------------------
 LandmarkEngine::LandmarkEngine(Locator *locator,
                                CoreState *coreState,
                                QObject *parent)
@@ -14,40 +22,99 @@ LandmarkEngine::LandmarkEngine(Locator *locator,
     Q_ASSERT(m_locator);
     Q_ASSERT(m_coreState);
 
-    // Timer setup (1 second update)
     connect(&m_timer, &QTimer::timeout,
             this, &LandmarkEngine::process);
 }
 
 // ------------------------------------------------------------
-// Test Function for UI
+// Public API
 // ------------------------------------------------------------
-static void sendTestLandmarkToUI(CoreState *coreState, const QString &name)
+void LandmarkEngine::setOperationMode(OperationMode mode)
 {
-    static int counter = 0;
-    counter++;
-    // Sends a specific landmark name to the UI via CoreState -> DBus
-    coreState->updateNextLandmarks(QString("%1 %2").arg(name).arg(counter), 500, "Test2", 1000, "Test3", 1500);
+    if (m_operationMode == mode)
+        return;
+
+    m_operationMode = mode;
+    qInfo() << "[LandmarkEngine] Operation mode set to:" << mode;
+
+    // Reset state on mode change
+    clearRoute();
+}
+
+QStringList LandmarkEngine::getAvailableRoutes() const
+{
+    QDir dir("/data/routes");
+    QStringList filters;
+    filters << "*.csv";
+    return dir.entryList(filters, QDir::Files | QDir::NoDotAndDotDot);
+}
+
+bool LandmarkEngine::selectRoute(const QString &routeName)
+{
+    if (m_operationMode == ModeIdle) {
+        qWarning() << "[LandmarkEngine] Cannot select route in IDLE mode";
+        return false;
+    }
+
+    QString fullPath = "/data/routes/" + routeName;
+    if (loadRouteFile(fullPath)) {
+        m_routeSelected = true;
+        start(); // Auto-start processing when route is ready
+        return true;
+    }
+
+    return false;
 }
 
 bool LandmarkEngine::loadRouteFile(const QString &filePath)
 {
-    Q_UNUSED(filePath)
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "[LandmarkEngine] Failed to open route file:" << filePath;
+        return false;
+    }
 
-    // TODO:
-    // - Open CSV
-    // - Parse landmarks
-    // - Populate m_routeLandmarks
+    m_route.clear();
+    QTextStream in(&file);
 
-    qDebug() << "[LandmarkEngine] Route file loaded:" << filePath;
-    return true;
+    bool headerSkipped = false;
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line.isEmpty())
+            continue;
+
+        // Skip header line if present
+        if (!headerSkipped) {
+            headerSkipped = true;
+            continue;
+        }
+
+        Landmark lm;
+        if (parseCsvLine(line, lm)) {
+            m_route.push_back(lm);
+        }
+    }
+
+    qInfo() << "[LandmarkEngine] Loaded route with"
+            << m_route.size() << "landmarks";
+
+    m_lastClosestIndex = -1;
+    return !m_route.isEmpty();
+}
+
+void LandmarkEngine::clearRoute()
+{
+    stop();
+    m_route.clear();
+    m_routeSelected = false;
+    m_lastClosestIndex = -1;
 }
 
 void LandmarkEngine::start()
 {
     if (!m_timer.isActive()) {
-        m_timer.start(1000);  // every 1 second
-        qDebug() << "[LandmarkEngine] Started";
+        m_timer.start(1000); // 1 Hz
+        qInfo() << "[LandmarkEngine] Started";
     }
 }
 
@@ -55,54 +122,123 @@ void LandmarkEngine::stop()
 {
     if (m_timer.isActive()) {
         m_timer.stop();
-        qDebug() << "[LandmarkEngine] Stopped";
+        qInfo() << "[LandmarkEngine] Stopped";
     }
 }
 
+// ------------------------------------------------------------
+// Periodic processing
+// ------------------------------------------------------------
 void LandmarkEngine::process()
 {
-    // CRITICAL: Update the locator with the latest data from the active GNSS source.
-    m_locator->update();
-
-    // 1️⃣ Get current position from Locator
-    double lat = 0.0;
-    double lon = 0.0;
-    double speed = 0.0;
-
-    if (!m_locator->isGnssStable()) {
+    // GATEKEEPER: Do nothing if no route is selected
+    if (!m_routeSelected)
         return;
-    }
+
+    if (!m_locator->isGnssStable())
+        return;
 
     Locator::Position pos = m_locator->position();
-    lat = pos.latitude;
-    lon = pos.longitude;
-    speed = pos.speedKmh;
 
-    // 2️⃣ Compute next landmarks (logic later)
-    computeNextLandmarks(lat, lon);
+    if (m_route.isEmpty())
+        return;
 
-    // 3️⃣ Compute distances (dummy values for now)
-    // int d1 = 1200;
-    // int d2 = 2400;
-    // int d3 = 3600;
+    computeNextLandmarks(pos.latitude, pos.longitude);
 
-    // 4️⃣ Push continuous state to CoreState
-    // TEST: Overriding logic to send test name to UI
-    sendTestLandmarkToUI(m_coreState, "Test Landmark UI");
+    // Push to CoreState → DBus → UI
+    m_coreState->updateNextLandmarks(
+        m_next[0].name, m_next[0].distanceMeters,
+        m_next[1].name, m_next[1].distanceMeters,
+        m_next[2].name, m_next[2].distanceMeters
+    );
 }
 
+// ------------------------------------------------------------
+// Core landmark logic
+// ------------------------------------------------------------
 void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
 {
-    Q_UNUSED(curLat)
-    Q_UNUSED(curLon)
+    int closestIdx = findClosestLandmarkIndex(curLat, curLon);
+    if (closestIdx < 0)
+        return;
 
-    // TODO:
-    // - Find closest landmark ahead
-    // - Select next 3 landmarks
-    // - Compute remaining distances
+    // Enforce forward-only movement
+    if (m_lastClosestIndex >= 0 &&
+        closestIdx < m_lastClosestIndex) {
+        closestIdx = m_lastClosestIndex;
+    }
 
-    // Placeholder data
-    m_next1.name = "Station A";
-    m_next2.name = "Bridge";
-    m_next3.name = "Tunnel";
+    m_lastClosestIndex = closestIdx;
+
+    for (int i = 0; i < 3; ++i) {
+        int idx = closestIdx + i;
+        if (idx < m_route.size()) {
+            const Landmark &lm = m_route[idx];
+            int dist = qRound(
+                distanceMeters(curLat, curLon,
+                                lm.latitude, lm.longitude));
+
+            m_next[i].name = lm.name;
+            m_next[i].distanceMeters = dist;
+        } else {
+            m_next[i].name.clear();
+            m_next[i].distanceMeters = -1;
+        }
+    }
+}
+
+// ------------------------------------------------------------
+// CSV parsing (FogPASS format)
+// ------------------------------------------------------------
+bool LandmarkEngine::parseCsvLine(const QString &line, Landmark &out)
+{
+    // CSV is tab or comma separated (handle both)
+    QStringList cols = line.split(QRegularExpression("[,\t]"));
+    if (cols.size() < 8)
+        return false;
+
+    out.index     = cols[0].toInt();
+    out.code      = cols[1].trimmed();
+    out.name      = cols[2].trimmed();
+    out.latitude  = cols[5].toDouble() / 100.0;
+    out.longitude = cols[6].toDouble() / 100.0;
+
+    return true;
+}
+
+// ------------------------------------------------------------
+// Helpers
+// ------------------------------------------------------------
+int LandmarkEngine::findClosestLandmarkIndex(double curLat, double curLon) const
+{
+    double minDist = 1e12;
+    int bestIdx = -1;
+
+    for (int i = 0; i < m_route.size(); ++i) {
+        const Landmark &lm = m_route[i];
+        double d = distanceMeters(curLat, curLon,
+                                  lm.latitude, lm.longitude);
+        if (d < minDist) {
+            minDist = d;
+            bestIdx = i;
+        }
+    }
+    return bestIdx;
+}
+
+double LandmarkEngine::distanceMeters(double lat1, double lon1,
+                                      double lat2, double lon2) const
+{
+    static constexpr double R = 6371000.0; // Earth radius (m)
+
+    double dLat = qDegreesToRadians(lat2 - lat1);
+    double dLon = qDegreesToRadians(lon2 - lon1);
+
+    double a = qSin(dLat / 2) * qSin(dLat / 2) +
+               qCos(qDegreesToRadians(lat1)) *
+               qCos(qDegreesToRadians(lat2)) *
+               qSin(dLon / 2) * qSin(dLon / 2);
+
+    double c = 2 * qAtan2(qSqrt(a), qSqrt(1 - a));
+    return R * c;
 }

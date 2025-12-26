@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include <QTimer>
+#include <QVector>
 #include <QString>
 
 class Locator;
@@ -12,42 +13,75 @@ class LandmarkEngine : public QObject
     Q_OBJECT
 
 public:
+    enum OperationMode {
+        ModeIdle = 0,
+        ModeManual = 1,
+        ModeAuto = 2
+    };
+    Q_ENUM(OperationMode)
+
+public:
     explicit LandmarkEngine(Locator *locator,
                             CoreState *coreState,
                             QObject *parent = nullptr);
 
-    // Load route / landmark data (CSV, JSON, etc.)
-    bool loadRouteFile(const QString &filePath);
+    // Route handling
+    void setOperationMode(OperationMode mode);
+    QStringList getAvailableRoutes() const;
+    bool selectRoute(const QString &routeName);
 
-    // Start / stop processing
+    bool loadRouteFile(const QString &filePath);
+    void clearRoute();
+
+    // Control
     void start();
     void stop();
 
 private slots:
-    void process();   // runs periodically
+    void process();   // periodic update (1 Hz)
 
 private:
+    // ===============================
+    // Internal data structures
+    // ===============================
     struct Landmark {
-        QString name;
-        double latitude;
-        double longitude;
+        int     index = -1;
+        QString code;          // DEE, CURV, PM, etc.
+        QString name;          // Full display string
+        double  latitude = 0.0;
+        double  longitude = 0.0;
     };
 
-    // Helpers (logic to be implemented later)
+    struct NextLandmark {
+        QString name;
+        int distanceMeters = -1;
+    };
+
+    // ===============================
+    // Core logic helpers
+    // ===============================
+    bool parseCsvLine(const QString &line, Landmark &out);
+    double distanceMeters(double lat1, double lon1,
+                           double lat2, double lon2) const;
+
+    int findClosestLandmarkIndex(double curLat, double curLon) const;
     void computeNextLandmarks(double curLat, double curLon);
 
-    // Dependencies
+    // ===============================
+    // Dependencies (injected)
+    // ===============================
     Locator   *m_locator;
     CoreState *m_coreState;
 
-    // Timer for periodic updates
+    // ===============================
+    // Runtime state
+    // ===============================
     QTimer m_timer;
 
-    // Route data
-    QVector<Landmark> m_routeLandmarks;
+    QVector<Landmark> m_route;     // full route
+    OperationMode m_operationMode = ModeIdle;
+    bool m_routeSelected = false;
+    int m_lastClosestIndex = -1;
 
-    // Cached next landmarks
-    Landmark m_next1;
-    Landmark m_next2;
-    Landmark m_next3;
+    NextLandmark m_next[3];        // next 3 landmarks
 };

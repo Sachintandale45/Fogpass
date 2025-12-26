@@ -7,6 +7,12 @@ Locator::Locator(IGnssSource *gnssSource, QObject *parent)
       m_gnss(gnssSource)
 {
     Q_ASSERT(m_gnss != nullptr);
+
+    // FIX: Automatically update Locator when GNSS data changes
+    connect(m_gnss, &IGnssSource::positionUpdated,
+            this, &Locator::update);
+    connect(m_gnss, &IGnssSource::gnssStabilityChanged,
+            this, &Locator::update);
 }
 
 void Locator::update()
