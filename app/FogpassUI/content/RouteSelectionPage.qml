@@ -17,6 +17,20 @@ Page {
         background: Rectangle { color: "transparent" }
         RowLayout {
             anchors.fill: parent
+            Button {
+                text: "Back"
+                Layout.preferredHeight: 40
+                Layout.preferredWidth: 80
+                font.pointSize: 14
+                background: Rectangle {
+                    color: parent.pressed ? "#666666" : "transparent"
+                    border.color: AppSettings.textColor || "white"
+                    border.width: 1
+                    radius: 4
+                }
+                contentItem: Text { text: parent.text; font: parent.font; color: AppSettings.textColor || "white"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                onClicked: (parentWindow && parentWindow.stack) ? parentWindow.stack.pop() : console.warn("No stack to pop from.")
+            }
             Label {
                 text: "Select Route"
                 font.pointSize: 20
@@ -27,6 +41,15 @@ Page {
                 padding: 10
             }
         }
+    }
+
+    Label {
+        anchors.centerIn: parent
+        text: "No routes found.\nPlease check /data/routes/ on device."
+        color: "#aaaaaa"
+        font.pointSize: 16
+        visible: routeSelectionPage.routeList.length === 0
+        horizontalAlignment: Text.AlignHCenter
     }
 
     ListView {

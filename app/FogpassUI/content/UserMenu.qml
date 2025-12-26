@@ -100,17 +100,13 @@ Item {
                     // 2. Get the list of available routes from the backend.
                     var routes = Backend.GetAvailableRoutes();
 
-                    // 3. If routes are found, navigate to the selection page.
-                    if (routes && routes.length > 0) {
-                        var s = stackRef();
-                        if (s) {
-                            s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/RouteSelectionPage.qml"), {
-                                parentWindow: userMenuRoot.parentWindow,
-                                routeList: routes
-                            });
-                        }
-                    } else {
-                        console.warn("No routes found. Ensure CSV files are in /data/routes/ on the target.");
+                    // 3. Navigate to the selection page (pass empty list if none found)
+                    var s = stackRef();
+                    if (s) {
+                        s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/RouteSelectionPage.qml"), {
+                            parentWindow: userMenuRoot.parentWindow,
+                            routeList: routes || []
+                        });
                     }
                 }
             }
