@@ -41,10 +41,13 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # ------------------------------------------------------------
 # 1️⃣ Create build directory
 # ------------------------------------------------------------
-if [ ! -d "${SCRIPT_DIR}/${BUILD_DIR}" ]; then
-    echo "Creating build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
-    mkdir -p "${SCRIPT_DIR}/${BUILD_DIR}"
+if [ -d "${SCRIPT_DIR}/${BUILD_DIR}" ]; then
+    echo "Removing existing build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
+    rm -rf "${SCRIPT_DIR}/${BUILD_DIR}"
 fi
+
+echo "Creating build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
+mkdir -p "${SCRIPT_DIR}/${BUILD_DIR}"
 
 cd "${SCRIPT_DIR}/${BUILD_DIR}"
 
