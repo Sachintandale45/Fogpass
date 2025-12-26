@@ -37,6 +37,9 @@ public:
     void start();
     void stop();
 
+signals:
+    void routeFileLoaded(const QString &filePath);
+
 private slots:
     void process();   // periodic update (1 Hz)
 

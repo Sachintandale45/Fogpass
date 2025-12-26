@@ -44,9 +44,18 @@ void LandmarkEngine::setOperationMode(OperationMode mode)
 QStringList LandmarkEngine::getAvailableRoutes() const
 {
     QDir dir("/data/routes");
+    if (!dir.exists()) {
+        qWarning() << "[LandmarkEngine] Route directory does not exist:" << dir.absolutePath();
+        return QStringList();
+    }
+
     QStringList filters;
-    filters << "*.csv";
-    return dir.entryList(filters, QDir::Files | QDir::NoDotAndDotDot);
+    filters << "*.csv" << "*.CSV"; // Case insensitive check
+    QStringList result = dir.entryList(filters, QDir::Files | QDir::NoDotAndDotDot);
+
+    qInfo() << "[LandmarkEngine] Scanned" << dir.absolutePath() << "- Found:" << result.size() << "files.";
+    
+    return result;
 }
 
 bool LandmarkEngine::selectRoute(const QString &routeName)
@@ -60,6 +69,7 @@ bool LandmarkEngine::selectRoute(const QString &routeName)
     if (loadRouteFile(fullPath)) {
         m_routeSelected = true;
         start(); // Auto-start processing when route is ready
+        emit routeFileLoaded(fullPath); // Notify others (e.g. Simulation)
         return true;
     }
 
