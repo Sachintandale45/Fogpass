@@ -16,12 +16,6 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
     );
     qDebug() << "CoreClient: Initialized and connected to D-Bus service 'com.fogpass.Core'.";
 
-    // Connect the D-Bus signal from the service to our local C++ signal
-    // This uses the older string-based syntax, which is required for D-Bus signals.
-    bool connected_legacy = QObject::connect(m_iface, SIGNAL(LandmarkLocationsChanged(QStringList)),
-                                      this, SIGNAL(landmarkLocationsChanged(QStringList)));
-    qDebug() << "CoreClient: Connection to LandmarkLocationsChanged signal:" << (connected_legacy ? "successful" : "failed");
-
     bool connected_new = QObject::connect(m_iface, SIGNAL(NextLandmarksUpdated(QString,int,QString,int,QString,int)),
                                           this, SIGNAL(landmarksUpdated(QString,int,QString,int,QString,int)));
     qDebug() << "CoreClient: Connection to NextLandmarksUpdated signal:" << (connected_new ? "successful" : "failed");

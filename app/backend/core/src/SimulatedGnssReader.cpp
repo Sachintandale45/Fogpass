@@ -169,11 +169,7 @@ void SimulatedGnssReader::onTimerTick()
 
     // Stop at end of file (or loop — your choice later)
     if (m_currentIndex >= m_points.size()) {
-        m_currentIndex = m_points.size() - 1;
-        
-        // Fix Deadlock: Do not call stop() here because we already hold m_mutex.
-        m_running = false;
-        m_timer.stop();
-        qDebug() << "[SimGnss] End of simulation reached";
+        m_currentIndex = 0;
+        qDebug() << "[SimGnss] Loop: restarting route";
     }
 }

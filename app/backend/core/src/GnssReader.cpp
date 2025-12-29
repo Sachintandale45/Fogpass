@@ -33,9 +33,9 @@ bool GnssReader::start()
         return true; // Already running
     }
 
-    if (m_portName.empty()) {
+    if (m_portName.empty()) {start
         qCritical() << "[GNSS] Cannot start: port not configured. Call configure() first.";
-        return false;
+        return false;start
     }
 
     qDebug() << "[GNSS] Attempting to connect to" << QString::fromStdString(m_portName)
