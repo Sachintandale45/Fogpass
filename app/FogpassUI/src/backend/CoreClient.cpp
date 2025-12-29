@@ -30,7 +30,7 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
 void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
 {
     // Fire-and-forget for now - no response handling needed
-    m_iface->call("SetWeatherMode", foggy);
+    m_iface->call(QDBus::NoBlock, "SetWeatherMode", foggy);
     qDebug() << "CoreClient: D-Bus call 'SetWeatherMode' sent with value:" << foggy;
     // No emit modeChanged(mode); here as per the "No response handling needed" instruction.
     // The UI will update when the system backend eventually sends a state update signal.
@@ -44,7 +44,7 @@ void CoreClient::setGnssMode(int mode)
         return;
     }
 
-    m_iface->call("SetGnssMode", mode);
+    m_iface->call(QDBus::NoBlock, "SetGnssMode", mode);
     qDebug() << "CoreClient: D-Bus call 'SetGnssMode' sent with value:" << mode;
 }
 

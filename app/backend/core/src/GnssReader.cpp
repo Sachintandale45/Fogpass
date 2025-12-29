@@ -106,10 +106,6 @@ void GnssReader::stop()
 {
     m_running = false;
 
-    if (m_readThread.joinable()) {
-        m_readThread.join();
-    }
-
     if (m_fd >= 0) {
         close(m_fd);
         m_fd = -1;
@@ -120,6 +116,10 @@ void GnssReader::stop()
             m_gnssStable = false;
             emit gnssStabilityChanged(false);
         }
+    }
+
+    if (m_readThread.joinable()) {
+        m_readThread.join();
     }
 }
 
