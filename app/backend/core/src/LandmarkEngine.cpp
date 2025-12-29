@@ -41,6 +41,11 @@ void LandmarkEngine::setOperationMode(OperationMode mode)
     clearRoute();
 }
 
+QString LandmarkEngine::getSelectedRouteName() const
+{
+    return m_selectedRouteName;
+}
+
 QStringList LandmarkEngine::getAvailableRoutes() const
 {
     QDir dir("/data/routes");
@@ -66,6 +71,7 @@ bool LandmarkEngine::selectRoute(const QString &routeName)
     }
 
     QString fullPath = "/data/routes/" + routeName;
+    m_selectedRouteName = routeName;
     if (loadRouteFile(fullPath)) {
         m_routeSelected = true;
         start(); // Auto-start processing when route is ready
@@ -117,6 +123,7 @@ void LandmarkEngine::clearRoute()
     stop();
     m_route.clear();
     m_routeSelected = false;
+    m_selectedRouteName.clear();
     m_lastClosestIndex = -1;
 }
 

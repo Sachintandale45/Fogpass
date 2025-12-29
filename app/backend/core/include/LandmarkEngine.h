@@ -29,6 +29,7 @@ public:
     void setOperationMode(OperationMode mode);
     QStringList getAvailableRoutes() const;
     bool selectRoute(const QString &routeName);
+    QString getSelectedRouteName() const;
 
     bool loadRouteFile(const QString &filePath);
     void clearRoute();
@@ -84,6 +85,7 @@ private:
     QVector<Landmark> m_route;     // full route
     OperationMode m_operationMode = ModeIdle;
     bool m_routeSelected = false;
+    QString m_selectedRouteName;
     int m_lastClosestIndex = -1;
 
     NextLandmark m_next[3];        // next 3 landmarks

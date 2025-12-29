@@ -1,4 +1,5 @@
 #include "SimulatedGnssReader.h"
+#include "LandmarkEngine.h"
 
 #include <QFile>
 #include <QTextStream>
@@ -20,6 +21,11 @@ SimulatedGnssReader::SimulatedGnssReader(QObject *parent)
 SimulatedGnssReader::~SimulatedGnssReader()
 {
     stop();
+}
+
+void SimulatedGnssReader::setLandmarkEngine(LandmarkEngine *engine)
+{
+    m_landmarkEngine = engine;
 }
 
 // ------------------------------------------------------------
@@ -91,6 +97,14 @@ bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
 bool SimulatedGnssReader::start()
 {
     qDebug() << "[SimGnss] Start requested.";
+
+    if (m_landmarkEngine) {
+        QString routeName = m_landmarkEngine->getSelectedRouteName();
+        if (!routeName.isEmpty()) {
+            QString fullPath = "/data/routes/" + routeName;
+            loadCsvFile(fullPath);
+        }
+    }
 
     QMutexLocker locker(&m_mutex);
 

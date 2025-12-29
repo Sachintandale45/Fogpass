@@ -8,6 +8,8 @@
 
 #include "IGnssSource.h"
 
+class LandmarkEngine;
+
 /*
  * SimulatedGnssReader
  *
@@ -31,6 +33,7 @@ public:
 
     // Load simulation data file
     bool loadCsvFile(const QString &filePath);
+    void setLandmarkEngine(LandmarkEngine *engine);
 
     // -------- IGnssSource API --------
     bool start() override;
@@ -63,4 +66,5 @@ private:
     double m_speedKmh {0.0};
 
     bool m_running {false};
+    LandmarkEngine *m_landmarkEngine {nullptr};
 };
