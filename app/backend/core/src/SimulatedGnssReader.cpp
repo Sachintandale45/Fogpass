@@ -1,5 +1,4 @@
 #include "SimulatedGnssReader.h"
-#include "LandmarkEngine.h"
 
 #include <QFile>
 #include <QTextStream>
@@ -23,9 +22,13 @@ SimulatedGnssReader::~SimulatedGnssReader()
     stop();
 }
 
-void SimulatedGnssReader::setLandmarkEngine(LandmarkEngine *engine)
+void SimulatedGnssReader::onRouteSelected(const QString &routeName)
 {
-    m_landmarkEngine = engine;
+    if (routeName.isEmpty())
+        return;
+
+    QString fullPath = "/data/routes/" + routeName;
+    loadCsvFile(fullPath);
 }
 
 // ------------------------------------------------------------
@@ -98,14 +101,6 @@ bool SimulatedGnssReader::start()
 {
     qDebug() << "[SimGnss] Start requested.";
 
-    if (m_landmarkEngine) {
-        QString routeName = m_landmarkEngine->getSelectedRouteName();
-        if (!routeName.isEmpty()) {
-            QString fullPath = "/data/routes/" + routeName;
-            loadCsvFile(fullPath);
-        }
-    }
-
     QMutexLocker locker(&m_mutex);
 
     if (m_points.isEmpty()) {
@@ -159,32 +154,10 @@ double SimulatedGnssReader::speedKmh() const
 bool SimulatedGnssReader::isGnssStable() const
 {
     QMutexLocker locker(&m_mutex);
-    return m_running;
+    return true;        //hardcoded
 }
+
 
 // ------------------------------------------------------------
 // Timer tick → advance simulation
 // ------------------------------------------------------------
-void SimulatedGnssReader::onTimerTick()
-{
-    QMutexLocker locker(&m_mutex);
-
-    if (!m_running || m_points.isEmpty())
-        return;
-
-    const GnssPoint &p = m_points[m_currentIndex];
-
-    m_latitude  = p.latitude;
-    m_longitude = p.longitude;
-    m_speedKmh  = p.speedKmh;
-
-    emit positionUpdated(m_latitude, m_longitude, m_speedKmh);
-
-    m_currentIndex++;
-
-    // Stop at end of file (or loop — your choice later)
-    if (m_currentIndex >= m_points.size()) {
-        m_currentIndex = 0;
-        qDebug() << "[SimGnss] Loop: restarting route";
-    }
-}

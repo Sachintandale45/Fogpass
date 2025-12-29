@@ -83,10 +83,8 @@ Page {
                 // 2. Navigate to the main driving display page.
                 var s = (parentWindow && parentWindow.stack) || StackView.view;
                 if (s) {
-                    // Replace the current page and the menu page with the driving screen
-                    s.pop(); // Pop RouteSelectionPage
-                    //s.pop(); // Pop UserMenu
-                    s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: routeSelectionPage.parentWindow });
+                    // Replace the current page with the driving screen so 'back' works correctly
+                    s.replace(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: routeSelectionPage.parentWindow });
                 }
             }
         }

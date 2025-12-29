@@ -39,7 +39,8 @@ public:
     void stop();
 
 signals:
-    void routeFileLoaded(const QString &filePath);
+    // Announce that a route has been chosen by the user.
+    void routeSelected(const QString &routeName);
 
 private slots:
     void process();   // periodic update (1 Hz)
@@ -64,7 +65,7 @@ private:
     // ===============================
     // Core logic helpers
     // ===============================
-    bool parseCsvLine(const QString &line, Landmark &out);
+    bool parseCsvLine(const QString &line, int index, Landmark &out);
     double distanceMeters(double lat1, double lon1,
                            double lat2, double lon2) const;
 

@@ -46,8 +46,9 @@ int main(int argc, char *argv[])
     // REMOVED: landmarkEngine->start(); 
     // The engine now starts in IDLE mode and waits for UI commands via D-Bus.
 
-    // Inject LandmarkEngine into SimulatedGnssReader so it can pull the active route
-    simGnss->setLandmarkEngine(landmarkEngine);
+    // When a route is selected, notify the simulation reader so it loads the same file.
+    QObject::connect(landmarkEngine, &LandmarkEngine::routeSelected,
+                     simGnss, &SimulatedGnssReader::onRouteSelected);
 
     // Alert manager (decision layer)
     AlertManager *alertManager =

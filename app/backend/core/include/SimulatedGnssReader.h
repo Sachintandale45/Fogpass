@@ -8,8 +8,6 @@
 
 #include "IGnssSource.h"
 
-class LandmarkEngine;
-
 /*
  * SimulatedGnssReader
  *
@@ -33,7 +31,6 @@ public:
 
     // Load simulation data file
     bool loadCsvFile(const QString &filePath);
-    void setLandmarkEngine(LandmarkEngine *engine);
 
     // -------- IGnssSource API --------
     bool start() override;
@@ -42,11 +39,14 @@ public:
     double latitude()  const override;
     double longitude() const override;
     double speedKmh()  const override;
-
     bool isGnssStable() const override;
 
+
+public slots:
+    void onRouteSelected(const QString &routeName);
+
 private slots:
-    void onTimerTick();
+    void onTimgerTick();
 
 private:
     struct GnssPoint {
@@ -65,6 +65,5 @@ private:
     double m_longitude {0.0};
     double m_speedKmh {0.0};
 
-    bool m_running {false};
-    LandmarkEngine *m_landmarkEngine {nullptr};
+    bool m_running {true};
 };

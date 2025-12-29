@@ -75,7 +75,7 @@ bool LandmarkEngine::selectRoute(const QString &routeName)
     if (loadRouteFile(fullPath)) {
         m_routeSelected = true;
         start(); // Auto-start processing when route is ready
-        emit routeFileLoaded(fullPath); // Notify others (e.g. Simulation)
+        emit routeSelected(routeName); // Announce the selection
         return true;
     }
 
@@ -93,21 +93,16 @@ bool LandmarkEngine::loadRouteFile(const QString &filePath)
     m_route.clear();
     QTextStream in(&file);
 
-    bool headerSkipped = false;
+    int landmarkIndex = 1;
     while (!in.atEnd()) {
         QString line = in.readLine().trimmed();
-        if (line.isEmpty())
+        if (line.isEmpty() || line.startsWith('#'))
             continue;
-
-        // Skip header line if present
-        if (!headerSkipped) {
-            headerSkipped = true;
-            continue;
-        }
 
         Landmark lm;
-        if (parseCsvLine(line, lm)) {
+        if (parseCsvLine(line, landmarkIndex, lm)) {
             m_route.push_back(lm);
+            landmarkIndex++;
         }
     }
 
@@ -152,8 +147,9 @@ void LandmarkEngine::process()
     if (!m_routeSelected)
         return;
 
-    if (!m_locator->isGnssStable())
-        return;
+    // if (!m_locator->isGnssStable())
+    //     qDebug() << "[LandmarkEngine] GNSS unstable, skipping landmark update";
+    //     return;
 
     Locator::Position pos = m_locator->position();
 
@@ -207,18 +203,25 @@ void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
 // ------------------------------------------------------------
 // CSV parsing (FogPASS format)
 // ------------------------------------------------------------
-bool LandmarkEngine::parseCsvLine(const QString &line, Landmark &out)
+bool LandmarkEngine::parseCsvLine(const QString &line, int index, Landmark &out)
 {
-    // CSV is tab or comma separated (handle both)
-    QStringList cols = line.split(QRegularExpression("[,\t]"));
-    if (cols.size() < 8)
+    // Simple format: lat,lon,speed
+    const QStringList parts = line.split(',');
+    if (parts.size() < 2) // We only need lat and lon
         return false;
 
-    out.index     = cols[0].toInt();
-    out.code      = cols[1].trimmed();
-    out.name      = cols[2].trimmed();
-    out.latitude  = cols[5].toDouble() / 100.0;
-    out.longitude = cols[6].toDouble() / 100.0;
+    bool okLat, okLon;
+    double lat = parts[0].toDouble(&okLat);
+    double lon = parts[1].toDouble(&okLon);
+
+    if (!okLat || !okLon)
+        return false;
+
+    out.index     = index;
+    out.code      = "SIM"; // A generic code for simulated points
+    out.name      = "Landmark " + QString::number(index);
+    out.latitude  = lat;
+    out.longitude = lon;
 
     return true;
 }

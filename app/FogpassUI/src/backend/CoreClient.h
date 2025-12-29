@@ -24,4 +24,5 @@ signals:
 
 private:
     QDBusInterface *m_iface;
+
 };
