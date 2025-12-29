@@ -85,7 +85,7 @@ Page {
                 if (s) {
                     // Replace the current page and the menu page with the driving screen
                     s.pop(); // Pop RouteSelectionPage
-                    s.pop(); // Pop UserMenu
+                    //s.pop(); // Pop UserMenu
                     s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: routeSelectionPage.parentWindow });
                 }
             }
