@@ -14,6 +14,7 @@
 GnssReader::GnssReader(QObject *parent)
     : IGnssSource(parent)
 {
+    qDebug() << "Real gnss constructor called";
 }
 
 GnssReader::~GnssReader()
@@ -33,9 +34,9 @@ bool GnssReader::start()
         return true; // Already running
     }
 
-    if (m_portName.empty()) {start
+    if (m_portName.empty()) {
         qCritical() << "[GNSS] Cannot start: port not configured. Call configure() first.";
-        return false;start
+        return false;
     }
 
     qDebug() << "[GNSS] Attempting to connect to" << QString::fromStdString(m_portName)
@@ -110,12 +111,6 @@ void GnssReader::stop()
         close(m_fd);
         m_fd = -1;
         qDebug() << "[GNSS] Serial port closed.";
-
-        // When stopping, we lose stability
-        if (m_gnssStable) {
-            m_gnssStable = false;
-            emit gnssStabilityChanged(false);
-        }
     }
 
     if (m_readThread.joinable()) {

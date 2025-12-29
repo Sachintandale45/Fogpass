@@ -8,6 +8,8 @@ SimulatedGnssReader::SimulatedGnssReader(QObject *parent)
     : IGnssSource(parent)
 {
     // Default: 1 Hz updates (can be made configurable later)
+    qDebug() << "Simulation gnss constructor called";
+
     m_timer.setInterval(1000);
 
     connect(&m_timer, &QTimer::timeout,
@@ -104,8 +106,6 @@ bool SimulatedGnssReader::start()
     m_currentIndex = 0;
     m_timer.start();
 
-    emit gnssStabilityChanged(true); // simulation is always stable
-
     qDebug() << "[SimGnss] Simulation started";
     return true;
 }
@@ -120,6 +120,7 @@ void SimulatedGnssReader::stop()
     m_running = false;
     m_timer.stop();
 
+    emit gnssStabilityChanged(false);
     qDebug() << "[SimGnss] Simulation stopped";
 }
 
@@ -144,7 +145,7 @@ double SimulatedGnssReader::speedKmh() const
 bool SimulatedGnssReader::isGnssStable() const
 {
     QMutexLocker locker(&m_mutex);
-    return m_running && !m_points.isEmpty();
+    return m_running;
 }
 
 // ------------------------------------------------------------

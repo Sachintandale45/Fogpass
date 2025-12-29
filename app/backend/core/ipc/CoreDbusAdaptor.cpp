@@ -49,6 +49,7 @@ void CoreDbusAdaptor::onNextLandmarksUpdated(const QString &name1, int dist1,
 void CoreDbusAdaptor::SetGnssMode(int mode)
 {
     // Received call from UI, forward to internal logic
+    qInfo() << "[CoreDbusAdaptor] SetGnssMode request received:" << mode;
     emit gnssModeChangeRequested(mode);
 }
 
