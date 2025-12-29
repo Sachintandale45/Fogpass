@@ -64,7 +64,8 @@ QStringList LandmarkEngine::getAvailableRoutes() const
 }
 
 bool LandmarkEngine::selectRoute(const QString &routeName)
-{
+{  
+    qDebug() << "[LandmarkEngine] selectRoute called with route:" << routeName;
     if (m_operationMode == ModeIdle) {
         qWarning() << "[LandmarkEngine] Cannot select route in IDLE mode";
         return false;
@@ -73,6 +74,7 @@ bool LandmarkEngine::selectRoute(const QString &routeName)
     QString fullPath = "/data/routes/" + routeName;
     m_selectedRouteName = routeName;
     if (loadRouteFile(fullPath)) {
+        qDebug() << "[LandmarkEngine] Route selected:" << routeName;
         m_routeSelected = true;
         start(); // Auto-start processing when route is ready
         emit routeSelected(routeName); // Announce the selection
@@ -158,9 +160,17 @@ void LandmarkEngine::process()
 
     computeNextLandmarks(pos.latitude, pos.longitude);
 
+    // Only check for alerts if we are close to the next landmark
+    if (m_next[0].distanceMeters > 0 && m_next[0].distanceMeters <= PREWARN_DISTANCE_METERS) {
+        triggerAlerts();
+    }
+
+    // If a pre-warn alert is active, send the name. Otherwise, send distance only.
+    QString name1_to_send = m_coreState->isAlertActive("LANDMARK_PREWARN") ? m_next[0].name : "";
+
     // Push to CoreState → DBus → UI
     m_coreState->updateNextLandmarks(
-        m_next[0].name, m_next[0].distanceMeters,
+        name1_to_send, m_next[0].distanceMeters,
         m_next[1].name, m_next[1].distanceMeters,
         m_next[2].name, m_next[2].distanceMeters
     );
@@ -175,11 +185,13 @@ void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
     if (closestIdx < 0)
         return;
 
-    // Enforce forward-only movement
-    if (m_lastClosestIndex >= 0 &&
-        closestIdx < m_lastClosestIndex) {
-        closestIdx = m_lastClosestIndex;
-    }
+    // If the newly found closest landmark is behind the last one, it means we are
+    // still between the last landmark and the next one. To ensure we always
+    // progress forward, we should stick with the last known index until we are
+    // physically closer to the next one in the list.
+    // The check for a route loop is to handle the case where the simulation restarts.
+    if (closestIdx < m_lastClosestIndex && (m_lastClosestIndex - closestIdx < m_route.size() / 2))
+        return; // Do nothing, wait until we are closer to the next landmark
 
     m_lastClosestIndex = closestIdx;
 
@@ -197,6 +209,20 @@ void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
             m_next[i].name.clear();
             m_next[i].distanceMeters = -1;
         }
+    }
+}
+
+void LandmarkEngine::triggerAlerts()
+{
+    // Check distance to the next immediate landmark
+    const int distanceToNext = m_next[0].distanceMeters;
+
+    if (distanceToNext > 0 && distanceToNext <= PREWARN_DISTANCE_METERS) {
+        // Raise the alert via CoreState. This will be picked up by AlertManager
+        // or sent directly over D-Bus if needed.
+        m_coreState->raiseAlert("LANDMARK_PREWARN");
+    } else {
+        m_coreState->clearAlert("LANDMARK_PREWARN");
     }
 }
 

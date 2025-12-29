@@ -23,12 +23,20 @@ SimulatedGnssReader::~SimulatedGnssReader()
 }
 
 void SimulatedGnssReader::onRouteSelected(const QString &routeName)
-{
+{   
+
     if (routeName.isEmpty())
-        return;
+        qDebug() << "[SimGnss] onRouteSelected: empty route name";
 
     QString fullPath = "/data/routes/" + routeName;
     loadCsvFile(fullPath);
+
+    // If we are the active GNSS source, start the simulation now that data is loaded.
+    QMutexLocker locker(&m_mutex);
+    if (m_running) {
+        qDebug() << "[SimGnss] onRouteSelected: restarting timer for new route";
+        m_timer.start();
+    }
 }
 
 // ------------------------------------------------------------
@@ -36,29 +44,15 @@ void SimulatedGnssReader::onRouteSelected(const QString &routeName)
 // ------------------------------------------------------------
 bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
 {
+    stop(); // Stop any current simulation
+
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "[SimGnss] Failed to open file:" << filePath << "- Generating DEFAULT simulation path.";
-
-        // Generate a simple diagonal path for testing if file is missing
-        QVector<GnssPoint> points;
-        double lat = 18.5204;
-        double lon = 73.8567;
-        for(int i=0; i<100; i++) {
-            GnssPoint p;
-            p.latitude = lat + (i * 0.0001);
-            p.longitude = lon + (i * 0.0001);
-            p.speedKmh = 40.0 + (i % 10);
-            points.append(p);
-        }
-
-        QMutexLocker locker(&m_mutex);
-        m_points = points;
-        m_currentIndex = 0;
-        return true;
+        qWarning() << "[SimGnss] Failed to open file:" << filePath;
+        return false;
     }
 
-    QVector<GnssPoint> points;
+    QVector<GnssPoint> waypoints;
     QTextStream in(&file);
 
     while (!in.atEnd()) {
@@ -67,30 +61,33 @@ bool SimulatedGnssReader::loadCsvFile(const QString &filePath)
             continue;
 
         const QStringList parts = line.split(',');
-        if (parts.size() < 3)
+        if (parts.size() < 2) // lat,lon are minimum
             continue;
 
-        bool ok1, ok2, ok3;
+        bool okLat, okLon;
         GnssPoint p;
-        p.latitude  = parts[0].toDouble(&ok1);
-        p.longitude = parts[1].toDouble(&ok2);
-        p.speedKmh  = parts[2].toDouble(&ok3);
+        p.latitude  = parts[0].toDouble(&okLat);
+        p.longitude = parts[1].toDouble(&okLon);
+        p.speedKmh  = (parts.size() > 2) ? parts[2].toDouble() : 60.0; // Default speed
 
-        if (ok1 && ok2 && ok3) {
-            points.append(p);
+        if (okLat && okLon) {
+            waypoints.append(p);
         }
     }
 
-    if (points.isEmpty()) {
+    if (waypoints.isEmpty()) {
         qWarning() << "[SimGnss] No valid points in CSV";
         return false;
     }
 
+    generateTrackPoints(waypoints);
+
     QMutexLocker locker(&m_mutex);
-    m_points = points;
     m_currentIndex = 0;
 
-    qDebug() << "[SimGnss] Loaded" << m_points.size() << "GNSS points";
+    // Don't auto-start here. Let the GnssManager or onRouteSelected control it.
+    // This prevents the timer from starting before the mode is officially switched.
+
     return true;
 }
 
@@ -108,12 +105,15 @@ bool SimulatedGnssReader::start()
         return false;
     }
 
-    if (m_running)
-        return true;
+    // if (m_running)
+    //     return true;
 
     m_running = true;
     m_currentIndex = 0;
     m_timer.start();
+
+    // This signal is now emitted from stop() and start() to correctly reflect state.
+    emit gnssStabilityChanged(true);
 
     qDebug() << "[SimGnss] Simulation started";
     return true;
@@ -126,7 +126,7 @@ void SimulatedGnssReader::stop()
     if (!m_running)
         return;
 
-    m_running = false;
+    m_running = true;
     m_timer.stop();
 
     emit gnssStabilityChanged(false);
@@ -154,10 +154,71 @@ double SimulatedGnssReader::speedKmh() const
 bool SimulatedGnssReader::isGnssStable() const
 {
     QMutexLocker locker(&m_mutex);
-    return true;        //hardcoded
+    return m_running;
 }
 
 
 // ------------------------------------------------------------
 // Timer tick → advance simulation
 // ------------------------------------------------------------
+void SimulatedGnssReader::onTimerTick()
+{
+    qDebug() << "[SimGnss] Timer tick received.";
+
+    QMutexLocker locker(&m_mutex);
+
+    if (!m_running || m_points.isEmpty())
+        return;
+
+    const GnssPoint &p = m_points[m_currentIndex];
+
+    m_latitude  = p.latitude;
+    m_longitude = p.longitude;
+    m_speedKmh  = p.speedKmh;
+
+    qDebug() << "[SimGnss] Tick -> Lat:" << m_latitude << "Lon:" << m_longitude;
+
+    emit positionUpdated(m_latitude, m_longitude, m_speedKmh);
+
+    m_currentIndex++;
+
+    // Stop at end of file (or loop — your choice later)
+    if (m_currentIndex >= m_points.size()) {
+        m_currentIndex = 0;
+        qDebug() << "[SimGnss] Loop: restarting route";
+    }
+}
+
+
+void SimulatedGnssReader::generateTrackPoints(const QVector<GnssPoint>& waypoints)
+{
+    QMutexLocker locker(&m_mutex);
+    m_points.clear();
+
+    if (waypoints.size() < 2) {
+        m_points = waypoints; // If only 0 or 1 point, just copy it.
+        return;
+    }
+
+    for (int i = 0; i < waypoints.size() - 1; ++i) {
+        const GnssPoint& startPoint = waypoints[i];
+        const GnssPoint& endPoint = waypoints[i+1];
+
+        double latStep = (endPoint.latitude - startPoint.latitude) / INTERPOLATION_STEPS;
+        double lonStep = (endPoint.longitude - startPoint.longitude) / INTERPOLATION_STEPS;
+        double speedStep = (endPoint.speedKmh - startPoint.speedKmh) / INTERPOLATION_STEPS;
+
+        for (int j = 0; j < INTERPOLATION_STEPS; ++j) {
+            GnssPoint p;
+            p.latitude = startPoint.latitude + j * latStep;
+            p.longitude = startPoint.longitude + j * lonStep;
+            p.speedKmh = startPoint.speedKmh + j * speedStep;
+            m_points.append(p);
+        }
+    }
+
+    // Add the very last point to complete the route
+    m_points.append(waypoints.last());
+
+    qDebug() << "[SimGnss] Generated" << m_points.size() << "interpolated GNSS points from" << waypoints.size() << "waypoints.";
+}

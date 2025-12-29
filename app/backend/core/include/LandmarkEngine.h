@@ -71,6 +71,7 @@ private:
 
     int findClosestLandmarkIndex(double curLat, double curLon) const;
     void computeNextLandmarks(double curLat, double curLon);
+    void triggerAlerts();
 
     // ===============================
     // Dependencies (injected)
@@ -82,6 +83,7 @@ private:
     // Runtime state
     // ===============================
     QTimer m_timer;
+    static constexpr int PREWARN_DISTANCE_METERS = 500;
 
     QVector<Landmark> m_route;     // full route
     OperationMode m_operationMode = ModeIdle;

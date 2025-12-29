@@ -29,6 +29,12 @@ public:
     explicit SimulatedGnssReader(QObject *parent = nullptr);
     ~SimulatedGnssReader() override;
 
+    struct GnssPoint {
+        double latitude;
+        double longitude;
+        double speedKmh;
+    };
+
     // Load simulation data file
     bool loadCsvFile(const QString &filePath);
 
@@ -46,14 +52,11 @@ public slots:
     void onRouteSelected(const QString &routeName);
 
 private slots:
-    void onTimgerTick();
+    void onTimerTick();
 
 private:
-    struct GnssPoint {
-        double latitude;
-        double longitude;
-        double speedKmh;
-    };
+    void generateTrackPoints(const QVector<GnssPoint>& waypoints);
+    static constexpr int INTERPOLATION_STEPS = 10;
 
     QVector<GnssPoint> m_points;
     int m_currentIndex {0};
