@@ -35,6 +35,9 @@ Item {
     }
 
     function goToAutoRoutePage() {
+        // Safety: Ensure we are in REAL mode when starting from main menu
+        Backend.setGnssMode(false);
+
         // 1. Set Operation Mode to Auto (2)
         Backend.SetOperationMode(2);
 
@@ -88,12 +91,16 @@ Item {
             Button { text: "Auto Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                // The function goToAutoRoutePage now handles the mode setting
                 onClicked: confirmPopup.open()
             }
             Button { text: "Manual Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: {
+                    // Safety: Ensure we are in REAL mode when starting from main menu
+                    Backend.setGnssMode(false);
+
                     // 1. Set the backend to Manual Mode. This makes it ready to accept a route.
                     Backend.SetOperationMode(1); // 1 = Manual
 
@@ -110,10 +117,25 @@ Item {
                     }
                 }
             }
+            Button { text: "GPS Simulation"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
+                background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
+                contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                onClicked: {
+                    // Navigate to the new simulation page, which will handle mode switching
+                    var s = stackRef();
+                    if (s) {
+                        s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/GPSSimulationPage2.qml"), {
+                            parentWindow: userMenuRoot.parentWindow
+                        });
+                    }
+                }
+            }
             Button { text: "Weather Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: weatherModePopup.open()
+                // The function goToAutoRoutePage now handles the mode setting
+                onClicked: confirmPopup.open()
             }
             Button { text: "Adjust Volume"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
