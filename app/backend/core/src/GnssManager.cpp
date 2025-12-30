@@ -110,7 +110,7 @@ void GnssManager::setMode(GnssManager::Mode mode)
     qDebug() << "[GnssManager] Switching GNSS mode from" << (m_mode == Mode::Simulation ? "SIM" : "REAL") << "to" << (mode == Mode::Simulation ? "SIM" : "REAL");
 
     // Stop current source
-    activeSource()->stop();
+    activeSource()->stop(); // This stops the *old* source
 
     m_mode = mode;
 
@@ -125,23 +125,32 @@ void GnssManager::setMode(GnssManager::Mode mode)
 // ------------------------------------------------------------
 void GnssManager::onSourceStabilityChanged(bool stable)
 {
-    QMutexLocker locker(&m_mutex);
+    bool shouldEmit = false;
+    {
+        QMutexLocker locker(&m_mutex);
 
-    // Emit only if this signal comes from active source
-    if (sender() == activeSource()) {
-        emit gnssStabilityChanged(stable);
+        // Emit only if this signal comes from active source
+        if (sender() == activeSource()) {
+            shouldEmit = true;
+        }
     }
+    if (shouldEmit)
+        emit gnssStabilityChanged(stable);
 }
 
 void GnssManager::onSourcePositionUpdated(double lat,
                                           double lon,
                                           double speed)
 {
-    QMutexLocker locker(&m_mutex);
-
-    if (sender() == activeSource()) {
-        emit positionUpdated(lat, lon, speed);
+    bool shouldEmit = false;
+    {
+        QMutexLocker locker(&m_mutex);
+        if (sender() == activeSource()) {
+            shouldEmit = true;
+        }
     }
+    if (shouldEmit)
+        emit positionUpdated(lat, lon, speed);
 }
 
 // ------------------------------------------------------------

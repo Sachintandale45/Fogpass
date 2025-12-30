@@ -68,5 +68,5 @@ private:
     double m_longitude {0.0};
     double m_speedKmh {0.0};
 
-    bool m_running {true};
+    bool m_running {false};
 };

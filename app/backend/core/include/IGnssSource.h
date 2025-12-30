@@ -35,7 +35,6 @@ public:
 
     // ---------------- GNSS health ----------------
     virtual bool isGnssStable() const = 0;
-
 signals:
     /*
      * Emitted when GNSS stability changes.

@@ -98,9 +98,6 @@ Item {
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: {
-                    // Safety: Ensure we are in REAL mode when starting from main menu
-                    Backend.setGnssMode(false);
-
                     // 1. Set the backend to Manual Mode. This makes it ready to accept a route.
                     Backend.SetOperationMode(1); // 1 = Manual
 

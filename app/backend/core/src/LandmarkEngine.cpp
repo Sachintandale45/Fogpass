@@ -24,6 +24,12 @@ LandmarkEngine::LandmarkEngine(Locator *locator,
 
     connect(&m_timer, &QTimer::timeout,
             this, &LandmarkEngine::process);
+
+    // Initialize m_next to prevent sending garbage values to UI
+    for (int i = 0; i < 3; ++i) {
+        m_next[i].distanceMeters = -1;
+        m_next[i].name.clear();
+    }
 }
 
 // ------------------------------------------------------------
@@ -149,9 +155,10 @@ void LandmarkEngine::process()
     if (!m_routeSelected)
         return;
 
-    // if (!m_locator->isGnssStable())
-    //     qDebug() << "[LandmarkEngine] GNSS unstable, skipping landmark update";
-    //     return;
+    if (!m_locator->isGnssStable()) {
+        qDebug() << "[LandmarkEngine] GNSS unstable, skipping landmark update";
+        return;
+    }
 
     Locator::Position pos = m_locator->position();
 
@@ -165,12 +172,10 @@ void LandmarkEngine::process()
         triggerAlerts();
     }
 
-    // If a pre-warn alert is active, send the name. Otherwise, send distance only.
-    QString name1_to_send = m_coreState->isAlertActive("LANDMARK_PREWARN") ? m_next[0].name : "";
 
     // Push to CoreState → DBus → UI
     m_coreState->updateNextLandmarks(
-        name1_to_send, m_next[0].distanceMeters,
+        m_next[0].name, m_next[0].distanceMeters,
         m_next[1].name, m_next[1].distanceMeters,
         m_next[2].name, m_next[2].distanceMeters
     );

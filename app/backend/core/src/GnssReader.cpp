@@ -95,6 +95,7 @@ bool GnssReader::start()
         return false;
     }
 
+
     m_running = true;
     m_readThread = std::thread(&GnssReader::readLoop, this);
 

@@ -24,17 +24,24 @@ SimulatedGnssReader::~SimulatedGnssReader()
 
 void SimulatedGnssReader::onRouteSelected(const QString &routeName)
 {   
-
+    // FIX: Capture running state BEFORE loading, because loadCsvFile() calls stop()
+    bool wasRunning = false;
+    {
+        QMutexLocker locker(&m_mutex);
+        wasRunning = m_running;
+    }
+    
     if (routeName.isEmpty())
         qDebug() << "[SimGnss] onRouteSelected: empty route name";
 
     QString fullPath = "/data/routes/" + routeName;
     loadCsvFile(fullPath);
 
-    // If we are the active GNSS source, start the simulation now that data is loaded.
+    // If we were running (active) before loading, restart the simulation now.
     QMutexLocker locker(&m_mutex);
-    if (m_running) {
+    if (wasRunning) {
         qDebug() << "[SimGnss] onRouteSelected: restarting timer for new route";
+        m_running = true;
         m_timer.start();
     }
 }
@@ -100,20 +107,19 @@ bool SimulatedGnssReader::start()
 
     QMutexLocker locker(&m_mutex);
 
-    if (m_points.isEmpty()) {
-        qWarning() << "[SimGnss] Cannot start: no simulation data loaded";
-        return false;
-    }
-
-    // if (m_running)
-    //     return true;
-
+    // FIX: Always mark as running/active so we know to start when a route is loaded.
     m_running = true;
     m_currentIndex = 0;
-    m_timer.start();
 
-    // This signal is now emitted from stop() and start() to correctly reflect state.
-    emit gnssStabilityChanged(true);
+    if (m_points.isEmpty()) {
+        qWarning() << "[SimGnss] Start requested but no data. Waiting for route...";
+        // Timer is started but onTimerTick will return early until points are loaded.
+        m_timer.start(); 
+        return true;
+    }
+
+    qDebug() << "[SimGnss] Timer Start from start()";
+    m_timer.start();
 
     qDebug() << "[SimGnss] Simulation started";
     return true;
@@ -121,16 +127,16 @@ bool SimulatedGnssReader::start()
 
 void SimulatedGnssReader::stop()
 {
+    qDebug() << "[SimGnss] Stop requested.";
+
     QMutexLocker locker(&m_mutex);
 
     if (!m_running)
         return;
 
-    m_running = true;
+    m_running = false;
+    qDebug() << "[SimGnss] Timer Stop from stop()";
     m_timer.stop();
-
-    emit gnssStabilityChanged(false);
-    qDebug() << "[SimGnss] Simulation stopped";
 }
 
 double SimulatedGnssReader::latitude() const
@@ -153,9 +159,10 @@ double SimulatedGnssReader::speedKmh() const
 
 bool SimulatedGnssReader::isGnssStable() const
 {
-    QMutexLocker locker(&m_mutex);
-    return m_running;
+    // In simulation, the signal is always considered stable.
+    return true;
 }
+
 
 
 // ------------------------------------------------------------
@@ -163,29 +170,36 @@ bool SimulatedGnssReader::isGnssStable() const
 // ------------------------------------------------------------
 void SimulatedGnssReader::onTimerTick()
 {
-    qDebug() << "[SimGnss] Timer tick received.";
+    double lat, lon, speed;
+    bool should_emit = false;
 
-    QMutexLocker locker(&m_mutex);
+    { // Scoped lock to ensure mutex is released before emitting signal
+        QMutexLocker locker(&m_mutex);
 
-    if (!m_running || m_points.isEmpty())
-        return;
+        if (!m_running || m_points.isEmpty())
+            return;
 
-    const GnssPoint &p = m_points[m_currentIndex];
+        const GnssPoint &p = m_points[m_currentIndex];
 
-    m_latitude  = p.latitude;
-    m_longitude = p.longitude;
-    m_speedKmh  = p.speedKmh;
+        // Update internal state
+        m_latitude  = p.latitude;
+        m_longitude = p.longitude;
+        m_speedKmh  = p.speedKmh;
 
-    qDebug() << "[SimGnss] Tick -> Lat:" << m_latitude << "Lon:" << m_longitude;
+        // Copy to local variables to emit outside the lock
+        lat = m_latitude;
+        lon = m_longitude;
+        speed = m_speedKmh;
+        should_emit = true;
 
-    emit positionUpdated(m_latitude, m_longitude, m_speedKmh);
+        qDebug() << "[SimGnss] Tick -> Lat:" << lat << "Lon:" << lon;
 
-    m_currentIndex++;
+        m_currentIndex = (m_currentIndex + 1) % m_points.size();
+    } // Mutex is unlocked here
 
-    // Stop at end of file (or loop — your choice later)
-    if (m_currentIndex >= m_points.size()) {
-        m_currentIndex = 0;
-        qDebug() << "[SimGnss] Loop: restarting route";
+    if (should_emit) {
+        // Emit signal outside of the locked scope to prevent deadlock
+        emit positionUpdated(lat, lon, speed);
     }
 }
 
