@@ -164,7 +164,7 @@ Item {
             }
             onClicked: {
                 var s = root.stackRef();
-                if (s) s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/GPSSimulationPage.qml"), { parentWindow: root.parentWindow });
+                if (s) s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/GPSSimulationPage2.qml"), { parentWindow: root.parentWindow });
             }
         }
 

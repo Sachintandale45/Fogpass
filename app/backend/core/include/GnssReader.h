@@ -5,66 +5,56 @@
 #include <mutex>
 #include <string>
 
+#include "IGnssSource.h"
+
 /*
  * GnssReader
  *
- * Responsibilities:
- *  - Open UART device (/dev/ttySx)
- *  - Read NMEA data in background thread
- *  - Parse RMC sentences
- *  - Maintain GNSS position & speed
- *  - Track GNSS stability
- *  - Emit signal when stability changes
- *
- * DOES NOT:
- *  - Talk to CoreState
- *  - Raise alerts
- *  - Use D-Bus
+ * REAL GNSS implementation using UART + NMEA
+ * Implements IGnssSource
  */
-class GnssReader : public QObject
+
+class GnssReader : public IGnssSource
 {
     Q_OBJECT
 
 public:
     explicit GnssReader(QObject *parent = nullptr);
-    ~GnssReader();
+    ~GnssReader() override;
 
-    bool start(const std::string &portName, int baudRate);
-    void stop();
+    // -------- IGnssSource API --------
+    bool start() override;     // uses stored port/baud
+    void stop() override;
 
-    // Thread-safe getters
-    double latitude() const;
-    double longitude() const;
-    double speedKmh() const;
-    bool isGnssStable() const;
+    double latitude()  const override;
+    double longitude() const override;
+    double speedKmh()  const override;
+    bool isGnssStable() const override;
 
-signals:
-    // Emitted ONLY when GNSS stability changes
-    void gnssStabilityChanged(bool stable);
+    // -------- Real GNSS specific API --------
+    // Configure the serial port before starting
+    void configure(const std::string &portName, int baudRate);
 
 private:
-    // Worker thread
     void readLoop();
-
-    // NMEA parsing
     void parseNmeaSentence(const std::string &sentence);
     double parseCoordinate(const std::string &val,
                            const std::string &dir);
 
 private:
     // UART
-    int m_fd{-1};
-
-    // Thread control
+    int m_fd {-1};
     std::thread m_readThread;
-    bool m_running{false};
+    bool m_running {false};
 
-    // GNSS data (protected)
+    // Config (for IGnssSource::start())
+    std::string m_portName;
+    int m_baudRate {115200};
+
+    // GNSS data
     mutable std::mutex m_dataMutex;
-    double m_latitude{0.0};
-    double m_longitude{0.0};
-    double m_speedKmh{0.0};
-
-    // GNSS state
-    bool m_gnssStable{false};
+    double m_latitude  {0.0};
+    double m_longitude {0.0};
+    double m_speedKmh  {0.0};
+    bool   m_gnssStable {false};
 };

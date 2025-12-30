@@ -1,0 +1,16 @@
+[Unit]
+Description=FogPass Core Backend Service
+After=network.target dbus.service
+Requires=dbus.service
+
+[Service]
+Type=simple
+# Adjust path if your install prefix is /usr/local/bin
+ExecStart=/usr/bin/fogpass-core
+Restart=on-failure
+RestartSec=5s
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

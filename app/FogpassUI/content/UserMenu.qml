@@ -35,6 +35,12 @@ Item {
     }
 
     function goToAutoRoutePage() {
+        // Safety: Ensure we are in REAL mode when starting from main menu
+        Backend.setGnssMode(false);
+
+        // 1. Set Operation Mode to Auto (2)
+        Backend.SetOperationMode(2);
+
         confirmPopup.close();
         var s = stackRef();
         if (s) {
@@ -85,25 +91,33 @@ Item {
             Button { text: "Auto Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                // The function goToAutoRoutePage now handles the mode setting
                 onClicked: confirmPopup.open()
             }
             Button { text: "Manual Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: {
-                    // 1. Request the latest landmark data from the backend
-                    Backend.requestLandmarks()
+                    // 1. Set the backend to Manual Mode. This makes it ready to accept a route.
+                    Backend.SetOperationMode(1); // 1 = Manual
 
-                    // 2. Push the Demo2.qml page (the manual mode screen) onto the navigation stack
+                    // 2. Get the list of available routes from the backend.
+                    var routes = Backend.GetAvailableRoutes();
+
+                    // 3. Navigate to the selection page (pass empty list if none found)
                     var s = stackRef();
                     if (s) {
-                        s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: userMenuRoot.parentWindow });
+                        s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/RouteSelectionPage.qml"), {
+                            parentWindow: userMenuRoot.parentWindow,
+                            routeList: routes || []
+                        });
                     }
                 }
             }
             Button { text: "Weather Mode"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                // Corrected: Open the weather mode popup
                 onClicked: weatherModePopup.open()
             }
             Button { text: "Adjust Volume"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter

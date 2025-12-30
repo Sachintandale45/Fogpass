@@ -2,7 +2,8 @@
   /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
-  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QSet \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20memory.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20type_traits.h \
@@ -43,6 +44,7 @@
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qgenericatomic.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qglobal.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qglobalstatic.h \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhashfunctions.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiodevicebase.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiterable.h \
@@ -68,6 +70,7 @@
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qrefcount.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopedpointer.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopeguard.h \
+  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstring.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringalgorithms.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringbuilder.h \

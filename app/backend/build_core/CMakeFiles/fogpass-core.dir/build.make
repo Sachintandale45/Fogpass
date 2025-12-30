@@ -103,24 +103,10 @@ CMakeFiles/fogpass-core.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/main.cpp.s"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/main.cpp -o CMakeFiles/fogpass-core.dir/src/main.cpp.s
 
-CMakeFiles/fogpass-core.dir/src/landmark.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
-CMakeFiles/fogpass-core.dir/src/landmark.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/landmark.cpp
-CMakeFiles/fogpass-core.dir/src/landmark.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fogpass-core.dir/src/landmark.cpp.o"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/landmark.cpp.o -MF CMakeFiles/fogpass-core.dir/src/landmark.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/landmark.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/landmark.cpp
-
-CMakeFiles/fogpass-core.dir/src/landmark.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/landmark.cpp.i"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/landmark.cpp > CMakeFiles/fogpass-core.dir/src/landmark.cpp.i
-
-CMakeFiles/fogpass-core.dir/src/landmark.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/landmark.cpp.s"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/landmark.cpp -o CMakeFiles/fogpass-core.dir/src/landmark.cpp.s
-
 CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
 CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp
 CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o -MF CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp
 
 CMakeFiles/fogpass-core.dir/src/CoreState.cpp.i: cmake_force
@@ -131,41 +117,135 @@ CMakeFiles/fogpass-core.dir/src/CoreState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/CoreState.cpp.s"
 	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp -o CMakeFiles/fogpass-core.dir/src/CoreState.cpp.s
 
-CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
-CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDBusAdaptor.cpp
-CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o -MF CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o.d -o CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDBusAdaptor.cpp
+CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp
+CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o -MF CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp
 
-CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.i"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDBusAdaptor.cpp > CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.i
+CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp > CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.i
 
-CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.s"
-	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDBusAdaptor.cpp -o CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.s
+CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp -o CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.s
+
+CMakeFiles/fogpass-core.dir/src/locator.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/locator.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp
+CMakeFiles/fogpass-core.dir/src/locator.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fogpass-core.dir/src/locator.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/locator.cpp.o -MF CMakeFiles/fogpass-core.dir/src/locator.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/locator.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp
+
+CMakeFiles/fogpass-core.dir/src/locator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/locator.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp > CMakeFiles/fogpass-core.dir/src/locator.cpp.i
+
+CMakeFiles/fogpass-core.dir/src/locator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/locator.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp -o CMakeFiles/fogpass-core.dir/src/locator.cpp.s
+
+CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp
+CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o -MF CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp
+
+CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp > CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.i
+
+CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp -o CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.s
+
+CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp
+CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o -MF CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp
+
+CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp > CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.i
+
+CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp -o CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.s
+
+CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp
+CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o -MF CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp
+
+CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp > CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.i
+
+CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp -o CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.s
+
+CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp
+CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o -MF CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o.d -o CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp
+
+CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp > CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.i
+
+CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp -o CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.s
+
+CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o: CMakeFiles/fogpass-core.dir/flags.make
+CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp
+CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o: CMakeFiles/fogpass-core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o -MF CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o.d -o CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o -c /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp
+
+CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.i"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp > CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.i
+
+CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.s"
+	/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++   -mcpu=cortex-a35+crc -mbranch-protection=standard --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux --sysroot=/opt/stm/sysroots/cortexa35-ostl-linux $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp -o CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.s
 
 # Object files for target fogpass-core
 fogpass__core_OBJECTS = \
 "CMakeFiles/fogpass-core.dir/fogpass-core_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/fogpass-core.dir/src/main.cpp.o" \
-"CMakeFiles/fogpass-core.dir/src/landmark.cpp.o" \
 "CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o" \
-"CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o"
+"CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o" \
+"CMakeFiles/fogpass-core.dir/src/locator.cpp.o" \
+"CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o" \
+"CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o" \
+"CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o" \
+"CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o" \
+"CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o"
 
 # External object files for target fogpass-core
 fogpass__core_EXTERNAL_OBJECTS =
 
 fogpass-core: CMakeFiles/fogpass-core.dir/fogpass-core_autogen/mocs_compilation.cpp.o
 fogpass-core: CMakeFiles/fogpass-core.dir/src/main.cpp.o
-fogpass-core: CMakeFiles/fogpass-core.dir/src/landmark.cpp.o
 fogpass-core: CMakeFiles/fogpass-core.dir/src/CoreState.cpp.o
-fogpass-core: CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/locator.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o
+fogpass-core: CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o
 fogpass-core: CMakeFiles/fogpass-core.dir/build.make
 fogpass-core: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6DBus.so.6.8.0
 fogpass-core: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Core.so.6.8.0
 fogpass-core: CMakeFiles/fogpass-core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable fogpass-core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable fogpass-core"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fogpass-core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,6 +1,6 @@
 #include "GnssReader.h"
 
-#include <iostream>
+#include <QDebug>
 #include <vector>
 #include <unistd.h>
 #include <fcntl.h>
@@ -12,8 +12,9 @@
 // ------------------------------------------------------------
 
 GnssReader::GnssReader(QObject *parent)
-    : QObject(parent)
+    : IGnssSource(parent)
 {
+    qDebug() << "Real gnss constructor called";
 }
 
 GnssReader::~GnssReader()
@@ -22,43 +23,50 @@ GnssReader::~GnssReader()
 }
 
 // ------------------------------------------------------------
-// Start / Stop
+// IGnssSource start / stop
 // ------------------------------------------------------------
 
-bool GnssReader::start(const std::string &portName, int baudRate)
+bool GnssReader::start()
 {
+    qDebug() << "[GnssReader] Start requested.";
+
     if (m_running) {
-        stop();
+        return true; // Already running
     }
 
-    m_fd = open(portName.c_str(), O_RDONLY | O_NOCTTY);
+    if (m_portName.empty()) {
+        qCritical() << "[GNSS] Cannot start: port not configured. Call configure() first.";
+        return false;
+    }
+
+    qDebug() << "[GNSS] Attempting to connect to" << QString::fromStdString(m_portName)
+             << "@" << m_baudRate << "baud";
+
+    m_fd = open(m_portName.c_str(), O_RDONLY | O_NOCTTY);
     if (m_fd < 0) {
-        std::cerr << "[GNSS] Failed to open " << portName
-                  << ": " << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] Failed to open" << QString::fromStdString(m_portName)
+                    << ":" << QString::fromStdString(std::system_category().message(errno));
         return false;
     }
 
     termios tty{};
     if (tcgetattr(m_fd, &tty) != 0) {
-        std::cerr << "[GNSS] tcgetattr failed: "
-                  << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] tcgetattr failed:"
+                    << QString::fromStdString(std::system_category().message(errno));
         close(m_fd);
         m_fd = -1;
         return false;
     }
 
     speed_t realBaud;
-    switch (baudRate) {
+    switch (m_baudRate) {
         case 9600:   realBaud = B9600; break;
         case 19200:  realBaud = B19200; break;
         case 38400:  realBaud = B38400; break;
         case 57600:  realBaud = B57600; break;
         case 115200: realBaud = B115200; break;
         default:
-            std::cerr << "[GNSS] Unsupported baud rate: "
-                      << baudRate << std::endl;
+            qCritical() << "[GNSS] Unsupported baud rate:" << m_baudRate;
             close(m_fd);
             m_fd = -1;
             return false;
@@ -81,19 +89,18 @@ bool GnssReader::start(const std::string &portName, int baudRate)
     tty.c_cflag &= ~CRTSCTS;
 
     if (tcsetattr(m_fd, TCSANOW, &tty) != 0) {
-        std::cerr << "[GNSS] tcsetattr failed: "
-                  << std::system_category().message(errno)
-                  << std::endl;
+        qCritical() << "[GNSS] tcsetattr failed:" << QString::fromStdString(std::system_category().message(errno));
         close(m_fd);
         m_fd = -1;
         return false;
     }
 
+
     m_running = true;
     m_readThread = std::thread(&GnssReader::readLoop, this);
 
-    std::cout << "[GNSS] Connected to " << portName
-              << " @ " << baudRate << " baud" << std::endl;
+    qDebug() << "[GNSS] Started read thread for" << QString::fromStdString(m_portName);
+
     return true;
 }
 
@@ -101,14 +108,14 @@ void GnssReader::stop()
 {
     m_running = false;
 
-    if (m_readThread.joinable()) {
-        m_readThread.join();
-    }
-
     if (m_fd >= 0) {
         close(m_fd);
         m_fd = -1;
-        std::cout << "[GNSS] Serial port closed." << std::endl;
+        qDebug() << "[GNSS] Serial port closed.";
+    }
+
+    if (m_readThread.joinable()) {
+        m_readThread.join();
     }
 }
 
@@ -131,7 +138,6 @@ void GnssReader::readLoop()
                 std::string sentence = buffer.substr(0, pos);
                 buffer.erase(0, pos + 1);
 
-                // trim
                 sentence.erase(0, sentence.find_first_not_of(" \r\n\t"));
                 sentence.erase(sentence.find_last_not_of(" \r\n\t") + 1);
 
@@ -178,7 +184,6 @@ void GnssReader::parseNmeaSentence(const std::string &sentence)
 
         std::lock_guard<std::mutex> lock(m_dataMutex);
 
-        // Emit signal ONLY on change
         if (newStable != m_gnssStable) {
             m_gnssStable = newStable;
             emit gnssStabilityChanged(m_gnssStable);
@@ -191,9 +196,11 @@ void GnssReader::parseNmeaSentence(const std::string &sentence)
             try {
                 double speedKnots = std::stod(parts[7]);
                 m_speedKmh = speedKnots * 1.852;
-            } catch (...) {
-                // ignore parse errors
-            }
+            } catch (...) {}
+
+            emit positionUpdated(m_latitude,
+                                 m_longitude,
+                                 m_speedKmh);
         }
     }
 }
@@ -252,4 +259,13 @@ double GnssReader::parseCoordinate(const std::string &val,
     } catch (...) {
         return 0.0;
     }
+}
+
+// ------------------------------------------------------------
+// Configuration
+// ------------------------------------------------------------
+void GnssReader::configure(const std::string &portName, int baudRate)
+{
+    m_portName = portName;
+    m_baudRate = baudRate;
 }

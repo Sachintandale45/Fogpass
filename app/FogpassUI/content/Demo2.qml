@@ -43,11 +43,6 @@ Item {
             }
         }
 
-        Connections {
-            target: Backend
-            function onLandmarksChanged() { } // This connection ensures this component re-evaluates bindings when the signal is fired.
-        }
-
         Button {
             text: "Back"
             Layout.minimumWidth: 160
@@ -66,6 +61,7 @@ Item {
             contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
 
             onClicked: {
+                Backend.ClearRoute();
                 var s = demo2Root.stackRef();
                 if (s) s.pop();
             }

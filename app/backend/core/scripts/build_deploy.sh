@@ -28,6 +28,9 @@ QT_HOST_PATH="/home/sachin/Qt/6.8.3/gcc_64"
 TARGET_USER="root"
 TARGET_HOST="10.42.0.41"
 TARGET_PATH="/home/root/project_test"
+TARGET_ROUTES_DIR="/data/routes"
+# Adjust this path if your local CSV files are stored elsewhere
+LOCAL_ROUTES_DIR="${SCRIPT_DIR}/../../../../data/routes"
 
 # ============================================================
 # 🚀 SCRIPT START
@@ -41,10 +44,13 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # ------------------------------------------------------------
 # 1️⃣ Create build directory
 # ------------------------------------------------------------
-if [ ! -d "${SCRIPT_DIR}/${BUILD_DIR}" ]; then
-    echo "Creating build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
-    mkdir -p "${SCRIPT_DIR}/${BUILD_DIR}"
+if [ -d "${SCRIPT_DIR}/${BUILD_DIR}" ]; then
+    echo "Removing existing build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
+    rm -rf "${SCRIPT_DIR}/${BUILD_DIR}"
 fi
+
+echo "Creating build directory: ${SCRIPT_DIR}/${BUILD_DIR}"
+mkdir -p "${SCRIPT_DIR}/${BUILD_DIR}"
 
 cd "${SCRIPT_DIR}/${BUILD_DIR}"
 
@@ -70,7 +76,16 @@ make -j$(nproc) && \
         echo "Stopping existing service on target..." && \
         ssh "${TARGET_USER}@${TARGET_HOST}" "killall ${EXECUTABLE_NAME} || true" && \
         echo "Deploying new executable..." && \
-        scp "./${EXECUTABLE_NAME}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}/"
+        scp "./${EXECUTABLE_NAME}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_PATH}/" && \
+        echo "Configuring routes on target..." && \
+        ssh "${TARGET_USER}@${TARGET_HOST}" "mkdir -p ${TARGET_ROUTES_DIR}" && \
+        if [ -d "${LOCAL_ROUTES_DIR}" ]; then \
+            echo "Copying route files from ${LOCAL_ROUTES_DIR}..." && \
+            scp "${LOCAL_ROUTES_DIR}"/*.csv "${TARGET_USER}@${TARGET_HOST}:${TARGET_ROUTES_DIR}/" 2>/dev/null || echo "  (No .csv files found to copy)"; \
+        else \
+            echo "⚠️  Local routes directory not found at: ${LOCAL_ROUTES_DIR}"; \
+            echo "    Please ensure CSV files exist on the target at ${TARGET_ROUTES_DIR}"; \
+        fi
     )
 
 echo "✅ Deployment successful."

@@ -57,6 +57,8 @@ qt_add_qml_module(apptrial1
         src/backend/CoreClient.h
         QML_FILES content/AutoRoutePage.qml
         QML_FILES content/Demo2.qml
+        QML_FILES content/RouteSelectionPage.qml
+        QML_FILES content/GPSSimulationPage2.qml
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---

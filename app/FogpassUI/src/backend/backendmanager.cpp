@@ -34,7 +34,8 @@ void BackendManager::setVolume(int volume)
 
 void BackendManager::requestLandmarks()
 {
-    m_core->requestLandmarkLocations();
+    // Disabled: CoreClient no longer supports manual requests.
+    // Updates are pushed automatically via signals.
 }
 
 QString BackendManager::landmark1() const { return m_landmark1; }
@@ -74,7 +75,35 @@ void BackendManager::setWeatherMode(bool foggy)
     // After sending the command, emit the signal to update the UI immediately.
     // This provides instant feedback to the user.
     const QString newMode = foggy ? "Foggy" : "Non-Foggy";
-    emit modeUpdated(newMode);
+    emit modeUpdated(newMode);   //this is loopback from ui only to ui. not from backend
+}
+
+void BackendManager::setGnssMode(bool simulation)
+{
+    // 0 = Real, 1 = Simulation
+    int mode = simulation ? 1 : 0;
+    m_core->setGnssMode(mode);
+}
+
+void BackendManager::SetOperationMode(int mode)
+{
+    m_core->setOperationMode(mode);
+}
+
+QStringList BackendManager::GetAvailableRoutes()
+{
+    return m_core->getAvailableRoutes();
+}
+
+void BackendManager::SelectRoute(const QString &routeName)
+{
+    m_core->selectRoute(routeName);
+}
+
+
+void BackendManager::ClearRoute()
+{
+    m_core->clearRoute();
 }
 
 void BackendManager::onTimeout()

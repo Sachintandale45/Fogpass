@@ -1,13 +1,18 @@
 #include "locator.h"
-#include "GnssReader.h"
 
 #include <QDebug>
 
-Locator::Locator(GnssReader* gnssReader, QObject* parent)
+Locator::Locator(IGnssSource *gnssSource, QObject *parent)
     : QObject(parent),
-      m_gnss(gnssReader)
+      m_gnss(gnssSource)
 {
     Q_ASSERT(m_gnss != nullptr);
+
+    // FIX: Automatically update Locator when GNSS data changes
+    connect(m_gnss, &IGnssSource::positionUpdated,
+            this, &Locator::update);
+    connect(m_gnss, &IGnssSource::gnssStabilityChanged,
+            this, &Locator::update);
 }
 
 void Locator::update()
@@ -17,6 +22,14 @@ void Locator::update()
     } else {
         updateFromImu();
     }
+}
+
+void Locator::reset()
+{
+    QMutexLocker lock(&m_mutex);
+    m_currentPosition = Position{}; // Reset to 0,0,0
+    m_gnssStable = false;
+    qDebug() << "[Locator] Position reset (stale data cleared).";
 }
 
 void Locator::updateFromGnss()
@@ -33,14 +46,15 @@ void Locator::updateFromGnss()
     }
 
     qDebug() << "[Locator] GNSS position:"
-             << pos.latitude << pos.longitude
+             << pos.latitude
+             << pos.longitude
              << "Speed:" << pos.speedKmh << "km/h";
 }
 
 void Locator::updateFromImu()
 {
     // Placeholder for future dead-reckoning / sensor fusion
-    // For now, keep last known position
+    // Currently keeps last known position
 
     {
         QMutexLocker lock(&m_mutex);

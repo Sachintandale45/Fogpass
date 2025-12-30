@@ -224,29 +224,29 @@ fogpass-core_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/fogpass-core_autogen/mocs_compilation.cpp.s
 .PHONY : fogpass-core_autogen/mocs_compilation.cpp.s
 
-ipc/CoreDBusAdaptor.o: ipc/CoreDBusAdaptor.cpp.o
-.PHONY : ipc/CoreDBusAdaptor.o
+ipc/CoreDbusAdaptor.o: ipc/CoreDbusAdaptor.cpp.o
+.PHONY : ipc/CoreDbusAdaptor.o
 
 # target to build an object file
-ipc/CoreDBusAdaptor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.o
-.PHONY : ipc/CoreDBusAdaptor.cpp.o
+ipc/CoreDbusAdaptor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o
+.PHONY : ipc/CoreDbusAdaptor.cpp.o
 
-ipc/CoreDBusAdaptor.i: ipc/CoreDBusAdaptor.cpp.i
-.PHONY : ipc/CoreDBusAdaptor.i
+ipc/CoreDbusAdaptor.i: ipc/CoreDbusAdaptor.cpp.i
+.PHONY : ipc/CoreDbusAdaptor.i
 
 # target to preprocess a source file
-ipc/CoreDBusAdaptor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.i
-.PHONY : ipc/CoreDBusAdaptor.cpp.i
+ipc/CoreDbusAdaptor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.i
+.PHONY : ipc/CoreDbusAdaptor.cpp.i
 
-ipc/CoreDBusAdaptor.s: ipc/CoreDBusAdaptor.cpp.s
-.PHONY : ipc/CoreDBusAdaptor.s
+ipc/CoreDbusAdaptor.s: ipc/CoreDbusAdaptor.cpp.s
+.PHONY : ipc/CoreDbusAdaptor.s
 
 # target to generate assembly for a file
-ipc/CoreDBusAdaptor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDBusAdaptor.cpp.s
-.PHONY : ipc/CoreDBusAdaptor.cpp.s
+ipc/CoreDbusAdaptor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.s
+.PHONY : ipc/CoreDbusAdaptor.cpp.s
 
 src/CoreState.o: src/CoreState.cpp.o
 .PHONY : src/CoreState.o
@@ -272,29 +272,149 @@ src/CoreState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/CoreState.cpp.s
 .PHONY : src/CoreState.cpp.s
 
-src/landmark.o: src/landmark.cpp.o
-.PHONY : src/landmark.o
+src/GnssManager.o: src/GnssManager.cpp.o
+.PHONY : src/GnssManager.o
 
 # target to build an object file
-src/landmark.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/landmark.cpp.o
-.PHONY : src/landmark.cpp.o
+src/GnssManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.o
+.PHONY : src/GnssManager.cpp.o
 
-src/landmark.i: src/landmark.cpp.i
-.PHONY : src/landmark.i
+src/GnssManager.i: src/GnssManager.cpp.i
+.PHONY : src/GnssManager.i
 
 # target to preprocess a source file
-src/landmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/landmark.cpp.i
-.PHONY : src/landmark.cpp.i
+src/GnssManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.i
+.PHONY : src/GnssManager.cpp.i
 
-src/landmark.s: src/landmark.cpp.s
-.PHONY : src/landmark.s
+src/GnssManager.s: src/GnssManager.cpp.s
+.PHONY : src/GnssManager.s
 
 # target to generate assembly for a file
-src/landmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/landmark.cpp.s
-.PHONY : src/landmark.cpp.s
+src/GnssManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssManager.cpp.s
+.PHONY : src/GnssManager.cpp.s
+
+src/GnssReader.o: src/GnssReader.cpp.o
+.PHONY : src/GnssReader.o
+
+# target to build an object file
+src/GnssReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o
+.PHONY : src/GnssReader.cpp.o
+
+src/GnssReader.i: src/GnssReader.cpp.i
+.PHONY : src/GnssReader.i
+
+# target to preprocess a source file
+src/GnssReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.i
+.PHONY : src/GnssReader.cpp.i
+
+src/GnssReader.s: src/GnssReader.cpp.s
+.PHONY : src/GnssReader.s
+
+# target to generate assembly for a file
+src/GnssReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.s
+.PHONY : src/GnssReader.cpp.s
+
+src/LandmarkEngine.o: src/LandmarkEngine.cpp.o
+.PHONY : src/LandmarkEngine.o
+
+# target to build an object file
+src/LandmarkEngine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o
+.PHONY : src/LandmarkEngine.cpp.o
+
+src/LandmarkEngine.i: src/LandmarkEngine.cpp.i
+.PHONY : src/LandmarkEngine.i
+
+# target to preprocess a source file
+src/LandmarkEngine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.i
+.PHONY : src/LandmarkEngine.cpp.i
+
+src/LandmarkEngine.s: src/LandmarkEngine.cpp.s
+.PHONY : src/LandmarkEngine.s
+
+# target to generate assembly for a file
+src/LandmarkEngine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.s
+.PHONY : src/LandmarkEngine.cpp.s
+
+src/SimulatedGnssReader.o: src/SimulatedGnssReader.cpp.o
+.PHONY : src/SimulatedGnssReader.o
+
+# target to build an object file
+src/SimulatedGnssReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o
+.PHONY : src/SimulatedGnssReader.cpp.o
+
+src/SimulatedGnssReader.i: src/SimulatedGnssReader.cpp.i
+.PHONY : src/SimulatedGnssReader.i
+
+# target to preprocess a source file
+src/SimulatedGnssReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.i
+.PHONY : src/SimulatedGnssReader.cpp.i
+
+src/SimulatedGnssReader.s: src/SimulatedGnssReader.cpp.s
+.PHONY : src/SimulatedGnssReader.s
+
+# target to generate assembly for a file
+src/SimulatedGnssReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.s
+.PHONY : src/SimulatedGnssReader.cpp.s
+
+src/alertmanager.o: src/alertmanager.cpp.o
+.PHONY : src/alertmanager.o
+
+# target to build an object file
+src/alertmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o
+.PHONY : src/alertmanager.cpp.o
+
+src/alertmanager.i: src/alertmanager.cpp.i
+.PHONY : src/alertmanager.i
+
+# target to preprocess a source file
+src/alertmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.i
+.PHONY : src/alertmanager.cpp.i
+
+src/alertmanager.s: src/alertmanager.cpp.s
+.PHONY : src/alertmanager.s
+
+# target to generate assembly for a file
+src/alertmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.s
+.PHONY : src/alertmanager.cpp.s
+
+src/locator.o: src/locator.cpp.o
+.PHONY : src/locator.o
+
+# target to build an object file
+src/locator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/locator.cpp.o
+.PHONY : src/locator.cpp.o
+
+src/locator.i: src/locator.cpp.i
+.PHONY : src/locator.i
+
+# target to preprocess a source file
+src/locator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/locator.cpp.i
+.PHONY : src/locator.cpp.i
+
+src/locator.s: src/locator.cpp.s
+.PHONY : src/locator.s
+
+# target to generate assembly for a file
+src/locator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fogpass-core.dir/build.make CMakeFiles/fogpass-core.dir/src/locator.cpp.s
+.PHONY : src/locator.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -338,15 +458,30 @@ help:
 	@echo "... fogpass-core_autogen/mocs_compilation.o"
 	@echo "... fogpass-core_autogen/mocs_compilation.i"
 	@echo "... fogpass-core_autogen/mocs_compilation.s"
-	@echo "... ipc/CoreDBusAdaptor.o"
-	@echo "... ipc/CoreDBusAdaptor.i"
-	@echo "... ipc/CoreDBusAdaptor.s"
+	@echo "... ipc/CoreDbusAdaptor.o"
+	@echo "... ipc/CoreDbusAdaptor.i"
+	@echo "... ipc/CoreDbusAdaptor.s"
 	@echo "... src/CoreState.o"
 	@echo "... src/CoreState.i"
 	@echo "... src/CoreState.s"
-	@echo "... src/landmark.o"
-	@echo "... src/landmark.i"
-	@echo "... src/landmark.s"
+	@echo "... src/GnssManager.o"
+	@echo "... src/GnssManager.i"
+	@echo "... src/GnssManager.s"
+	@echo "... src/GnssReader.o"
+	@echo "... src/GnssReader.i"
+	@echo "... src/GnssReader.s"
+	@echo "... src/LandmarkEngine.o"
+	@echo "... src/LandmarkEngine.i"
+	@echo "... src/LandmarkEngine.s"
+	@echo "... src/SimulatedGnssReader.o"
+	@echo "... src/SimulatedGnssReader.i"
+	@echo "... src/SimulatedGnssReader.s"
+	@echo "... src/alertmanager.o"
+	@echo "... src/alertmanager.i"
+	@echo "... src/alertmanager.s"
+	@echo "... src/locator.o"
+	@echo "... src/locator.i"
+	@echo "... src/locator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

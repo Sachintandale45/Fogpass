@@ -387,8 +387,61 @@ CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtimer.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbasictimer.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QStringList \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlist.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVector \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvector.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstring.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/locator.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmutex.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdeadlinetimer.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qelapsedtimer.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtsan_impl.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
+ /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QSet \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QFile \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfile.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfiledevice.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiodevice.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/filesystem \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_fwd.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_path.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/locale \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/cwctype \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/wctype.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/wctype-wchar.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/ctype_base.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/ctype_inline.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets_nonio.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/time_members.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/messages_members.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/libintl.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/codecvt.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets_nonio.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_conv.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/iomanip \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/quoted_string.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/sstream \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/istream \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ios \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_ios.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_ios.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ostream \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/ostream.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/istream.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/sstream.tcc \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/codecvt \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_dir.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_ops.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTextStream \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtextstream.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QtMath \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmath.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtextstream.h \
@@ -410,5 +463,4 @@ CMakeFiles/fogpass-core.dir/src/LandmarkEngine.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmap.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata_impl.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h

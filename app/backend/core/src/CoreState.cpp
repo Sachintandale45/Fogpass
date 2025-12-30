@@ -16,6 +16,7 @@ void CoreState::setFogMode(bool foggy)
         return;
 
     m_foggy = foggy;
+    qInfo() << "[CoreState] Fog mode changed to:" << (m_foggy ? "ENABLED" : "DISABLED");
     emit fogModeChanged(m_foggy);
 }
 

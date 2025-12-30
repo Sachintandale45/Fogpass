@@ -18,14 +18,19 @@ add_executable(fogpass-core
     src/locator.cpp
     src/alertmanager.cpp
     src/LandmarkEngine.cpp
-    ipc/CoreDBusAdaptor.cpp
+    src/GnssManager.cpp
+    src/SimulatedGnssReader.cpp
+    ipc/CoreDbusAdaptor.cpp
     # Add headers with Q_OBJECT so AUTOMOC generates the necessary meta-object code
     include/CoreState.h
     include/GnssReader.h
     include/locator.h
     include/alertmanager.h
     include/LandmarkEngine.h
-    include/CoreDBusAdaptor.h
+    include/CoreDbusAdaptor.h
+    include/IGnssSource.h
+    include/GnssManager.h
+    include/SimulatedGnssReader.h
 )
 
 target_include_directories(fogpass-core
@@ -51,4 +56,14 @@ target_compile_options(fogpass-core
 
 install(TARGETS fogpass-core
     RUNTIME DESTINATION bin
+)
+
+# Install systemd service file
+install(FILES fogpass-core.service
+    DESTINATION /lib/systemd/system
+)
+
+# Install D-Bus policy configuration
+install(FILES com.fogpass.Core.conf
+    DESTINATION /etc/dbus-1/system.d
 )
