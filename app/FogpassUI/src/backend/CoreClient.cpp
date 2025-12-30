@@ -59,3 +59,8 @@ void CoreClient::selectRoute(const QString &routeName)
 {
     m_iface->call(QDBus::NoBlock, "SelectRoute", routeName);
 }
+
+void CoreClient::clearRoute()
+{
+    m_iface->call(QDBus::NoBlock, "ClearRoute");
+}

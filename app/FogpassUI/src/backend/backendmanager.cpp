@@ -100,6 +100,12 @@ void BackendManager::SelectRoute(const QString &routeName)
     m_core->selectRoute(routeName);
 }
 
+
+void BackendManager::ClearRoute()
+{
+    m_core->clearRoute();
+}
+
 void BackendManager::onTimeout()
 {
     if (m_batteryLevel > 25) { // Stop at 25

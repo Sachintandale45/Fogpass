@@ -43,6 +43,7 @@ public slots:
     void SetOperationMode(int mode);
     QStringList GetAvailableRoutes();
     void SelectRoute(const QString &routeName);
+    void ClearRoute();
 
 private slots:
     // -------- Internal slots (CoreState → Adaptor) --------

@@ -24,6 +24,14 @@ void Locator::update()
     }
 }
 
+void Locator::reset()
+{
+    QMutexLocker lock(&m_mutex);
+    m_currentPosition = Position{}; // Reset to 0,0,0
+    m_gnssStable = false;
+    qDebug() << "[Locator] Position reset (stale data cleared).";
+}
+
 void Locator::updateFromGnss()
 {
     Position pos;

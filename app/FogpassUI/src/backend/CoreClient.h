@@ -16,6 +16,7 @@ public:
     void setOperationMode(int mode);
     QStringList getAvailableRoutes();
     void selectRoute(const QString &routeName);
+    void clearRoute();
 
 
 signals:

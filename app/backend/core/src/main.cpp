@@ -78,6 +78,10 @@ int main(int argc, char *argv[])
         gnssManager->setMode(m);
     });
 
+    // Notify LandmarkEngine of mode changes so it knows whether to clear stale data
+    QObject::connect(dbusAdaptor, &CoreDbusAdaptor::gnssModeChangeRequested,
+                     landmarkEngine, &LandmarkEngine::setGnssMode);
+
     // Weather / fog mode
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::weatherModeChangeRequested,
                      coreState, &CoreState::setFogMode);

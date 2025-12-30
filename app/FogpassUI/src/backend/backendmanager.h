@@ -28,6 +28,7 @@ public:
     Q_INVOKABLE void SetOperationMode(int mode);
     Q_INVOKABLE QStringList GetAvailableRoutes();
     Q_INVOKABLE void SelectRoute(const QString &routeName);
+    Q_INVOKABLE void ClearRoute();
 
     QString landmark1() const;
     int distance1() const;

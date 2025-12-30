@@ -42,6 +42,9 @@ signals:
     // Announce that a route has been chosen by the user.
     void routeSelected(const QString &routeName);
 
+public slots:
+    void setGnssMode(int mode);
+
 private slots:
     void process();   // periodic update (1 Hz)
 
@@ -91,5 +94,6 @@ private:
     QString m_selectedRouteName;
     int m_lastClosestIndex = -1;
 
+    bool m_isSimulation = false;
     NextLandmark m_next[3];        // next 3 landmarks
 };

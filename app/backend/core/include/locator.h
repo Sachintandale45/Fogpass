@@ -21,6 +21,7 @@ public:
 
     // Called periodically (timer / worker thread)
     void update();
+    void reset();
 
     Position position() const;
     bool isGnssStable() const;

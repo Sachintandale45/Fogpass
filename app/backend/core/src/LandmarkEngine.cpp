@@ -123,11 +123,25 @@ bool LandmarkEngine::loadRouteFile(const QString &filePath)
 
 void LandmarkEngine::clearRoute()
 {
+    qDebug() << "[LandmarkEngine] clearRoute() called. Stopping engine and clearing data.";
     stop();
     m_route.clear();
     m_routeSelected = false;
     m_selectedRouteName.clear();
     m_lastClosestIndex = -1;
+
+    // Clear the next landmarks structure so UI doesn't show stale data
+    for (int i = 0; i < 3; ++i) {
+        m_next[i].name.clear();
+        m_next[i].distanceMeters = -1;
+    }
+    m_coreState->updateNextLandmarks("", -1, "", -1, "", -1);
+
+    // If we are in Real GNSS mode, clear the locator's position to remove
+    // any stale data left over from a previous simulation run.
+    if (!m_isSimulation) {
+        m_locator->reset();
+    }
 }
 
 void LandmarkEngine::start()
@@ -146,6 +160,12 @@ void LandmarkEngine::stop()
     }
 }
 
+void LandmarkEngine::setGnssMode(int mode)
+{
+    m_isSimulation = (mode == 1);
+    qDebug() << "[LandmarkEngine] GNSS mode updated:" << (m_isSimulation ? "SIMULATION" : "REAL");
+}
+
 // ------------------------------------------------------------
 // Periodic processing
 // ------------------------------------------------------------
@@ -156,7 +176,16 @@ void LandmarkEngine::process()
         return;
 
     if (!m_locator->isGnssStable()) {
-        qDebug() << "[LandmarkEngine] GNSS unstable, skipping landmark update";
+        // If we have stale data (distance != -1), clear it now to prevent
+        // showing frozen simulation data when switching to Real GNSS.
+        if (m_next[0].distanceMeters != -1) {
+            qDebug() << "[LandmarkEngine] GNSS unstable, clearing landmarks";
+            for (int i = 0; i < 3; ++i) {
+                m_next[i].name.clear();
+                m_next[i].distanceMeters = -1;
+            }
+            m_coreState->updateNextLandmarks("", -1, "", -1, "", -1);
+        }
         return;
     }
 
@@ -195,8 +224,21 @@ void LandmarkEngine::computeNextLandmarks(double curLat, double curLon)
     // progress forward, we should stick with the last known index until we are
     // physically closer to the next one in the list.
     // The check for a route loop is to handle the case where the simulation restarts.
-    if (closestIdx < m_lastClosestIndex && (m_lastClosestIndex - closestIdx < m_route.size() / 2))
-        return; // Do nothing, wait until we are closer to the next landmark
+    if (m_lastClosestIndex != -1 && closestIdx < m_lastClosestIndex && 
+        (m_lastClosestIndex - closestIdx < m_route.size() / 2)) {
+        closestIdx = m_lastClosestIndex;
+    }
+
+    // "Pass" logic: If we are very close to the current target landmark (e.g. < 10m),
+    // assume we have reached it and switch focus to the next one immediately.
+    // This prevents the distance bouncing (2m -> 0m -> 2m) for the same landmark.
+    if (closestIdx == m_lastClosestIndex) {
+        const Landmark &lm = m_route[closestIdx];
+        double d = distanceMeters(curLat, curLon, lm.latitude, lm.longitude);
+        if (d < 10.0 && (closestIdx + 1 < m_route.size())) {
+            closestIdx++;
+        }
+    }
 
     m_lastClosestIndex = closestIdx;
 

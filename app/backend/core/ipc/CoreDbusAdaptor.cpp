@@ -76,3 +76,9 @@ void CoreDbusAdaptor::SelectRoute(const QString &routeName)
 {
     m_landmarkEngine->selectRoute(routeName);
 }
+
+void CoreDbusAdaptor::ClearRoute()
+{
+    qInfo() << "[CoreDbusAdaptor] ClearRoute request received";
+    m_landmarkEngine->clearRoute();
+}
