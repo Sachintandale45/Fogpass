@@ -1,8 +1,8 @@
 CMakeFiles/fogpass-core.dir/fogpass-core_autogen/mocs_compilation.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/mocs_compilation.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/mocs_compilation.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreDbusAdaptor.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/CoreDbusAdaptor.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreDbusAdaptor.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/CoreDbusAdaptor.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -809,26 +809,26 @@ CMakeFiles/fogpass-core.dir/fogpass-core_autogen/mocs_compilation.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusversion.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtmochelpers.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreState.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/CoreState.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreState.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/CoreState.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QSet \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssManager.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/GnssManager.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/IGnssSource.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssReader.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/GnssReader.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssManager.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/GnssManager.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/IGnssSource.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssReader.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/GnssReader.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/thread \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/this_thread_sleep.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_IGnssSource.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_LandmarkEngine.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/LandmarkEngine.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_IGnssSource.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_LandmarkEngine.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/LandmarkEngine.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVector \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_SimulatedGnssReader.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/SimulatedGnssReader.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_alertmanager.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/alertmanager.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_locator.cpp \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/locator.h
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_SimulatedGnssReader.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/SimulatedGnssReader.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_alertmanager.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/alertmanager.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_locator.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/../../../core/include/locator.h

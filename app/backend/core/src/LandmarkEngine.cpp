@@ -42,6 +42,7 @@ void LandmarkEngine::setOperationMode(OperationMode mode)
 
     m_operationMode = mode;
     qInfo() << "[LandmarkEngine] Operation mode set to:" << mode;
+    emit operationModeChanged(mode);
 
     // Reset state on mode change
     clearRoute();

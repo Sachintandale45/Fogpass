@@ -26,6 +26,9 @@ signals:
     // Speed
     void SpeedUpdated(int speed);
 
+    // Operation Mode
+    void OperationModeUpdated(int mode);
+
     // Landmark updates
     void NextLandmarksUpdated(const QString &name1, int dist1,
                               const QString &name2, int dist2,

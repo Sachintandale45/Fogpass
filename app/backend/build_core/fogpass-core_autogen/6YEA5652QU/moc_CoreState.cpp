@@ -41,6 +41,8 @@ static constexpr auto qt_meta_stringdata_ZN9CoreStateE = QtMocHelpers::stringDat
     "fogModeChanged",
     "",
     "foggy",
+    "speedChanged",
+    "speed",
     "nextLandmarksUpdated",
     "name1",
     "dist1",
@@ -62,24 +64,26 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9CoreStateE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       4,       // signalCount
+       5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x06,    1 /* Public */,
-       4,    6,   41,    2, 0x06,    3 /* Public */,
-      11,    1,   54,    2, 0x06,   10 /* Public */,
-      13,    1,   57,    2, 0x06,   12 /* Public */,
+       1,    1,   44,    2, 0x06,    1 /* Public */,
+       4,    1,   47,    2, 0x06,    3 /* Public */,
+       6,    6,   50,    2, 0x06,    5 /* Public */,
+      13,    1,   63,    2, 0x06,   12 /* Public */,
+      15,    1,   66,    2, 0x06,   14 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int,    5,    6,    7,    8,    9,   10,
-    QMetaType::Void, QMetaType::QString,   12,
-    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::Int,    5,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::Int,    7,    8,    9,   10,   11,   12,
+    QMetaType::Void, QMetaType::QString,   14,
+    QMetaType::Void, QMetaType::QString,   14,
 
        0        // eod
 };
@@ -96,6 +100,9 @@ Q_CONSTINIT const QMetaObject CoreState::staticMetaObject = { {
         // method 'fogModeChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'speedChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'nextLandmarksUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
@@ -120,9 +127,10 @@ void CoreState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->fogModeChanged((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 1: _t->nextLandmarksUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6]))); break;
-        case 2: _t->alertRaised((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->alertCleared((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->speedChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->nextLandmarksUpdated((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[6]))); break;
+        case 3: _t->alertRaised((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->alertCleared((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
@@ -136,23 +144,30 @@ void CoreState::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             }
         }
         {
-            using _q_method_type = void (CoreState::*)(QString , int , QString , int , QString , int );
-            if (_q_method_type _q_method = &CoreState::nextLandmarksUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (CoreState::*)(int );
+            if (_q_method_type _q_method = &CoreState::speedChanged; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
-            using _q_method_type = void (CoreState::*)(const QString & );
-            if (_q_method_type _q_method = &CoreState::alertRaised; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            using _q_method_type = void (CoreState::*)(QString , int , QString , int , QString , int );
+            if (_q_method_type _q_method = &CoreState::nextLandmarksUpdated; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
             using _q_method_type = void (CoreState::*)(const QString & );
-            if (_q_method_type _q_method = &CoreState::alertCleared; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+            if (_q_method_type _q_method = &CoreState::alertRaised; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 3;
+                return;
+            }
+        }
+        {
+            using _q_method_type = void (CoreState::*)(const QString & );
+            if (_q_method_type _q_method = &CoreState::alertCleared; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 4;
                 return;
             }
         }
@@ -178,14 +193,14 @@ int CoreState::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
@@ -198,23 +213,30 @@ void CoreState::fogModeChanged(bool _t1)
 }
 
 // SIGNAL 1
-void CoreState::nextLandmarksUpdated(QString _t1, int _t2, QString _t3, int _t4, QString _t5, int _t6)
+void CoreState::speedChanged(int _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void CoreState::alertRaised(const QString & _t1)
+void CoreState::nextLandmarksUpdated(QString _t1, int _t2, QString _t3, int _t4, QString _t5, int _t6)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t6))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void CoreState::alertCleared(const QString & _t1)
+void CoreState::alertRaised(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void CoreState::alertCleared(const QString & _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
 QT_WARNING_POP

@@ -17,6 +17,7 @@ class BackendManager : public QObject
     Q_PROPERTY(QString landmark3 READ landmark3 NOTIFY landmarksChanged)
     Q_PROPERTY(int distance3 READ distance3 NOTIFY landmarksChanged)
     Q_PROPERTY(int speed READ speed NOTIFY speedUpdated)
+    Q_PROPERTY(QString operationModeLabel READ operationModeLabel NOTIFY operationModeChanged)
 
 public:
     explicit BackendManager(QObject *parent = nullptr);
@@ -38,6 +39,7 @@ public:
     QString landmark3() const;
     int distance3() const;
     int speed() const;
+    QString operationModeLabel() const;
 
 public slots:
     void start();
@@ -50,6 +52,7 @@ signals:
     void landmarkLocationsUpdated(const QStringList &locations);
     void landmarksChanged();
     void speedUpdated(int speed);
+    void operationModeChanged();
 
 private slots:
     void onTimeout();
@@ -68,4 +71,5 @@ private:
     int m_dist2 = 0;
     int m_dist3 = 0;
     int m_speed = 0;
+    int m_opMode = 0; // 0=Idle, 1=Manual, 2=Auto
 };

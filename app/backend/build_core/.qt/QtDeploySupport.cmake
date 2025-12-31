@@ -34,7 +34,7 @@ endif()
 set(__QT_DEPLOY_SYSTEM_NAME "Linux")
 set(__QT_DEPLOY_IS_SHARED_LIBS_BUILD "ON")
 set(__QT_DEPLOY_TOOL "")
-set(__QT_DEPLOY_IMPL_DIR "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/.qt")
+set(__QT_DEPLOY_IMPL_DIR "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/.qt")
 set(__QT_DEPLOY_VERBOSE "")
 set(__QT_CMAKE_EXPORT_NAMESPACE "Qt6")
 set(__QT_DEPLOY_GENERATOR_IS_MULTI_CONFIG "0")
@@ -58,7 +58,7 @@ set(__QT_DEPLOY_QT_DEBUG_POSTFIX "")
 
 # Define the CMake commands to be made available during deployment.
 set(__qt_deploy_support_files
-    "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/.qt/QtDeployTargets.cmake"
+    "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/.qt/QtDeployTargets.cmake"
     "/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6Core/Qt6CoreDeploySupport.cmake"
 )
 foreach(__qt_deploy_support_file IN LISTS __qt_deploy_support_files)

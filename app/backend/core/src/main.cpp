@@ -89,6 +89,10 @@ int main(int argc, char *argv[])
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::gnssModeChangeRequested,
                      landmarkEngine, &LandmarkEngine::setGnssMode);
 
+    // Operation Mode updates: LandmarkEngine -> D-Bus
+    QObject::connect(landmarkEngine, &LandmarkEngine::operationModeChanged,
+                     dbusAdaptor, &CoreDbusAdaptor::OperationModeUpdated);
+
     // Weather / fog mode
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::weatherModeChangeRequested,
                      coreState, &CoreState::setFogMode);

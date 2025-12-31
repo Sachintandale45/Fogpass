@@ -21,25 +21,25 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
   CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.3/CMakeSystem.cmake \
   fogpass-core_autogen/moc_predefs.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/CMakeLists.txt \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreDbusAdaptor.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssManager.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssReader.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/LandmarkEngine.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/SimulatedGnssReader.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/alertmanager.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/locator.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/main.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/CMakeLists.txt \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreDbusAdaptor.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssManager.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssReader.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/LandmarkEngine.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/SimulatedGnssReader.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/alertmanager.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/locator.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/CoreState.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssManager.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssReader.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/LandmarkEngine.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/SimulatedGnssReader.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/alertmanager.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/locator.cpp \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/main.cpp \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDeadlineTimer \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QHash \
@@ -835,6 +835,8 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
 
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake:
+
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake:
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
@@ -993,6 +995,8 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/features.h:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/endian.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/vector:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/utility:
@@ -1109,6 +1113,8 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/vector.tcc:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/utility.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/uses_allocator_args.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/uses_allocator.h:
@@ -1133,13 +1139,13 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets_nonio.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfiledevice.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/locale_facets_nonio.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsimd.h:
 
@@ -1163,25 +1169,15 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qreadwritelock.h:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/LandmarkEngine.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpropertyprivate.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qproperty.h:
-
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopedpointer.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/errno.h:
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/pstl/glue_memory_defs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpoint.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qplugin.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h:
 
@@ -1194,10 +1190,6 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ctime:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsortfilterproxymodel.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qversiontagging.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qxmlstream.h:
 
@@ -1221,17 +1213,11 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmimedatabase.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/utility.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreDbusAdaptor.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDeadlineTimer:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qjsonobject.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qflags.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qjsonobject.h:
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/lib/aarch64-ostl-linux/gcc/aarch64-ostl-linux/13.3.0/include/arm_fp16.h:
 
@@ -1269,15 +1255,9 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfunctionpointer.h:
 
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qglobal.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfuturesynchronizer.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfuture_impl.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
@@ -1295,6 +1275,16 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qjsonvalue.h:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/iomanip:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiterator.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QtDBus:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct_itimerspec.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/linux/limits.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfile.h:
@@ -1304,18 +1294,6 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qexceptionhandling.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/cpu-set.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stringfwd.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpromise.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusexports.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qprocessordetection.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qprocess.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/string:
 
@@ -1327,17 +1305,11 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qelapsedtimer.h:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdirlisting.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdiriterator.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/error_t.h:
-
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstring.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/istream:
 
@@ -1349,11 +1321,37 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/locale_t.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_ios.tcc:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcache.h:
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbindingstorage.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qglobal.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/alertmanager.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsharedpointer.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/gnu/stubs.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/tuple:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlistmodel.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtipccommon.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stringfwd.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/cmath:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/LandmarkEngine.h:
+
+CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qrandom.h:
 
@@ -1367,11 +1365,13 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/std_abs.h:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmimetype.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject_impl.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qassert.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbitarray.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/pthreadtypes-64.h:
 
@@ -1379,81 +1379,51 @@ fogpass-core_autogen/timestamp: /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTo
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/streambuf.tcc:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbindingstorage.h:
 
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/main.cpp:
-
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qarraydataops.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtsymbolmacros.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusversion.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborstreamreader.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qoverload.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QtCore:
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/locator.cpp:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qwineventnotifier.h:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringfwd.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_tempbuf.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsemaphore.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/gnu/stubs.h:
+CMakeFiles/3.28.3/CMakeSystem.cmake:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/tuple:
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/locator.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringlistmodel.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringmatcher.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbitarray.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/refwrap.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qassert.h:
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssReader.cpp:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtipccommon.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtclasshelpermacros.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/cmath:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/locale:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusglobal.h:
 
-CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsignalmapper.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20vector.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stream_iterator.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtenvironmentvariables.h:
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreDbusAdaptor.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/endian.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdatastream.h:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/locator.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpair.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdirlisting.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/initializer_list:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtdeprecationmarkers.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_construct.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/exception_defines.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qresultstore.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/ostream_insert.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiodevicebase.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qatomicscopedvaluerollback.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/stdio_lim.h:
-
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qoverload.h:
 
 /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake:
 
@@ -1467,17 +1437,101 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/std_function.h:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborstream.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpropertyanimation.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/exception_ptr.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVector:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcoreapplication.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopeguard.h:
 
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborarray.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsharedpointer.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcontiguouscache.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qversiontagging.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QtCore:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/SimulatedGnssReader.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qitemselectionmodel.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qanimationgroup.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/mutex:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/quuid.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qanystringview.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qprocess.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qprocessordetection.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
+
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstring.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/alertmanager.cpp:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/CoreState.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qproperty.h:
+
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopedpointer.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/errno.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/CMakeLists.txt:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/hash_bytes.h:
+
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs_impl.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/charconv.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/errno.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_algobase.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/memory:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusargument.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdeadlinetimer.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qrunnable.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmetaobject.h:
 
@@ -1488,6 +1542,10 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/algorithmfwd.h:
 
 /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_string.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtpreprocessorsupport.h:
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake:
 
@@ -1507,17 +1565,65 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qresource.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringfwd.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/gthr.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsemaphore.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbuffer.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpropertyanimation.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/time.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborstream.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_ios.tcc:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcache.h:
 
-CMakeFiles/3.28.3/CMakeSystem.cmake:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/new_allocator.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcomparehelpers.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/LandmarkEngine.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20vector.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtenvironmentvariables.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssManager.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpromise.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusexports.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/clockid_t.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qchar.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qexception.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/stdint-least.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/functional_hash.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qresultstore.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/ostream_insert.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiodevicebase.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qatomicscopedvaluerollback.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/stdio_lim.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssReader.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpluginloader.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpauseanimation.h:
 
@@ -1526,72 +1632,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/compare:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q23utility.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject:
-
-/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs_impl.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/charconv.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcomparehelpers.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/new_allocator.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_algobase.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/memory:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusargument.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdeadlinetimer.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qplugin.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/CMakeLists.txt:
-
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/errno.h:
-
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssReader.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcoreapplication.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qscopeguard.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborarray.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcontiguouscache.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qarraydatapointer.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpermissions.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcoreapplication_platform.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qabstractitemmodel.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcollator.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/iomanip:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qiterator.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/QtDBus:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct_itimerspec.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssManager.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpluginloader.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q26numeric.h:
 
@@ -1607,15 +1647,17 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h:
 
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/main.cpp:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmetacontainer.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfuture.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qlibrary.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/libc-header-start.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMap:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/alertmanager.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qxptype_traits.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qparallelanimationgroup.h:
 
@@ -1629,31 +1671,43 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qwaitcondition.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qitemselectionmodel.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtpreprocessorsupport.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/basic_string.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qanimationgroup.h:
-
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/mutex:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/quuid.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qanystringview.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qconstructormacros.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qlocale.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qapplicationstatic.h:
 
+/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qarraydataops.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtsymbolmacros.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusversion.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborstreamreader.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qarraydatapointer.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpermissions.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcoreapplication_platform.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qabstractitemmodel.h:
+
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcollator.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qjsondocument.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcontainerfwd.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborcommon.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/endian-64.h:
 
@@ -1669,29 +1723,9 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qoperatingsystemversion.h:
 
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssManager.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qatomic_cxx11.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/locale:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusglobal.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsignalmapper.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stream_iterator.h:
-
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qrunnable.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdatastream.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qpair.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/initializer_list:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtdeprecationmarkers.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/exception_defines.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbasictimer.h:
 
@@ -1733,21 +1767,11 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qconcatenatetablesproxymodel.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfuture.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVariant:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmetacontainer.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcompilerdetection.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/clockid_t.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qchar.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qexception.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/stdint-least.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/functional_hash.h:
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborvalue.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcommandlineoption.h:
 
@@ -1791,16 +1815,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qsettings.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborcommon.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcontainerfwd.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcompilerdetection.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qcborvalue.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVariant:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/chrono:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstandardpaths.h:
@@ -1816,8 +1830,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6HostInfo/Qt6HostInfoConfig.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfutureinterface.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringview.h:
 
@@ -1844,8 +1856,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qurl.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtclasshelpermacros.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/optional:
 
@@ -1951,12 +1961,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtversionchecks.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/cpu_defines.h:
-
-fogpass-core_autogen/moc_predefs.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/waitflags.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtypeinfo.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/__fpos64_t.h:
@@ -1982,6 +1986,8 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvector.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qxpfunctional.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qxptype_traits.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qyieldcpu.h:
 
@@ -2103,10 +2109,6 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/struct_mutex.h:
 
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct_FILE.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/struct_rwlock-64.h:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/timesize.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/timex.h:
@@ -2124,6 +2126,10 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/iosfwd:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/cookie_io_functions_t.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/struct_rwlock-64.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct_FILE.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/struct_timespec.h:
 
@@ -2165,17 +2171,17 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_vector.h:
 
+fogpass-core_autogen/moc_predefs.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/waitflags.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/cpu_defines.h:
+
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/backward/auto_ptr.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/gthr-default.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qbuffer.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/time.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/gthr.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/cwctype:
 
@@ -2189,17 +2195,15 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/aarch64-ostl-linux/bits/time_members.h:
 
-/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmath.h:
+
+/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/algorithm:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/atomic:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/backward/binders.h:
-
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/SimulatedGnssReader.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/local_lim.h:
 
@@ -2235,8 +2239,6 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/cxxabi_forced.h:
 
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp:
-
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/cxxabi_init_exception.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/cstddef:
@@ -2246,8 +2248,6 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/enable_special_members.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/erase_if.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/exception_ptr.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_dir.h:
 
@@ -2262,8 +2262,6 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/local_lim-64.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_path.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/hash_bytes.h:
 
 /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:
 
@@ -2295,6 +2293,8 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/functional:
 
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/SimulatedGnssReader.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/__sigset_t.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/localefwd.h:
@@ -2318,10 +2318,6 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfactoryinterface.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/random.tcc:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstringmatcher.h:
-
-/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/refwrap.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/requires_hosted.h:
 
@@ -2359,6 +2355,8 @@ fogpass-core_autogen/moc_predefs.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/string_view.tcc:
 
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_construct.h:
+
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmap.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_list.h:
@@ -2374,6 +2372,8 @@ fogpass-core_autogen/moc_predefs.h:
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/bits/types/clock_t.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_relops.h:
+
+/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/stl_tempbuf.h:
 
 /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/fs_ops.h:
 

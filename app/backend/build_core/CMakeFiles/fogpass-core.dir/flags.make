@@ -4,7 +4,7 @@
 # compile CXX with /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/aarch64-ostl-linux/aarch64-ostl-linux-g++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_DBUS_LIB -DQT_NO_DEBUG
 
-CXX_INCLUDES = -I/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/include -I/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include -I/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc -I/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/mkspecs/linux-g++ -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus
+CXX_INCLUDES = -I/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/include -I/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include -I/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc -I/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/mkspecs/linux-g++ -isystem /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus
 
 CXX_FLAGS =  -O2 -pipe -g -feliminate-unused-debug-types  -std=gnu++17 -Wall -Wextra -Wpedantic
 

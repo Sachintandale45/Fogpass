@@ -16,6 +16,36 @@ Rectangle {
         anchors.rightMargin: 10
         height: parent.height
 
+        // Operation Mode Indicator (Rectangular)
+        Rectangle {
+            width: 80
+            height: 30
+            color: "black"
+            border.color: "#ffffff"
+            border.width: 1
+            radius: 4
+            anchors.verticalCenter: parent.verticalCenter
+
+            Text {
+                anchors.centerIn: parent
+                text: Backend.operationModeLabel
+                color: "#ffffff"
+                font.pixelSize: 12
+                font.bold: true
+            }
+        }
+
+        // Status LED (Yellow Circle)
+        Rectangle {
+            width: 18
+            height: 18
+            radius: 9
+            color: "#ffeb3b" // Yellow
+            border.color: "#ffffff"
+            border.width: 1
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
         // Battery Indicator
         Rectangle {
             id: batteryIndicator

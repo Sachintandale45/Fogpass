@@ -46,6 +46,15 @@ int BackendManager::distance2() const { return m_dist2; }
 QString BackendManager::landmark3() const { return m_landmark3; }
 int BackendManager::distance3() const { return m_dist3; }
 int BackendManager::speed() const { return m_speed; }
+QString BackendManager::operationModeLabel() const 
+{
+    switch(m_opMode) {
+        case 1: return "MANUAL";
+        case 2: return "AUTO";
+        case 0: 
+        default: return "IDLE";
+    }
+}
 
 void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
 {
@@ -100,6 +109,11 @@ void BackendManager::setGnssMode(bool simulation)
 
 void BackendManager::SetOperationMode(int mode)
 {
+    // Update local state immediately for UI responsiveness
+    if (m_opMode != mode) {
+        m_opMode = mode;
+        emit operationModeChanged();
+    }
     m_core->setOperationMode(mode);
 }
 
