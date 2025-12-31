@@ -15,6 +15,14 @@ Item {
         return s;
     }
 
+    // Debug: Log backend values to console to verify QML access
+    Timer {
+        interval: 2000
+        running: true
+        repeat: true
+        onTriggered: console.log("Demo2 Backend Data:", Backend.landmark1, Backend.distance1)
+    }
+
     ColumnLayout {
         anchors.centerIn: parent
         spacing: 20
@@ -37,9 +45,9 @@ Item {
                 anchors.fill: parent
                 anchors.margins: 15
 
-                Text { text: Backend.landmark1 + " - " + Backend.distance1 + " m"; color: "white"; font.pixelSize: 22 }
-                Text { text: Backend.landmark2 + " - " + Backend.distance2 + " m"; color: "white"; font.pixelSize: 22 }
-                Text { text: Backend.landmark3 + " - " + Backend.distance3 + " m"; color: "white"; font.pixelSize: 22 }
+                Text { text: (Backend.landmark1 || "N/A") + " - " + (Backend.distance1 || "0") + " m"; color: "white"; font.pixelSize: 22 }
+                Text { text: (Backend.landmark2 || "N/A") + " - " + (Backend.distance2 || "0") + " m"; color: "white"; font.pixelSize: 22 }
+                Text { text: (Backend.landmark3 || "N/A") + " - " + (Backend.distance3 || "0") + " m"; color: "white"; font.pixelSize: 22 }
             }
         }
 
