@@ -24,32 +24,53 @@ Item {
     }
 
     ColumnLayout {
-        anchors.centerIn: parent
-        spacing: 20
+        anchors.fill: parent
+        anchors.margins: 20
+        spacing: 10
 
         Text {
             text: "Manual Mode Landmarks"
-            font.pixelSize: 28
+            font.pixelSize: 24
             font.bold: true
-            Layout.alignment: Qt.AlignHCenter
+            color: "#aaaaaa"
+            Layout.alignment: Qt.AlignLeft
+            Layout.topMargin: 10
         }
 
-        Rectangle {
-            width: 400
-            height: 150
-            color: "#00000033"
-            radius: 8
-            Layout.alignment: Qt.AlignHCenter
+        // Spacer to push content to center vertically
+        Item { Layout.fillHeight: true }
 
-            ColumnLayout {
-                anchors.fill: parent
-                anchors.margins: 15
-
-                Text { text: (Backend.landmark1 || "N/A") + " - " + (Backend.distance1 || "0") + " m"; color: "white"; font.pixelSize: 22 }
-                Text { text: (Backend.landmark2 || "N/A") + " - " + (Backend.distance2 || "0") + " m"; color: "white"; font.pixelSize: 22 }
-                Text { text: (Backend.landmark3 || "N/A") + " - " + (Backend.distance3 || "0") + " m"; color: "white"; font.pixelSize: 22 }
-            }
+        // Landmark 1 - Double size (approx 2 inch visual)
+        Text {
+            text: (Backend.landmark1 || "N/A") + " - " + (Backend.distance1 || "0") + " m"
+            color: "#4fc3f7" // Highlight color
+            font.pixelSize: 100
+            font.bold: true
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignLeft
+            wrapMode: Text.WordWrap
         }
+
+        // Landmark 2 & 3 - Standard size (approx 1 inch visual)
+        Text {
+            text: (Backend.landmark2 || "N/A") + " - " + (Backend.distance2 || "0") + " m"
+            color: "white"
+            font.pixelSize: 60
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignLeft
+            wrapMode: Text.WordWrap
+        }
+        Text {
+            text: (Backend.landmark3 || "N/A") + " - " + (Backend.distance3 || "0") + " m"
+            color: "white"
+            font.pixelSize: 60
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignLeft
+            wrapMode: Text.WordWrap
+        }
+
+        // Spacer
+        Item { Layout.fillHeight: true }
 
         Button {
             text: "Back"
