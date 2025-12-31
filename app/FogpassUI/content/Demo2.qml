@@ -8,6 +8,7 @@ Item {
 
     // This property is set by UserMenu.qml when this page is pushed
     property var parentWindow
+    property string routeName: "Selected Route"
 
     function stackRef() {
         var s = (parentWindow && parentWindow.stack) || StackView.view;
@@ -29,7 +30,7 @@ Item {
         spacing: 10
 
         Text {
-            text: "Manual Mode Landmarks"
+            text: demo2Root.routeName
             font.pixelSize: 24
             font.bold: true
             color: "#aaaaaa"
@@ -41,32 +42,66 @@ Item {
         Item { Layout.fillHeight: true }
 
         // Landmark 1 - Double size (approx 2 inch visual)
-        Text {
-            text: (Backend.landmark1 || "N/A") + " - " + (Backend.distance1 || "0") + " m"
-            color: "#4fc3f7" // Highlight color
-            font.pixelSize: 100
-            font.bold: true
+        RowLayout {
             Layout.fillWidth: true
-            horizontalAlignment: Text.AlignLeft
-            wrapMode: Text.WordWrap
+            Layout.rightMargin: 40
+
+            Text {
+                text: (Backend.landmark1 || "N/A")
+                color: "#4fc3f7" // Highlight color
+                font.pixelSize: 100
+                font.bold: true
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.WordWrap
+            }
+            Text {
+                text: (Backend.distance1 || "0") + " m"
+                color: "#4fc3f7"
+                font.pixelSize: 100
+                font.bold: true
+                Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            }
         }
 
         // Landmark 2 & 3 - Standard size (approx 1 inch visual)
-        Text {
-            text: (Backend.landmark2 || "N/A") + " - " + (Backend.distance2 || "0") + " m"
-            color: "white"
-            font.pixelSize: 60
+        RowLayout {
             Layout.fillWidth: true
-            horizontalAlignment: Text.AlignLeft
-            wrapMode: Text.WordWrap
+            Layout.rightMargin: 40
+
+            Text {
+                text: (Backend.landmark2 || "N/A")
+                color: "white"
+                font.pixelSize: 60
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.WordWrap
+            }
+            Text {
+                text: (Backend.distance2 || "0") + " m"
+                color: "white"
+                font.pixelSize: 60
+                Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            }
         }
-        Text {
-            text: (Backend.landmark3 || "N/A") + " - " + (Backend.distance3 || "0") + " m"
-            color: "white"
-            font.pixelSize: 60
+        RowLayout {
             Layout.fillWidth: true
-            horizontalAlignment: Text.AlignLeft
-            wrapMode: Text.WordWrap
+            Layout.rightMargin: 40
+
+            Text {
+                text: (Backend.landmark3 || "N/A")
+                color: "white"
+                font.pixelSize: 60
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.WordWrap
+            }
+            Text {
+                text: (Backend.distance3 || "0") + " m"
+                color: "white"
+                font.pixelSize: 60
+                Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            }
         }
 
         // Spacer
