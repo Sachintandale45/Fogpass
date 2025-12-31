@@ -23,6 +23,9 @@ signals:
     // Alerts
     void AlertRaised(const QString &alertId);
 
+    // Speed
+    void SpeedUpdated(int speed);
+
     // Landmark updates
     void NextLandmarksUpdated(const QString &name1, int dist1,
                               const QString &name2, int dist2,

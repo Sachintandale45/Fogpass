@@ -21,7 +21,7 @@ Item {
         interval: 2000
         running: true
         repeat: true
-        onTriggered: console.log("Demo2 Backend Data:", Backend.landmark1, Backend.distance1)
+        onTriggered: console.log("Demo2 Backend Data:", Backend.landmark1, Backend.distance1, Backend.speed)
     }
 
     ColumnLayout {
@@ -29,13 +29,17 @@ Item {
         anchors.margins: 20
         spacing: 10
 
-        Text {
-            text: demo2Root.routeName
-            font.pixelSize: 24
-            font.bold: true
-            color: "#aaaaaa"
-            Layout.alignment: Qt.AlignLeft
+        RowLayout {
+            Layout.fillWidth: true
             Layout.topMargin: 10
+
+            Text {
+                text: demo2Root.routeName
+                font.pixelSize: 24
+                font.bold: true
+                color: "#aaaaaa"
+                Layout.alignment: Qt.AlignLeft
+            }
         }
 
         // Spacer to push content to center vertically
@@ -107,27 +111,41 @@ Item {
         // Spacer
         Item { Layout.fillHeight: true }
 
-        Button {
-            text: "Back"
-            Layout.minimumWidth: 160
-            Layout.minimumHeight: 46
-            font.pointSize: 16
-            font.bold: true
-            Layout.alignment: Qt.AlignHCenter
+        Item {
+            Layout.fillWidth: true
+            Layout.minimumHeight: 50
 
-            background: Rectangle {
-                radius: 8
-                color: parent.pressed ? "#ffffff" : "#ffffff"
-                opacity: parent.pressed ? 0.9 : 1.0
-                border.width: 2
-                border.color: "#333333"
+            Button {
+                text: "Back"
+                width: 160
+                height: 46
+                anchors.centerIn: parent
+                font.pointSize: 16
+                font.bold: true
+
+                background: Rectangle {
+                    radius: 8
+                    color: parent.pressed ? "#ffffff" : "#ffffff"
+                    opacity: parent.pressed ? 0.9 : 1.0
+                    border.width: 2
+                    border.color: "#333333"
+                }
+                contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+
+                onClicked: {
+                    Backend.ClearRoute();
+                    var s = demo2Root.stackRef();
+                    if (s) s.pop();
+                }
             }
-            contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
 
-            onClicked: {
-                Backend.ClearRoute();
-                var s = demo2Root.stackRef();
-                if (s) s.pop();
+            Text {
+                anchors.right: parent.right
+                anchors.verticalCenter: parent.verticalCenter
+                text: "Speed: " + (Backend.speed || "0") + " km/h"
+                font.pixelSize: 24
+                font.bold: true
+                color: "#4fc3f7"
             }
         }
     }

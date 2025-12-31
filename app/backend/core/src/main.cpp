@@ -64,6 +64,13 @@ int main(int argc, char *argv[])
                      alertManager, &AlertManager::onNextLandmarksUpdated,
                      Qt::QueuedConnection);
 
+    // Speed updates: GnssManager -> CoreState
+    QObject::connect(gnssManager, &IGnssSource::positionUpdated,
+                     coreState, [coreState](double, double, double speed) {
+        qDebug() << "[Main] GNSS Speed Update:" << speed;
+        coreState->setSpeed(static_cast<int>(speed));
+    });
+
     // D-Bus adaptor
     CoreDbusAdaptor *dbusAdaptor =
         new CoreDbusAdaptor(coreState, landmarkEngine, &app);
@@ -85,6 +92,10 @@ int main(int argc, char *argv[])
     // Weather / fog mode
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::weatherModeChangeRequested,
                      coreState, &CoreState::setFogMode);
+
+    // Speed updates: CoreState -> D-Bus
+    QObject::connect(coreState, &CoreState::speedChanged,
+                     dbusAdaptor, &CoreDbusAdaptor::SpeedUpdated);
 
     // Register D-Bus service
     QDBusConnection bus = QDBusConnection::systemBus();

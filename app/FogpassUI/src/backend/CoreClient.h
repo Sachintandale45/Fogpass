@@ -22,8 +22,12 @@ public:
 signals:
     void landmarkLocationsChanged(const QStringList &locations);
     void landmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
+    void speedUpdated(int speed);
 
 private:
     QDBusInterface *m_iface;
+
+private slots:
+    void onDbusLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
 
 };
