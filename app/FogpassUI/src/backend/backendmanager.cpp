@@ -22,6 +22,13 @@ BackendManager::BackendManager(QObject *parent)
     connect(m_core, SIGNAL(speedUpdated(int)), this, SLOT(onSpeedUpdated(int)));
     connect(m_core, &CoreClient::gnssStabilityChanged, this, &BackendManager::onCoreGnssStabilityChanged);
 
+    // Sync initial state from Core
+    bool initialStable = m_core->getGnssStability();
+    if (m_isGnssStable != initialStable) {
+        m_isGnssStable = initialStable;
+        emit gnssStabilityChanged(m_isGnssStable);
+    }
+
     // --- Battery Simulation Timer ---
     m_timer.setInterval(1000); // Update once per second
     m_timer.setTimerType(Qt::CoarseTimer);

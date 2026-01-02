@@ -76,5 +76,5 @@ private:
     int m_dist3 = 0;
     int m_speed = 0;
     int m_opMode = 0; // 0=Idle, 1=Manual, 2=Auto
-    bool m_isGnssStable = true;
+    bool m_isGnssStable = false;
 };

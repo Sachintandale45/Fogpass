@@ -86,6 +86,15 @@ void CoreClient::clearRoute()
     m_iface->call(QDBus::NoBlock, "ClearRoute");
 }
 
+bool CoreClient::getGnssStability()
+{
+    QDBusReply<bool> reply = m_iface->call("GetGnssStability");
+    if (reply.isValid()) {
+        return reply.value();
+    }
+    return false; // Default to unstable if call fails
+}
+
 void CoreClient::onDbusLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
 {
     // Log the raw data received from D-Bus

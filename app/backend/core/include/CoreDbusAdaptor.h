@@ -45,6 +45,9 @@ public slots:
     // D-Bus method: SetGnssMode(int mode) -> 0=Real, 1=Simulation
     void SetGnssMode(int mode);
 
+    // D-Bus method: Get current stability state
+    bool GetGnssStability() { return m_lastKnownStability; }
+
     // D-Bus method: SetWeatherMode(bool foggy)
     void SetWeatherMode(bool foggy);
 
@@ -56,6 +59,7 @@ public slots:
 
     // Slot to forward signal from LandmarkEngine to D-Bus
     void onGnssStabilityChanged(bool stable) {
+        m_lastKnownStability = stable;
         qDebug() << "[CoreDbusAdaptor] Forwarding GnssStabilityChanged signal:" << stable;
         emit GnssStabilityChanged(stable);
     }
@@ -71,4 +75,5 @@ private slots:
 private:
     CoreState *m_coreState;
     LandmarkEngine *m_landmarkEngine;
+    bool m_lastKnownStability = false;
 };

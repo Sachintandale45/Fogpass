@@ -75,9 +75,12 @@ int main(int argc, char *argv[])
     CoreDbusAdaptor *dbusAdaptor =
         new CoreDbusAdaptor(coreState, landmarkEngine, &app);
 
-    // Connect LandmarkEngine stability signal to D-Bus adaptor
-    QObject::connect(landmarkEngine, &LandmarkEngine::gnssStabilityChanged,
+    // Connect GnssManager stability signal directly to D-Bus adaptor
+    QObject::connect(gnssManager, &IGnssSource::gnssStabilityChanged,
                      dbusAdaptor, &CoreDbusAdaptor::onGnssStabilityChanged);
+
+    // Sync initial stability state to adaptor so UI can query it on startup
+    dbusAdaptor->onGnssStabilityChanged(gnssManager->isGnssStable());
 
     // GNSS mode change from UI
     QObject::connect(dbusAdaptor, &CoreDbusAdaptor::gnssModeChangeRequested,

@@ -98,26 +98,32 @@ bool GnssManager::isGnssStable() const
 // ------------------------------------------------------------
 void GnssManager::setMode(GnssManager::Mode mode)
 {
-    QMutexLocker locker(&m_mutex);
+    bool newStability = false;
+    {
+        QMutexLocker locker(&m_mutex);
 
-    qDebug() << "[GnssManager] Received request to set mode to:" << (mode == Mode::Simulation ? "SIMULATION" : "REAL");
+        qDebug() << "[GnssManager] Received request to set mode to:" << (mode == Mode::Simulation ? "SIMULATION" : "REAL");
 
-    if (m_mode == mode) {
-        qDebug() << "[GnssManager] Already in requested mode. No change.";
-        return; // no-op
-    }
+        if (m_mode == mode) {
+            qDebug() << "[GnssManager] Already in requested mode. No change.";
+            return; // no-op
+        }
 
-    qDebug() << "[GnssManager] Switching GNSS mode from" << (m_mode == Mode::Simulation ? "SIM" : "REAL") << "to" << (mode == Mode::Simulation ? "SIM" : "REAL");
+        qDebug() << "[GnssManager] Switching GNSS mode from" << (m_mode == Mode::Simulation ? "SIM" : "REAL") << "to" << (mode == Mode::Simulation ? "SIM" : "REAL");
 
-    // Stop current source
-    activeSource()->stop(); // This stops the *old* source
+        // Stop current source
+        activeSource()->stop(); // This stops the *old* source
 
-    m_mode = mode;
+        m_mode = mode;
 
-    // Start new source
-    activeSource()->start();
+        // Start new source
+        activeSource()->start();
+        newStability = activeSource()->isGnssStable();
+    } // Unlock mutex before emitting to prevent potential deadlocks
 
     emit gnssModeChanged(m_mode);
+    qDebug() << "[GnssManager] Mode switched. Forcing stability update to:" << newStability;
+    emit gnssStabilityChanged(newStability);
 }
 
 // ------------------------------------------------------------

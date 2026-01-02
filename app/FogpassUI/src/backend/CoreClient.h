@@ -17,6 +17,7 @@ public:
     QStringList getAvailableRoutes();
     void selectRoute(const QString &routeName);
     void clearRoute();
+    bool getGnssStability();
 
 
 signals:
