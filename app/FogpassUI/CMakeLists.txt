@@ -45,6 +45,10 @@ qt_add_qml_module(apptrial1
         content/BackendBindings.qml
         content/BrightnessControl.qml
         config/AppSettings.qml
+        content/AutoRoutePage.qml
+        content/Demo2.qml
+        content/RouteSelectionPage.qml
+        content/GPSSimulationPage2.qml
 
     SOURCES
         src/backend/backendmanager.cpp
@@ -55,10 +59,7 @@ qt_add_qml_module(apptrial1
         src/backend/PowerClient.h
         src/backend/CoreClient.cpp
         src/backend/CoreClient.h
-        QML_FILES content/AutoRoutePage.qml
-        QML_FILES content/Demo2.qml
-        QML_FILES content/RouteSelectionPage.qml
-        QML_FILES content/GPSSimulationPage2.qml
+
 )
 
 # --- Properties (for macOS/iOS, safe to keep) ---

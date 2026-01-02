@@ -53,10 +53,10 @@ RM = /opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core
+CMAKE_SOURCE_DIR = /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core
+CMAKE_BINARY_DIR = /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core
 
 # Utility rule file for fogpass-core_autogen_timestamp_deps.
 
@@ -66,9 +66,9 @@ include CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/fogpass-core_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Core.so.6.8.0
-CMakeFiles/fogpass-core_autogen_timestamp_deps: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
 CMakeFiles/fogpass-core_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6DBus.so.6.8.0
+CMakeFiles/fogpass-core_autogen_timestamp_deps: /home/sachin/Qt/6.8.3/gcc_64/libexec/moc
+CMakeFiles/fogpass-core_autogen_timestamp_deps: /opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/libQt6Core.so.6.8.0
 
 fogpass-core_autogen_timestamp_deps: CMakeFiles/fogpass-core_autogen_timestamp_deps
 fogpass-core_autogen_timestamp_deps: CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/depend:
-	cd /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/fogpass-core_autogen_timestamp_deps.dir/depend
 

@@ -1,7 +1,7 @@
 CMakeFiles/fogpass-core.dir/src/locator.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/locator.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/locator.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/locator.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -388,7 +388,7 @@ CMakeFiles/fogpass-core.dir/src/locator.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdeadlinetimer.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qelapsedtimer.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtsan_impl.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtextstream.h \

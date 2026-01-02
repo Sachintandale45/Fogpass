@@ -26,7 +26,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/sachin/Qt/6.8.3/gcc_64/lib/cmake/Qt6HostInfo/Qt6HostInfoConfig.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
-  "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/CMakeLists.txt"
+  "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/CMakeLists.txt"
   "/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6Config.cmake"
   "/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake"

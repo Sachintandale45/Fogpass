@@ -26,6 +26,25 @@ bool CoreState::fogMode() const
     return m_foggy;
 }
 
+/* ===================== Speed ===================== */
+
+void CoreState::setSpeed(int speed)
+{
+    QMutexLocker locker(&m_mutex);
+    // Disable deduplication to ensure UI receives the value even if it connects late
+    // if (m_speed == speed) return;
+
+    m_speed = speed;
+    qDebug() << "[CoreState] Emitting speedChanged:" << m_speed << "(D-Bus should receive this)";
+    emit speedChanged(m_speed);
+}
+
+int CoreState::speed() const
+{
+    QMutexLocker locker(&m_mutex);
+    return m_speed;
+}
+
 /* ===================== Landmarks ===================== */
 
 void CoreState::updateNextLandmarks(

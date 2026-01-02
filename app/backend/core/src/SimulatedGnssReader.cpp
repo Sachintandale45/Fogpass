@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
+#include <QtMath>
 
 SimulatedGnssReader::SimulatedGnssReader(QObject *parent)
     : IGnssSource(parent)
@@ -163,6 +164,20 @@ bool SimulatedGnssReader::isGnssStable() const
     return true;
 }
 
+static double simulateSpeed(double lat1, double lon1, double lat2, double lon2)
+{
+    double R = 6371000.0; // Earth radius (m)
+    double dLat = qDegreesToRadians(lat2 - lat1);
+    double dLon = qDegreesToRadians(lon2 - lon1);
+    double a = qSin(dLat / 2) * qSin(dLat / 2) +
+               qCos(qDegreesToRadians(lat1)) *
+               qCos(qDegreesToRadians(lat2)) *
+               qSin(dLon / 2) * qSin(dLon / 2);
+    double c = 2 * qAtan2(qSqrt(a), qSqrt(1 - a));
+
+    // Calculate distance in meters, then convert to km/h (assuming 1s interval)
+    return (R * c) * 3.6;
+}
 
 
 // ------------------------------------------------------------
@@ -184,7 +199,12 @@ void SimulatedGnssReader::onTimerTick()
         // Update internal state
         m_latitude  = p.latitude;
         m_longitude = p.longitude;
-        m_speedKmh  = p.speedKmh;
+
+        m_speedKmh = 0.0;
+        if (m_currentIndex > 0) {
+            const GnssPoint &prev = m_points[m_currentIndex - 1];
+            m_speedKmh = simulateSpeed(prev.latitude, prev.longitude, p.latitude, p.longitude);
+        }
 
         // Copy to local variables to emit outside the lock
         lat = m_latitude;
@@ -192,7 +212,7 @@ void SimulatedGnssReader::onTimerTick()
         speed = m_speedKmh;
         should_emit = true;
 
-        qDebug() << "[SimGnss] Tick -> Lat:" << lat << "Lon:" << lon;
+        qDebug() << "[SimGnss] Tick -> Lat:" << lat << "Lon:" << lon << " | Speed:" << speed << "km/h";
 
         m_currentIndex = (m_currentIndex + 1) % m_points.size();
     } // Mutex is unlocked here

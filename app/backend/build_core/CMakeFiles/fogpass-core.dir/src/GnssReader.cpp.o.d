@@ -1,7 +1,7 @@
 CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssReader.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssReader.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssReader.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -389,7 +389,7 @@ CMakeFiles/fogpass-core.dir/src/GnssReader.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/mutex \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/std_mutex.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/unique_lock.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdebug.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtextstream.h \

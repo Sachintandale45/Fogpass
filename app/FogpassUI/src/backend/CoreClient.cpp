@@ -16,9 +16,30 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
     );
     qDebug() << "CoreClient: Initialized and connected to D-Bus service 'com.fogpass.Core'.";
 
-    bool connected_new = QObject::connect(m_iface, SIGNAL(NextLandmarksUpdated(QString,int,QString,int,QString,int)),
-                                          this, SIGNAL(landmarksUpdated(QString,int,QString,int,QString,int)));
-    qDebug() << "CoreClient: Connection to NextLandmarksUpdated signal:" << (connected_new ? "successful" : "failed");
+    // Use direct QDBusConnection for robust signal handling
+    bool landmarksConnected = QDBusConnection::systemBus().connect(
+        "com.fogpass.Core",          // Service
+        "/com/fogpass/Core",         // Path
+        "com.fogpass.Core",          // Interface
+        "NextLandmarksUpdated",      // Signal name
+        this,                        // Receiver
+        SLOT(onDbusLandmarksUpdated(QString,int,QString,int,QString,int)) // Slot
+    );
+    qDebug() << "CoreClient: Direct connection to NextLandmarksUpdated:" << (landmarksConnected ? "successful" : "failed");
+
+    // Connect SpeedUpdated signal from D-Bus to local signal
+    bool speedConnected = QObject::connect(m_iface, SIGNAL(SpeedUpdated(int)), this, SIGNAL(speedUpdated(int)));
+    qDebug() << "CoreClient: Connection to SpeedUpdated signal:" << (speedConnected ? "successful" : "failed");
+
+    // Connect GnssStabilityChanged signal
+    QDBusConnection::systemBus().connect(
+        "com.fogpass.Core",
+        "/com/fogpass/Core",
+        "com.fogpass.Core",
+        "GnssStabilityChanged",
+        this,
+        SLOT(onDbusGnssStabilityChanged(bool))
+    );
 }
 
 void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
@@ -63,4 +84,26 @@ void CoreClient::selectRoute(const QString &routeName)
 void CoreClient::clearRoute()
 {
     m_iface->call(QDBus::NoBlock, "ClearRoute");
+}
+
+bool CoreClient::getGnssStability()
+{
+    QDBusReply<bool> reply = m_iface->call("GetGnssStability");
+    if (reply.isValid()) {
+        return reply.value();
+    }
+    return false; // Default to unstable if call fails
+}
+
+void CoreClient::onDbusLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
+{
+    // Log the raw data received from D-Bus
+    qDebug() << "CoreClient: Received landmarks ->" << l1 << d1 << "|" << l2 << d2 << "|" << l3 << d3;
+    emit landmarksUpdated(l1, d1, l2, d2, l3, d3);
+}
+
+void CoreClient::onDbusGnssStabilityChanged(bool stable)
+{
+    qDebug() << "CoreClient: GNSS Stability changed ->" << stable;
+    emit gnssStabilityChanged(stable);
 }

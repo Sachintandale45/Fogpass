@@ -84,7 +84,10 @@ Page {
                 var s = (parentWindow && parentWindow.stack) || StackView.view;
                 if (s) {
                     // Replace the current page with the driving screen so 'back' works correctly
-                    s.replace(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), { parentWindow: routeSelectionPage.parentWindow });
+                    s.replace(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/Demo2.qml"), {
+                        parentWindow: routeSelectionPage.parentWindow,
+                        routeName: modelData.replace(".csv", "")
+                    });
                 }
             }
         }

@@ -19,6 +19,15 @@ BackendManager::BackendManager(QObject *parent)
     // Connect the landmark locations signal from the CoreClient to the BackendManager's signal
     connect(m_core, &CoreClient::landmarkLocationsChanged, this, &BackendManager::landmarkLocationsUpdated);
     connect(m_core, &CoreClient::landmarksUpdated, this, &BackendManager::onLandmarksUpdated);
+    connect(m_core, SIGNAL(speedUpdated(int)), this, SLOT(onSpeedUpdated(int)));
+    connect(m_core, &CoreClient::gnssStabilityChanged, this, &BackendManager::onCoreGnssStabilityChanged);
+
+    // Sync initial state from Core
+    bool initialStable = m_core->getGnssStability();
+    if (m_isGnssStable != initialStable) {
+        m_isGnssStable = initialStable;
+        emit gnssStabilityChanged(m_isGnssStable);
+    }
 
     // --- Battery Simulation Timer ---
     m_timer.setInterval(1000); // Update once per second
@@ -44,9 +53,26 @@ QString BackendManager::landmark2() const { return m_landmark2; }
 int BackendManager::distance2() const { return m_dist2; }
 QString BackendManager::landmark3() const { return m_landmark3; }
 int BackendManager::distance3() const { return m_dist3; }
+int BackendManager::speed() const { return m_speed; }
+QString BackendManager::operationModeLabel() const 
+{
+    switch(m_opMode) {
+        case 1: return "MANUAL";
+        case 2: return "AUTO";
+        case 0: 
+        default: return "IDLE";
+    }
+}
+
+bool BackendManager::isGnssStable() const
+{
+    return m_isGnssStable;
+}
 
 void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
 {
+    qDebug() << "BackendManager: Updating landmarks ->" << l1 << d1;
+
     bool changed = false;
     if (m_landmark1 != l1) { m_landmark1 = l1; changed = true; }
     if (m_dist1 != d1) { m_dist1 = d1; changed = true; }
@@ -57,6 +83,23 @@ void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString
 
     if (changed) {
         emit landmarksChanged();
+    }
+}
+
+void BackendManager::onSpeedUpdated(int speed)
+{
+    qDebug() << "BackendManager: Received speed update:" << speed;
+    if (m_speed != speed) {
+        m_speed = speed;
+        emit speedUpdated(m_speed);
+    }
+}
+
+void BackendManager::onCoreGnssStabilityChanged(bool stable)
+{
+    if (m_isGnssStable != stable) {
+        m_isGnssStable = stable;
+        emit gnssStabilityChanged(m_isGnssStable);
     }
 }
 
@@ -87,6 +130,11 @@ void BackendManager::setGnssMode(bool simulation)
 
 void BackendManager::SetOperationMode(int mode)
 {
+    // Update local state immediately for UI responsiveness
+    if (m_opMode != mode) {
+        m_opMode = mode;
+        emit operationModeChanged();
+    }
     m_core->setOperationMode(mode);
 }
 

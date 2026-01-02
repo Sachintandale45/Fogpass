@@ -1,7 +1,7 @@
 CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/alertmanager.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/alertmanager.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/alertmanager.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -383,7 +383,7 @@ CMakeFiles/fogpass-core.dir/src/alertmanager.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/bits/chrono.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ratio \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/c++/13.3.0/ctime \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmutex.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qdeadlinetimer.h \

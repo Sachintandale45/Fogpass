@@ -1,7 +1,7 @@
 CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/SimulatedGnssReader.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/SimulatedGnssReader.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/SimulatedGnssReader.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -396,7 +396,7 @@ CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qtsan_impl.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qstring.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QFile \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfile.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qfiledevice.h \
@@ -457,4 +457,6 @@ CMakeFiles/fogpass-core.dir/src/SimulatedGnssReader.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qshareddata_impl.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qset.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qhash.h \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qvarlengtharray.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QtMath \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qmath.h

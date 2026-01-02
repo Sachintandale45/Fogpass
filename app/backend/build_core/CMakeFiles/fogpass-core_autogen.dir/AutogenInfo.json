@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen",
-	"CMAKE_BINARY_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core",
+	"BUILD_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen",
+	"CMAKE_BINARY_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core",
 	"CMAKE_EXECUTABLE" : "/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/CMakeLists.txt",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/CMakeLists.txt",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake/OEToolchainConfig.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in",
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeSystem.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake/OEToolchainConfig.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
@@ -65,7 +65,7 @@
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -90,7 +90,7 @@
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/cmake/Qt6/Qt6Config.cmake",
@@ -193,69 +193,69 @@
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core",
-	"DEP_FILE" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core",
+	"DEP_FILE" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "fogpass-core_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreDbusAdaptor.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreDbusAdaptor.h",
 			"Mu",
 			"6YEA5652QU/moc_CoreDbusAdaptor.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h",
 			"Mu",
 			"6YEA5652QU/moc_CoreState.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssManager.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssManager.h",
 			"Mu",
 			"6YEA5652QU/moc_GnssManager.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssReader.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssReader.h",
 			"Mu",
 			"6YEA5652QU/moc_GnssReader.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h",
 			"Mu",
 			"6YEA5652QU/moc_IGnssSource.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/LandmarkEngine.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/LandmarkEngine.h",
 			"Mu",
 			"6YEA5652QU/moc_LandmarkEngine.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/SimulatedGnssReader.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/SimulatedGnssReader.h",
 			"Mu",
 			"6YEA5652QU/moc_SimulatedGnssReader.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/alertmanager.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/alertmanager.h",
 			"Mu",
 			"6YEA5652QU/moc_alertmanager.cpp",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/locator.h",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/locator.h",
 			"Mu",
 			"6YEA5652QU/moc_locator.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_DBUS_LIB", "QT_NO_DEBUG" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -266,9 +266,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include",
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc",
-		"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc",
+		"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/lib/mkspecs/linux-g++",
 		"/opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus",
@@ -303,61 +303,61 @@
 		"-c",
 		"/opt/stm/sysroots/x86_64-ostl_sdk-linux/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/home/sachin/Qt/6.8.3/gcc_64/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 8,
-	"SETTINGS_FILE" : "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/CMakeFiles/fogpass-core_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/CoreState.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/CoreState.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssManager.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssManager.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/GnssReader.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/GnssReader.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/LandmarkEngine.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/LandmarkEngine.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/SimulatedGnssReader.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/SimulatedGnssReader.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/alertmanager.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/alertmanager.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/locator.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/locator.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/src/main.cpp",
+			"/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/src/main.cpp",
 			"Mu",
 			null
 		]

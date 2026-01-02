@@ -1,7 +1,7 @@
 CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o: \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/ipc/CoreDbusAdaptor.cpp \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/stdc-predef.h \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreDbusAdaptor.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreDbusAdaptor.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/qobjectdefs.h \
@@ -807,7 +807,10 @@ CMakeFiles/fogpass-core.dir/ipc/CoreDbusAdaptor.cpp.o: \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qdbusvirtualobject.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtDBus/qtdbusversion.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QDebug \
- /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
  /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QSet \
- /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QString \
+ /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/LandmarkEngine.h \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QTimer \
+ /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QVector

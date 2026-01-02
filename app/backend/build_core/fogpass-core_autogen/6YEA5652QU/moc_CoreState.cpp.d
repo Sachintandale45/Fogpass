@@ -1,5 +1,5 @@
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreState.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/CoreState.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_CoreState.cpp: /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/CoreState.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QMutex \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QSet \

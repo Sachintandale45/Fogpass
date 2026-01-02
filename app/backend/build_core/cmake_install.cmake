@@ -1,4 +1,4 @@
-# Install script for directory: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core
+# Install script for directory: /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fogpass-core"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fogpass-core" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/fogpass-core")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -67,7 +67,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/lib/systemd/system" TYPE FILE FILES "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/fogpass-core.service")
+  file(INSTALL DESTINATION "/lib/systemd/system" TYPE FILE FILES "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/fogpass-core.service")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,7 +79,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/etc/dbus-1/system.d" TYPE FILE FILES "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/com.fogpass.Core.conf")
+  file(INSTALL DESTINATION "/etc/dbus-1/system.d" TYPE FILE FILES "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/com.fogpass.Core.conf")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -90,5 +90,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

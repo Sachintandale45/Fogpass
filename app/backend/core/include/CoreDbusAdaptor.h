@@ -23,10 +23,19 @@ signals:
     // Alerts
     void AlertRaised(const QString &alertId);
 
+    // Speed
+    void SpeedUpdated(int speed);
+
+    // Operation Mode
+    void OperationModeUpdated(int mode);
+
     // Landmark updates
     void NextLandmarksUpdated(const QString &name1, int dist1,
                               const QString &name2, int dist2,
                               const QString &name3, int dist3);
+
+    // Signal to UI: GNSS Stability Changed
+    void GnssStabilityChanged(bool stable);
     
     // Internal signal to notify main.cpp to switch modes
     void gnssModeChangeRequested(int mode);
@@ -36,6 +45,9 @@ public slots:
     // D-Bus method: SetGnssMode(int mode) -> 0=Real, 1=Simulation
     void SetGnssMode(int mode);
 
+    // D-Bus method: Get current stability state
+    bool GetGnssStability() { return m_lastKnownStability; }
+
     // D-Bus method: SetWeatherMode(bool foggy)
     void SetWeatherMode(bool foggy);
 
@@ -44,6 +56,13 @@ public slots:
     QStringList GetAvailableRoutes();
     void SelectRoute(const QString &routeName);
     void ClearRoute();
+
+    // Slot to forward signal from LandmarkEngine to D-Bus
+    void onGnssStabilityChanged(bool stable) {
+        m_lastKnownStability = stable;
+        qDebug() << "[CoreDbusAdaptor] Forwarding GnssStabilityChanged signal:" << stable;
+        emit GnssStabilityChanged(stable);
+    }
 
 private slots:
     // -------- Internal slots (CoreState → Adaptor) --------
@@ -56,4 +75,5 @@ private slots:
 private:
     CoreState *m_coreState;
     LandmarkEngine *m_landmarkEngine;
+    bool m_lastKnownStability = false;
 };

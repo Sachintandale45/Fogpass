@@ -17,13 +17,21 @@ public:
     QStringList getAvailableRoutes();
     void selectRoute(const QString &routeName);
     void clearRoute();
+    bool getGnssStability();
 
 
 signals:
     void landmarkLocationsChanged(const QStringList &locations);
     void landmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
+    void speedUpdated(int speed);
+    void operationModeUpdated(int mode);
+    void gnssStabilityChanged(bool stable);
 
 private:
     QDBusInterface *m_iface;
+
+private slots:
+    void onDbusLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
+    void onDbusGnssStabilityChanged(bool stable);
 
 };

@@ -16,6 +16,10 @@ public:
     void setFogMode(bool foggy);
     bool fogMode() const;
 
+    /* ===================== Speed ===================== */
+    void setSpeed(int speed);
+    int speed() const;
+
     /* ===================== Landmarks ===================== */
     void updateNextLandmarks(
         const QString &name1, int dist1,
@@ -31,6 +35,9 @@ public:
 signals:
     /* Fog */
     void fogModeChanged(bool foggy);
+
+    /* Speed */
+    void speedChanged(int speed);
 
     /* Landmarks */
     void nextLandmarksUpdated(
@@ -48,6 +55,9 @@ private:
 
     /* Fog */
     bool m_foggy = false;
+
+    /* Speed */
+    int m_speed = 0;
 
     /* Landmarks */
     QString m_l1Name;

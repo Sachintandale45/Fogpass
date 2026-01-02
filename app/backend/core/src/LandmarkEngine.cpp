@@ -42,6 +42,7 @@ void LandmarkEngine::setOperationMode(OperationMode mode)
 
     m_operationMode = mode;
     qInfo() << "[LandmarkEngine] Operation mode set to:" << mode;
+    emit operationModeChanged(mode);
 
     // Reset state on mode change
     clearRoute();
@@ -175,7 +176,17 @@ void LandmarkEngine::process()
     if (!m_routeSelected)
         return;
 
-    if (!m_locator->isGnssStable()) {
+    // Check stability and emit signal if changed
+    bool currentStable = m_locator->isGnssStable();
+    static bool lastStable = !currentStable; // Force initial update
+
+    if (currentStable != lastStable) {
+        lastStable = currentStable;
+        qDebug() << "[LandmarkEngine] GNSS Stability changed to:" << currentStable << "- Emitting signal";
+        emit gnssStabilityChanged(currentStable);
+    }
+
+    if (!currentStable) {
         // If we have stale data (distance != -1), clear it now to prevent
         // showing frozen simulation data when switching to Real GNSS.
         if (m_next[0].distanceMeters != -1) {

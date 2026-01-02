@@ -1,6 +1,6 @@
-/home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssReader.cpp: /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/GnssReader.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
-  /home/sachin/projects/Develop_FogPass/fogpass/app/backend/core/include/IGnssSource.h \
+/home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/6YEA5652QU/moc_GnssReader.cpp: /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/GnssReader.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/build_core/fogpass-core_autogen/moc_predefs.h \
+  /home/sachin/projects/Develop_FogPass/Fogpass_UI/Fogpass/app/backend/core/include/IGnssSource.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/QObject \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20functional.h \
   /opt/stm/sysroots/cortexa35-ostl-linux/usr/include/QtCore/q20memory.h \
