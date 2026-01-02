@@ -20,6 +20,7 @@ BackendManager::BackendManager(QObject *parent)
     connect(m_core, &CoreClient::landmarkLocationsChanged, this, &BackendManager::landmarkLocationsUpdated);
     connect(m_core, &CoreClient::landmarksUpdated, this, &BackendManager::onLandmarksUpdated);
     connect(m_core, SIGNAL(speedUpdated(int)), this, SLOT(onSpeedUpdated(int)));
+    connect(m_core, &CoreClient::gnssStabilityChanged, this, &BackendManager::onCoreGnssStabilityChanged);
 
     // --- Battery Simulation Timer ---
     m_timer.setInterval(1000); // Update once per second
@@ -56,6 +57,11 @@ QString BackendManager::operationModeLabel() const
     }
 }
 
+bool BackendManager::isGnssStable() const
+{
+    return m_isGnssStable;
+}
+
 void BackendManager::onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3)
 {
     qDebug() << "BackendManager: Updating landmarks ->" << l1 << d1;
@@ -79,6 +85,14 @@ void BackendManager::onSpeedUpdated(int speed)
     if (m_speed != speed) {
         m_speed = speed;
         emit speedUpdated(m_speed);
+    }
+}
+
+void BackendManager::onCoreGnssStabilityChanged(bool stable)
+{
+    if (m_isGnssStable != stable) {
+        m_isGnssStable = stable;
+        emit gnssStabilityChanged(m_isGnssStable);
     }
 }
 

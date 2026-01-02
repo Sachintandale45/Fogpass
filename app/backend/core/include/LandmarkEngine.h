@@ -42,6 +42,7 @@ signals:
     // Announce that a route has been chosen by the user.
     void routeSelected(const QString &routeName);
     void operationModeChanged(int mode);
+    void gnssStabilityChanged(bool stable);
 
 public slots:
     void setGnssMode(int mode);

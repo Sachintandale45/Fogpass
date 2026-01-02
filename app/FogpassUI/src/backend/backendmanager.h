@@ -18,6 +18,7 @@ class BackendManager : public QObject
     Q_PROPERTY(int distance3 READ distance3 NOTIFY landmarksChanged)
     Q_PROPERTY(int speed READ speed NOTIFY speedUpdated)
     Q_PROPERTY(QString operationModeLabel READ operationModeLabel NOTIFY operationModeChanged)
+    Q_PROPERTY(bool isGnssStable READ isGnssStable NOTIFY gnssStabilityChanged)
 
 public:
     explicit BackendManager(QObject *parent = nullptr);
@@ -40,6 +41,7 @@ public:
     int distance3() const;
     int speed() const;
     QString operationModeLabel() const;
+    bool isGnssStable() const;
 
 public slots:
     void start();
@@ -53,11 +55,13 @@ signals:
     void landmarksChanged();
     void speedUpdated(int speed);
     void operationModeChanged();
+    void gnssStabilityChanged(bool stable);
 
 private slots:
     void onTimeout();
     void onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
     void onSpeedUpdated(int speed);
+    void onCoreGnssStabilityChanged(bool stable);
 
 private:
     QTimer m_timer;
@@ -72,4 +76,5 @@ private:
     int m_dist3 = 0;
     int m_speed = 0;
     int m_opMode = 0; // 0=Idle, 1=Manual, 2=Auto
+    bool m_isGnssStable = true;
 };

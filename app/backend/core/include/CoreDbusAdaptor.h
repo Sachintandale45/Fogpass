@@ -33,6 +33,9 @@ signals:
     void NextLandmarksUpdated(const QString &name1, int dist1,
                               const QString &name2, int dist2,
                               const QString &name3, int dist3);
+
+    // Signal to UI: GNSS Stability Changed
+    void GnssStabilityChanged(bool stable);
     
     // Internal signal to notify main.cpp to switch modes
     void gnssModeChangeRequested(int mode);
@@ -50,6 +53,12 @@ public slots:
     QStringList GetAvailableRoutes();
     void SelectRoute(const QString &routeName);
     void ClearRoute();
+
+    // Slot to forward signal from LandmarkEngine to D-Bus
+    void onGnssStabilityChanged(bool stable) {
+        qDebug() << "[CoreDbusAdaptor] Forwarding GnssStabilityChanged signal:" << stable;
+        emit GnssStabilityChanged(stable);
+    }
 
 private slots:
     // -------- Internal slots (CoreState → Adaptor) --------

@@ -30,6 +30,16 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
     // Connect SpeedUpdated signal from D-Bus to local signal
     bool speedConnected = QObject::connect(m_iface, SIGNAL(SpeedUpdated(int)), this, SIGNAL(speedUpdated(int)));
     qDebug() << "CoreClient: Connection to SpeedUpdated signal:" << (speedConnected ? "successful" : "failed");
+
+    // Connect GnssStabilityChanged signal
+    QDBusConnection::systemBus().connect(
+        "com.fogpass.Core",
+        "/com/fogpass/Core",
+        "com.fogpass.Core",
+        "GnssStabilityChanged",
+        this,
+        SLOT(onDbusGnssStabilityChanged(bool))
+    );
 }
 
 void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
@@ -81,4 +91,10 @@ void CoreClient::onDbusLandmarksUpdated(const QString &l1, int d1, const QString
     // Log the raw data received from D-Bus
     qDebug() << "CoreClient: Received landmarks ->" << l1 << d1 << "|" << l2 << d2 << "|" << l3 << d3;
     emit landmarksUpdated(l1, d1, l2, d2, l3, d3);
+}
+
+void CoreClient::onDbusGnssStabilityChanged(bool stable)
+{
+    qDebug() << "CoreClient: GNSS Stability changed ->" << stable;
+    emit gnssStabilityChanged(stable);
 }

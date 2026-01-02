@@ -37,6 +37,7 @@ Rectangle {
 
         // Status LED (Yellow Circle)
         Rectangle {
+            id: statusLed
             width: 18
             height: 18
             radius: 9
@@ -44,6 +45,14 @@ Rectangle {
             border.color: "#ffffff"
             border.width: 1
             anchors.verticalCenter: parent.verticalCenter
+
+            Timer {
+                interval: 500
+                repeat: true
+                running: !Backend.isGnssStable
+                onTriggered: statusLed.opacity = (statusLed.opacity === 1.0 ? 0.0 : 1.0)
+                onRunningChanged: if (!running) statusLed.opacity = 1.0
+            }
         }
 
         // Battery Indicator
