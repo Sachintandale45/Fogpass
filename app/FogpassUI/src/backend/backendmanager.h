@@ -32,6 +32,7 @@ public:
     Q_INVOKABLE QStringList GetAvailableRoutes();
     Q_INVOKABLE void SelectRoute(const QString &routeName);
     Q_INVOKABLE void ClearRoute();
+    Q_INVOKABLE bool requestAccess(const QString &capability, const QString &password);
 
     QString landmark1() const;
     int distance1() const;
@@ -56,12 +57,16 @@ signals:
     void speedUpdated(int speed);
     void operationModeChanged();
     void gnssStabilityChanged(bool stable);
+    void accessGranted(const QString &capability);
+    void accessDenied(const QString &capability);
 
 private slots:
     void onTimeout();
     void onLandmarksUpdated(const QString &l1, int d1, const QString &l2, int d2, const QString &l3, int d3);
     void onSpeedUpdated(int speed);
     void onCoreGnssStabilityChanged(bool stable);
+    void onAccessGranted(const QString &capability);
+    void onAccessDenied(const QString &capability);
 
 private:
     QTimer m_timer;

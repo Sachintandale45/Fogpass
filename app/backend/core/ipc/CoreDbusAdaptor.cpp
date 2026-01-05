@@ -1,15 +1,18 @@
 #include "CoreDbusAdaptor.h"
 #include "CoreState.h"
 #include "LandmarkEngine.h"
+#include "Auth/SecurityManager.h"
 
 #include <QDebug>
 
 CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState,
                                  LandmarkEngine *landmarkEngine,
+                                 SecurityManager *securityManager,
                                  QObject *parent)
     : QObject(parent),
       m_coreState(coreState),
-      m_landmarkEngine(landmarkEngine)
+      m_landmarkEngine(landmarkEngine),
+      m_securityManager(securityManager)
 {
     // ---- Internal wiring (NOT D-Bus) ----
 
@@ -22,6 +25,13 @@ CoreDbusAdaptor::CoreDbusAdaptor(CoreState *coreState,
     connect(m_coreState, &CoreState::nextLandmarksUpdated,
             this, &CoreDbusAdaptor::onNextLandmarksUpdated,
             Qt::QueuedConnection);
+
+    // Security signals (CoreState -> D-Bus)
+    connect(m_coreState, &CoreState::accessGranted,
+            this, &CoreDbusAdaptor::AccessGranted);
+    
+    connect(m_coreState, &CoreState::accessDenied,
+            this, &CoreDbusAdaptor::AccessDenied);
 
     qInfo() << "CoreDbusAdaptor initialized and exported on D-Bus";
 }
@@ -81,4 +91,20 @@ void CoreDbusAdaptor::ClearRoute()
 {
     qInfo() << "[CoreDbusAdaptor] ClearRoute request received";
     m_landmarkEngine->clearRoute();
+}
+
+// ---------- Security API ----------
+
+bool CoreDbusAdaptor::requestAccess(const QString &capability, const QString &password)
+{
+    bool allowed = m_securityManager->verifyPassword(capability, password);
+
+    if (allowed) {
+        qInfo() << "[CoreDbusAdaptor] Access GRANTED for capability:" << capability;
+        m_coreState->notifyAccessGranted(capability);
+    } else {
+        qWarning() << "[CoreDbusAdaptor] Access DENIED for capability:" << capability;
+        m_coreState->notifyAccessDenied(capability);
+    }
+    return allowed;
 }

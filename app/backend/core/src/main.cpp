@@ -15,6 +15,7 @@
 // Logic
 #include "LandmarkEngine.h"
 #include "alertmanager.h"
+#include "Auth/SecurityManager.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,6 +24,9 @@ int main(int argc, char *argv[])
 
     // Core shared state
     CoreState *coreState = new CoreState(&app);
+
+    // Security Manager (Access Control)
+    SecurityManager *securityManager = new SecurityManager(&app);
 
     // Real GNSS (UART)
     GnssReader *realGnss = new GnssReader(&app);
@@ -73,7 +77,7 @@ int main(int argc, char *argv[])
 
     // D-Bus adaptor
     CoreDbusAdaptor *dbusAdaptor =
-        new CoreDbusAdaptor(coreState, landmarkEngine, &app);
+        new CoreDbusAdaptor(coreState, landmarkEngine, securityManager, &app);
 
     // Connect GnssManager stability signal directly to D-Bus adaptor
     QObject::connect(gnssManager, &IGnssSource::gnssStabilityChanged,

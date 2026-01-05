@@ -20,6 +20,7 @@ add_executable(fogpass-core
     src/LandmarkEngine.cpp
     src/GnssManager.cpp
     src/SimulatedGnssReader.cpp
+    src/Auth/SecurityManager.cpp
     ipc/CoreDbusAdaptor.cpp
     # Add headers with Q_OBJECT so AUTOMOC generates the necessary meta-object code
     include/CoreState.h
@@ -31,6 +32,7 @@ add_executable(fogpass-core
     include/IGnssSource.h
     include/GnssManager.h
     include/SimulatedGnssReader.h
+    src/Auth/SecurityManager.h
 )
 
 target_include_directories(fogpass-core

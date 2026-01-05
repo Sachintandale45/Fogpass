@@ -20,6 +20,26 @@ Item {
         }
     }
 
+    // Listen for authentication results from the backend
+    Connections {
+        target: Backend
+
+        function onAccessGranted(capability) {
+            if (capability === "ADMIN") {
+                passwordPopup.close();
+                // Now, navigate to the protected page
+                go("Admin Settings");
+            }
+        }
+
+        function onAccessDenied(capability) {
+            if (capability === "ADMIN") {
+                passwordPopup.errorText = "Access Denied. Please try again.";
+                passwordPopup.passwordInput = ""; // Clear password field
+            }
+        }
+    }
+
     function stackRef() {
         var s = (parentWindow && parentWindow.stack) || StackView.view;
         if (!s) console.warn("UserMenu: no stack available");
@@ -135,6 +155,13 @@ Item {
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: go("Display All Route")
+            }
+
+            Button { text: "Admin Settings"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
+                background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
+                contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
+                // Open the password prompt instead of navigating directly
+                onClicked: passwordPopup.open()
             }
 
         }
@@ -284,6 +311,82 @@ Item {
                         Backend.setWeatherMode(false); // Command to UI backend
                         weatherModePopup.close();
                     }
+                }
+            }
+        }
+    }
+
+    // --- Password Prompt Popup ---
+    Popup {
+        id: passwordPopup
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        width: 450
+        height: 280
+        modal: true
+        focus: true
+        closePolicy: Popup.NoAutoClose
+
+        property alias passwordInput: passwordField.text
+        property alias errorText: errorLabel.text
+
+        // Reset on close
+        onClosed: {
+            errorText = "";
+            passwordInput = "";
+        }
+
+        background: Rectangle {
+            color: "#34495e"
+            border.color: "#4fc3f7"
+            border.width: 2
+            radius: 12
+        }
+
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 20
+            spacing: 20
+
+            Text {
+                text: "Enter Admin Password"
+                color: "white"
+                font.pointSize: 18
+                font.bold: true
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            TextField {
+                id: passwordField
+                Layout.fillWidth: true
+                placeholderText: "Password"
+                echoMode: TextInput.Password
+                color: "white"
+                font.pointSize: 16
+                background: Rectangle {
+                    color: "#2c3e50"
+                    border.color: "white"
+                    border.width: 1
+                    radius: 4
+                }
+            }
+
+            Text {
+                id: errorLabel
+                color: "#e74c3c" // Red for errors
+                font.pointSize: 14
+                Layout.alignment: Qt.AlignHCenter
+            }
+
+            RowLayout {
+                Layout.alignment: Qt.AlignHCenter
+                spacing: 25
+
+                Button { text: "Submit"; Layout.minimumWidth: 120; Layout.minimumHeight: 45; font.pointSize: 16; background: Rectangle { color: "#27ae60"; radius: 8 }
+                    onClicked: Backend.requestAccess("ADMIN", passwordField.text)
+                }
+                Button { text: "Cancel"; Layout.minimumWidth: 120; Layout.minimumHeight: 45; font.pointSize: 16; background: Rectangle { color: "#c0392b"; radius: 8 }
+                    onClicked: passwordPopup.close()
                 }
             }
         }

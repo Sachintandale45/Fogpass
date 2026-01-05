@@ -102,3 +102,17 @@ bool CoreState::isAlertActive(const QString &alertId) const
     QMutexLocker locker(&m_mutex);
     return m_activeAlerts.contains(alertId);
 }
+
+/* ===================== Security ===================== */
+
+void CoreState::notifyAccessGranted(const QString &capability)
+{
+    // Signal only, no internal state change required yet
+    emit accessGranted(capability);
+}
+
+void CoreState::notifyAccessDenied(const QString &capability)
+{
+    // Signal only
+    emit accessDenied(capability);
+}
