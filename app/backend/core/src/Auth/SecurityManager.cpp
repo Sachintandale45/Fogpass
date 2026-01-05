@@ -5,6 +5,10 @@
 #include <QTextStream>
 #include <QDebug>
 
+namespace {
+    const QString CONFIG_FILE_PATH = "/etc/fogpass/security.conf";
+}
+
 SecurityManager::SecurityManager(QObject *parent)
     : QObject(parent)
 {
@@ -13,9 +17,9 @@ SecurityManager::SecurityManager(QObject *parent)
 
 void SecurityManager::loadConfig()
 {
-    QFile file("/etc/fogpass/security.conf");
+    QFile file(CONFIG_FILE_PATH);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "[SecurityManager] Config file missing or unreadable: /etc/fogpass/security.conf";
+        qWarning() << "[SecurityManager] Config file missing or unreadable:" << CONFIG_FILE_PATH;
         qWarning() << "[SecurityManager] Access will be DENIED by default.";
         return;
     }
@@ -50,6 +54,26 @@ bool SecurityManager::verifyPassword(const QString &capability, const QString &p
 
     QByteArray inputHash = hashPassword(password);
     return (inputHash == m_adminPasswordHash);
+}
+
+bool SecurityManager::setPassword(const QString &capability, const QString &password)
+{
+    Q_UNUSED(capability); // Currently only "ADMIN" is supported
+
+    QByteArray newHash = hashPassword(password);
+
+    // Write the new hash to the configuration file
+    QFile file(CONFIG_FILE_PATH);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+        qCritical() << "[SecurityManager] Failed to write to config file:" << file.errorString();
+        return false;
+    }
+
+    QTextStream out(&file);
+    out << "admin_password_hash=" << newHash.toHex() << Qt::endl;
+    
+    m_adminPasswordHash = newHash;
+    return true;
 }
 
 QByteArray SecurityManager::hashPassword(const QString &password) const

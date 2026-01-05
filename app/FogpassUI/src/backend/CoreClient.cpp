@@ -145,6 +145,17 @@ bool CoreClient::requestAccess(const QString &capability, const QString &passwor
     return false;
 }
 
+bool CoreClient::changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword)
+{
+    qInfo() << "CoreClient: Sending changePassword for" << capability;
+    QDBusReply<bool> reply = m_iface->call("changePassword", capability, oldPassword, newPassword);
+    if (reply.isValid()) {
+        return reply.value();
+    }
+    qWarning() << "CoreClient: changePassword failed:" << reply.error().message();
+    return false;
+}
+
 void CoreClient::onDbusAccessGranted(const QString &capability)
 {
     qInfo() << "CoreClient: Received AccessGranted for" << capability;

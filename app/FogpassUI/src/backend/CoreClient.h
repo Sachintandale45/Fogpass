@@ -19,6 +19,7 @@ public:
     void clearRoute();
     bool getGnssStability();
     bool requestAccess(const QString &capability, const QString &password);
+    bool changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword);
 
 
 signals:

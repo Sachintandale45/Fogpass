@@ -33,6 +33,7 @@ public:
     Q_INVOKABLE void SelectRoute(const QString &routeName);
     Q_INVOKABLE void ClearRoute();
     Q_INVOKABLE bool requestAccess(const QString &capability, const QString &password);
+    Q_INVOKABLE bool changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword);
 
     QString landmark1() const;
     int distance1() const;

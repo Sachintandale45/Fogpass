@@ -108,3 +108,17 @@ bool CoreDbusAdaptor::requestAccess(const QString &capability, const QString &pa
     }
     return allowed;
 }
+
+bool CoreDbusAdaptor::changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword)
+{
+    // 1. Verify the old password first
+    if (!m_securityManager->verifyPassword(capability, oldPassword)) {
+        qWarning() << "[CoreDbusAdaptor] Change Password Failed: Incorrect old password for" << capability;
+        return false;
+    }
+
+    // 2. Set the new password
+    bool success = m_securityManager->setPassword(capability, newPassword);
+    qInfo() << "[CoreDbusAdaptor] Change Password for" << capability << (success ? "SUCCESS" : "FAILED");
+    return success;
+}

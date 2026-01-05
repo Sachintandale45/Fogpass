@@ -69,3 +69,12 @@ install(FILES fogpass-core.service
 install(FILES com.fogpass.Core.conf
     DESTINATION /etc/dbus-1/system.d
 )
+
+# Install security configuration with permissions allowing the app to update it
+install(FILES config/security.conf
+    DESTINATION /etc/fogpass
+    PERMISSIONS
+        OWNER_READ OWNER_WRITE
+        GROUP_READ GROUP_WRITE
+        WORLD_READ WORLD_WRITE
+)

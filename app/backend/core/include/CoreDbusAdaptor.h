@@ -65,6 +65,7 @@ public slots:
 
     // Security
     bool requestAccess(const QString &capability, const QString &password);
+    bool changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword);
 
     // Slot to forward signal from LandmarkEngine to D-Bus
     void onGnssStabilityChanged(bool stable) {

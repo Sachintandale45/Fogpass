@@ -185,6 +185,33 @@ Item {
             }
         }
 
+        Button { 
+            text: "Change Password"; 
+            Layout.minimumWidth: 240; 
+            Layout.minimumHeight: 50
+            Layout.alignment: Qt.AlignHCenter
+            font.pointSize: 14
+            font.bold: true
+            background: Rectangle {
+                radius: 8
+                color: parent.pressed ? "#ffffff" : "#ffffff"
+                opacity: parent.pressed ? 0.9 : 1.0
+                border.width: 2
+                border.color: "#333333"
+            }
+            contentItem: Text {
+                text: parent.text
+                font: parent.font
+                color: "#333333"
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+            onClicked: {
+                var s = root.stackRef();
+                if (s) s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/ChangePasswordPage.qml"), { parentWindow: root.parentWindow });
+            }
+        }
+
     }
 
     Popup {

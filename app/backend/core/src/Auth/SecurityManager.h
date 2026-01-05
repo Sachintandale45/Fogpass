@@ -18,6 +18,7 @@ public:
     explicit SecurityManager(QObject *parent = nullptr);
 
     bool verifyPassword(const QString &capability, const QString &password);
+    bool setPassword(const QString &capability, const QString &password);
 
 private:
     /**

@@ -171,6 +171,11 @@ bool BackendManager::requestAccess(const QString &capability, const QString &pas
     return m_core->requestAccess(capability, password);
 }
 
+bool BackendManager::changePassword(const QString &capability, const QString &oldPassword, const QString &newPassword)
+{
+    return m_core->changePassword(capability, oldPassword, newPassword);
+}
+
 void BackendManager::onAccessGranted(const QString &capability)
 {
     qInfo() << "BackendManager: Access granted for" << capability;
