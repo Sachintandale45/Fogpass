@@ -21,6 +21,8 @@ BackendManager::BackendManager(QObject *parent)
     connect(m_core, &CoreClient::landmarksUpdated, this, &BackendManager::onLandmarksUpdated);
     connect(m_core, SIGNAL(speedUpdated(int)), this, SLOT(onSpeedUpdated(int)));
     connect(m_core, &CoreClient::gnssStabilityChanged, this, &BackendManager::onCoreGnssStabilityChanged);
+    connect(m_core, &CoreClient::accessGranted, this, &BackendManager::onAccessGranted);
+    connect(m_core, &CoreClient::accessDenied, this, &BackendManager::onAccessDenied);
 
     // Sync initial state from Core
     bool initialStable = m_core->getGnssStability();
@@ -162,4 +164,21 @@ void BackendManager::onTimeout()
     } else {
         m_timer.stop();
     }
+}
+
+bool BackendManager::requestAccess(const QString &capability, const QString &password)
+{
+    return m_core->requestAccess(capability, password);
+}
+
+void BackendManager::onAccessGranted(const QString &capability)
+{
+    qInfo() << "BackendManager: Access granted for" << capability;
+    emit accessGranted(capability);
+}
+
+void BackendManager::onAccessDenied(const QString &capability)
+{
+    qInfo() << "BackendManager: Access denied for" << capability;
+    emit accessDenied(capability);
 }

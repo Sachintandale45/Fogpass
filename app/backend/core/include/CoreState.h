@@ -32,6 +32,10 @@ public:
     void clearAlert(const QString &alertId);
     bool isAlertActive(const QString &alertId) const;
 
+    /* ===================== Security ===================== */
+    void notifyAccessGranted(const QString &capability);
+    void notifyAccessDenied(const QString &capability);
+
 signals:
     /* Fog */
     void fogModeChanged(bool foggy);
@@ -49,6 +53,10 @@ signals:
     /* Alerts */
     void alertRaised(const QString &alertId);
     void alertCleared(const QString &alertId);
+
+    /* Security */
+    void accessGranted(const QString &capability);
+    void accessDenied(const QString &capability);
 
 private:
     mutable QMutex m_mutex;

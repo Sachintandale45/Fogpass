@@ -10,6 +10,9 @@ Item {
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
 
+    property string pendingAction: ""
+    property bool volumeUnlocked: false
+
     // Beautiful gradient background with mixed colors
     Rectangle {
         anchors.fill: parent
@@ -27,8 +30,13 @@ Item {
         function onAccessGranted(capability) {
             if (capability === "ADMIN") {
                 passwordPopup.close();
-                // Now, navigate to the protected page
-                go("Admin Settings");
+                if (pendingAction === "VOLUME") {
+                    goVolume();
+                }
+                if (pendingAction === "VOLUME_UNLOCK") {
+                    volumeUnlocked = true;
+                }
+                pendingAction = "";
             }
         }
 
@@ -70,13 +78,19 @@ Item {
         }
     }
 
+    function requestVolumeUnlock() {
+        pendingAction = "VOLUME_UNLOCK";
+        passwordPopup.open();
+    }
+
     function goVolume() {
         var s = stackRef();
         if (s) {
             var page = s.push(Qt.resolvedUrl("qrc:/qt/qml/trial1/content/VolumeControl.qml"), {
                 parentWindow: userMenuRoot.parentWindow,
                 // Pass the current volume level to the new page
-                volumeLevel: AppSettings.volumeLevel 
+                volumeLevel: AppSettings.volumeLevel,
+                userMenu: userMenuRoot // Pass reference so VolumeControl can request unlock
             });
             // Connect to the new page's signal
             page.volumeChanged.connect(function(newVolume) {
@@ -155,13 +169,6 @@ Item {
                 background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
                 contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                 onClicked: go("Display All Route")
-            }
-
-            Button { text: "Admin Settings"; Layout.minimumWidth: 260; Layout.minimumHeight: 46; font.pointSize: 18; font.bold: true; Layout.alignment: Qt.AlignHCenter
-                background: Rectangle { radius: 8; color: parent.pressed ? "#ffffff" : "#ffffff"; opacity: parent.pressed ? 0.9 : 1.0; border.width: 2; border.color: "#333333" }
-                contentItem: Text { text: parent.text; font: parent.font; color: "#333333"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
-                // Open the password prompt instead of navigating directly
-                onClicked: passwordPopup.open()
             }
 
         }
@@ -369,6 +376,7 @@ Item {
                     border.width: 1
                     radius: 4
                 }
+                onAccepted: Backend.requestAccess("ADMIN", passwordField.text)
             }
 
             Text {

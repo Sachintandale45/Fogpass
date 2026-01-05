@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDBusConnection>
+#include <QLoggingCategory>
 
 // Core modules
 #include "CoreState.h"
@@ -19,6 +20,9 @@
 
 int main(int argc, char *argv[])
 {
+    // Force debug logs to be visible
+    QLoggingCategory::setFilterRules("*.debug=true");
+
     QCoreApplication app(argc, argv);
     qInfo() << "FogPASS Core Service starting...";
 

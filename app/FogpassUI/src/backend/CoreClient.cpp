@@ -15,6 +15,7 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
         this
     );
     qDebug() << "CoreClient: Initialized and connected to D-Bus service 'com.fogpass.Core'.";
+    qInfo() << "CoreClient: Initialized and connected to D-Bus service 'com.fogpass.Core'.";
 
     // Use direct QDBusConnection for robust signal handling
     bool landmarksConnected = QDBusConnection::systemBus().connect(
@@ -26,10 +27,12 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
         SLOT(onDbusLandmarksUpdated(QString,int,QString,int,QString,int)) // Slot
     );
     qDebug() << "CoreClient: Direct connection to NextLandmarksUpdated:" << (landmarksConnected ? "successful" : "failed");
+    qInfo() << "CoreClient: Direct connection to NextLandmarksUpdated:" << (landmarksConnected ? "successful" : "failed");
 
     // Connect SpeedUpdated signal from D-Bus to local signal
     bool speedConnected = QObject::connect(m_iface, SIGNAL(SpeedUpdated(int)), this, SIGNAL(speedUpdated(int)));
     qDebug() << "CoreClient: Connection to SpeedUpdated signal:" << (speedConnected ? "successful" : "failed");
+    qInfo() << "CoreClient: Connection to SpeedUpdated signal:" << (speedConnected ? "successful" : "failed");
 
     // Connect GnssStabilityChanged signal
     QDBusConnection::systemBus().connect(
@@ -40,6 +43,29 @@ CoreClient::CoreClient(QObject *parent) : QObject(parent)
         this,
         SLOT(onDbusGnssStabilityChanged(bool))
     );
+
+    // Connect Security signals
+    bool accessGrantedConnected = QDBusConnection::systemBus().connect(
+        "com.fogpass.Core",
+        "/com/fogpass/Core",
+        "com.fogpass.Core",
+        "AccessGranted",
+        this,
+        SLOT(onDbusAccessGranted(QString))
+    );
+    if (!accessGrantedConnected) qWarning() << "CoreClient: Failed to connect AccessGranted signal!";
+
+    bool accessDeniedConnected = QDBusConnection::systemBus().connect(
+        "com.fogpass.Core",
+        "/com/fogpass/Core",
+        "com.fogpass.Core",
+        "AccessDenied",
+        this,
+        SLOT(onDbusAccessDenied(QString))
+    );
+    if (!accessDeniedConnected) qWarning() << "CoreClient: Failed to connect AccessDenied signal!";
+
+    qInfo() << "CoreClient: Security signals connected:" << (accessGrantedConnected && accessDeniedConnected);
 }
 
 void CoreClient::setWeatherMode(bool foggy) // Renamed and changed to bool
@@ -106,4 +132,27 @@ void CoreClient::onDbusGnssStabilityChanged(bool stable)
 {
     qDebug() << "CoreClient: GNSS Stability changed ->" << stable;
     emit gnssStabilityChanged(stable);
+}
+
+bool CoreClient::requestAccess(const QString &capability, const QString &password)
+{
+    qInfo() << "CoreClient: Sending requestAccess for" << capability;
+    QDBusReply<bool> reply = m_iface->call("requestAccess", capability, password);
+    if (reply.isValid()) {
+        return reply.value();
+    }
+    qWarning() << "CoreClient: requestAccess failed:" << reply.error().message();
+    return false;
+}
+
+void CoreClient::onDbusAccessGranted(const QString &capability)
+{
+    qInfo() << "CoreClient: Received AccessGranted for" << capability;
+    emit accessGranted(capability);
+}
+
+void CoreClient::onDbusAccessDenied(const QString &capability)
+{
+    qInfo() << "CoreClient: Received AccessDenied for" << capability;
+    emit accessDenied(capability);
 }

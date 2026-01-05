@@ -6,6 +6,7 @@
 
 class CoreState;
 class LandmarkEngine;
+class SecurityManager;
 
 class CoreDbusAdaptor : public QObject
 {
@@ -15,6 +16,7 @@ class CoreDbusAdaptor : public QObject
 public:
     explicit CoreDbusAdaptor(CoreState *coreState,
                              LandmarkEngine *landmarkEngine,
+                             SecurityManager *securityManager,
                              QObject *parent = nullptr);
 
 signals:
@@ -37,6 +39,10 @@ signals:
     // Signal to UI: GNSS Stability Changed
     void GnssStabilityChanged(bool stable);
     
+    // Security
+    void AccessGranted(const QString &capability);
+    void AccessDenied(const QString &capability);
+
     // Internal signal to notify main.cpp to switch modes
     void gnssModeChangeRequested(int mode);
     void weatherModeChangeRequested(bool foggy);
@@ -57,6 +63,9 @@ public slots:
     void SelectRoute(const QString &routeName);
     void ClearRoute();
 
+    // Security
+    bool requestAccess(const QString &capability, const QString &password);
+
     // Slot to forward signal from LandmarkEngine to D-Bus
     void onGnssStabilityChanged(bool stable) {
         m_lastKnownStability = stable;
@@ -75,5 +84,6 @@ private slots:
 private:
     CoreState *m_coreState;
     LandmarkEngine *m_landmarkEngine;
+    SecurityManager *m_securityManager;
     bool m_lastKnownStability = false;
 };

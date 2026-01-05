@@ -17,6 +17,22 @@ Item {
     width: parent ? parent.width : 800
     height: parent ? parent.height : 600
 
+    Connections {
+        target: Backend
+        function onAccessGranted(capability) {
+            if (capability === "ADMIN") {
+                root.isAuthenticated = true;
+                passwordPopup.close();
+            }
+        }
+        function onAccessDenied(capability) {
+            if (capability === "ADMIN") {
+                passwordField.text = "";
+                passwordField.placeholderText = "Try Again";
+            }
+        }
+    }
+
     Rectangle {
         anchors.fill: parent
         gradient: Gradient {
@@ -64,7 +80,7 @@ Item {
             value: root.volumeLevel // Set slider's initial value
             stepSize: 1
             onValueChanged: {
-                if (value < AppSettings.volumeThreshold && !root.isAuthenticated) {
+                if (value < 60 && !root.isAuthenticated) {
                     // If moving below threshold without auth, open dialog
                     passwordPopup.open();
                     // Prevent slider from staying in the restricted area
@@ -152,10 +168,7 @@ Item {
                 echoMode: TextInput.Password
                 color: "white"
                 onAccepted: { 
-                    if (text === AppSettings.volumePassword) {
-                        root.isAuthenticated = true;
-                        passwordPopup.close();
-                    } else { text = ""; }
+                    Backend.requestAccess("ADMIN", text);
                 }
             }
         }

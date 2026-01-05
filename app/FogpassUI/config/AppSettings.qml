@@ -14,6 +14,5 @@ Item {
     property string currentMode: "Non-Foggy" // Can be "Foggy" or "Non-Foggy"
 
     // --- Configuration Constants ---
-    readonly property string volumePassword: "admin123"
     readonly property int volumeThreshold: 60
 }
